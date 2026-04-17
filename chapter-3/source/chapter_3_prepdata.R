@@ -9,11 +9,8 @@ library(tidyr)
 library(purrr)
 library(stringr)
 library(janitor)
-library(ggstats)
 library(readxl)
 library(openxlsx)
-library(WDI)
-library(labelled)
 
 # ==============================================================================
 # 2. read-in data
@@ -86,12 +83,6 @@ gdp_pc <- read_csv(
     ) |> 
     na.omit()
 
-# boost
-boost_raw <- read_csv(
-    here("chapter 4", "data", "input", "world-bank", "boost", "boost_brazil.csv"),
-    na = "-"
-)
-
 # bready
 bready_files <- fs::dir_ls(
     here("chapter 4", "data", "input", "world-bank", "bready"),
@@ -123,29 +114,6 @@ bready_raw <- bready_files |>
     select(-EconomyName) |>
     clean_names()
 
-bready_competition_raw <- bready_files |> 
-  str_subset("competition") |> 
-  read_csv(
-    locale = locale(encoding = "latin1")
-  ) |> 
-  mutate(
-    economy = EconomyName
-  ) |> 
-  clean_names()
-  
-enterprise_surveys_raw <- read_xlsx(
-    here("chapter 4", "data", "input", "world-bank", "enterprise-surveys", "WB-ENTERPRISESURVEYS.xlsx")
-) |> 
-    clean_names()
-
-wdi_raw <- WDI(
-    indicator = c("gdp_pc_ppp_2005" = "NY.GDP.PCAP.PP.KD"),
-    country = "all",
-    start = 2000,
-    end = 2024
-) |> 
-    as_tibble()
-
 gsr_raw <- read_xlsx(
   here("chapter 4", "data", "input", "oecd", "oecd_gsr.xlsx"),
   sheet = "Clean"
@@ -157,22 +125,11 @@ gsr_original_raw <- read_xlsx(
   sheet = "Database"
 )
 
-# url: https://prosperitydata360.worldbank.org/en/indicator/OECDWBG+PMR+7
-pmr_raw <- read_xlsx(
-  here("chapter 4", "data", "input", "oecd-world-bank", "oecdwbg_pmr.xlsx"),
-  sheet = "Data"
-) |> 
-  clean_names()
-
 # financial regulator
 # url: https://datacatalog.worldbank.org/int/search/dataset/0038632
 # 2021 edition
 bank_regulator_raw <- read_csv(
   here("chapter 4", "data", "input", "world-bank", "brss", "banking_regulator.csv")
-)
-
-fsi_loans_raw <- read_csv(
-  "https://data360files.worldbank.org/data360-data/data/WB_WDI/WB_WDI_FB_AST_NPER_ZS_WIDEF.csv"
 )
 
 countryclass_raw <- read.xlsx(
@@ -372,23 +329,6 @@ itu_complete <- list(
         region = countrycode(country_iso, origin = "iso3c", destination = "region")
     )
 
-boost <- boost_raw |> 
-    mutate(
-        across(
-            c(approved, modified, paid),
-            \(x) str_replace_all(x, ",", "")
-        ),
-        across(
-            c(is.character),
-            str_to_sentence
-        )
-    ) |> 
-    # exclude legislative and judiciary branches
-    filter(
-        !str_detect(func1, "^01|^02") &
-        year <= 2021
-    )
-
 bready <- bready_raw |> 
     select(
         economy,
@@ -396,41 +336,6 @@ bready <- bready_raw |>
         starts_with("pillar"),
         category_2_2_overall,
         topic
-    )
-
-bready_competition <- bready_competition_raw |> 
-  transmute(
-    economy,
-    economy_code,
-    pillar_i_overall,
-    pillar_ii_overall,
-    regulatory_gap = pillar_ii_overall - pillar_i_overall,
-    competition_authority_independence = sub_category_2_1_1_overall,
-    competition_authority_transparency = sub_category_2_1_2_overall,
-    market_competition = sub_category_3_1_2_overall
-  )
-
-enterprise_surveys <- enterprise_surveys_raw |> 
-    filter(
-        indicator == "Senior management time spent dealing with the requirements of government regulation (%)"
-    ) |> 
-    select(
-        economy = economy_name,
-        economy_code = economy_iso3,
-        starts_with("x")
-    ) |> 
-    pivot_longer(
-        cols = c(starts_with("x")),
-        names_prefix = "x",
-        values_to = "senior_management_time_reg",
-        names_to = "year"
-    )
-
-wdi <- wdi_raw |> 
-    # remove income groups
-    filter(
-        !(iso2c %in% c("XD", "XM", "XN", "XY", "XT")) &
-        !(iso2c %in% c("ZH", "ZI", "ZT", "ZJ", "ZQ", "ZG", "ZF"))
     )
 
 gsr <- gsr_raw |> 
@@ -565,14 +470,6 @@ bank_regulator <- bank_regulator_raw |>
     )
   )
 
-fsi_loans <- fsi_loans_raw |> 
-  transmute(
-    countrycode = REF_AREA,
-    countryname = REF_AREA_LABEL,
-    year = 2019,
-    nonperforming_loans = `2019`
-  )
-
 countryclass <- countryclass_raw |>
   select(
     economy = Economy,
@@ -588,35 +485,6 @@ countryclass <- countryclass_raw |>
     )
   )
 
-pmr_labels <- pmr_raw |> 
-  distinct(indicator_id, indicator) |> 
-  tibble::deframe() |> 
-  as.list()
-
-pmr <- pmr_raw |> 
-  pivot_longer(
-    cols = c(x2018, x2020, x2022),
-    names_prefix = "x",
-    names_to = "year"
-  ) |> 
-  mutate(
-    indicator = str_replace(indicator, "OECD-WBG PMR: ", "")
-  ) |> 
-  pivot_wider(
-    id_cols = c(economy_iso3, year, attribute_1),
-    names_from = indicator_id,
-    values_from = value
-  ) |> 
-  rename(
-    country_code = economy_iso3,
-    sector = attribute_1
-  )
-
-var_label(pmr) <- pmr_labels
-
-pmr <- pmr |> 
-  clean_names()
-
 # ==============================================================================
 # 4. write-out
 # ==============================================================================
@@ -625,29 +493,9 @@ itu_complete |>
         here("chapter 4", "data", "output", "itu.csv")
     )
 
-boost |> 
-    write_csv(
-        here("chapter 4", "data", "output", "boost.csv.gz")
-    )
-
 bready |> 
     write_csv(
         here("chapter 4", "data", "output", "bready.csv")
-    )
-
-bready_competition |> 
-  write_csv(
-    here("chapter 4", "data", "output", "bready_competition.csv")
-  )
-
-enterprise_surveys |> 
-    write_csv(
-        here("chapter 4", "data", "output", "enterprise_surveys.csv")
-    )
-
-wdi |> 
-    write_csv(
-        here("chapter 4", "data", "output", "wdi.csv")
     )
 
 gsr |> 
@@ -663,16 +511,6 @@ gsr_original |>
 bank_regulator |> 
   write_csv(
     here("chapter 4", "data", "output", "wb_bank_regulator.csv")
-  )
-
-fsi_loans |> 
-  write_csv(
-    here("chapter 4", "data", "output", "fsi_loans.csv")
-  )
-
-pmr |> 
-  write_rds(
-    here("chapter 4", "data", "output", "pmr.rds")
   )
 
 countryclass |> 
