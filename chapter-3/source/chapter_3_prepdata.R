@@ -17,59 +17,55 @@ library(openxlsx)
 # ==============================================================================
 # people
 itu_appointment_raw <- read_csv(
-    here("chapter 4", "data", "input", "itu", "itu_appointment.csv")
+    here("chapter-3", "data", "input", "itu", "itu_appointment.csv")
 )
 
 itu_workfoce_raw <- read_csv(
-    here("chapter 4", "data", "input", "itu", "itu_workforce.csv")
+    here("chapter-3", "data", "input", "itu", "itu_workforce.csv")
 )
 
 # money: not available
 
 # management system
-itu_coordination_raw <- read_csv(
-    here("chapter 4", "data", "input", "itu", "itu_coordination.csv")
-)
-
 itu_dispute_raw <- read_csv(
-    here("chapter 4", "data", "input", "itu", "itu_dispute_resolution.csv")
+    here("chapter-3", "data", "input", "itu", "itu_dispute_resolution.csv")
 )
 
 itu_institutional_structure_raw <- read_csv(
-    here("chapter 4", "data", "input", "itu", "itu_institutional_structure.csv")
+    here("chapter-3", "data", "input", "itu", "itu_institutional_structure.csv")
 )
 
 itu_dropped_call_raw <- read_csv(
-    here("chapter 4", "data", "input", "itu", "itu_mobile_dropped_call_ratio.csv")
+    here("chapter-3", "data", "input", "itu", "itu_mobile_dropped_call_ratio.csv")
 )
 
 itu_investment_raw <- read_csv(
-    here("chapter 4", "data", "input", "itu", "itu_investment.csv")
+    here("chapter-3", "data", "input", "itu", "itu_investment.csv")
 )
 
 # covariates
 itu_revenue_raw <- read_csv(
-    here("chapter 4", "data", "input", "itu", "itu_revenue.csv")
+    here("chapter-3", "data", "input", "itu", "itu_revenue.csv")
 )
 
 itu_broadband_raw <- read_csv(
-    here("chapter 4", "data", "input", "itu", "itu_broadband.csv")
+    here("chapter-3", "data", "input", "itu", "itu_broadband.csv")
 )
 
 itu_mobile_subscription_raw <- read_csv(
-    here("chapter 4", "data", "input", "itu", "itu_mobile_subscription.csv")
+    here("chapter-3", "data", "input", "itu", "itu_mobile_subscription.csv")
 )
 
 itu_coverage_raw <- read_csv(
-    here("chapter 4", "data", "input", "itu", "itu_coverage.csv")
+    here("chapter-3", "data", "input", "itu", "itu_coverage.csv")
 )
 
 itu_decision_making_raw <- read_csv(
-  here("chapter 4", "data", "input", "itu", "itu_decision_making.csv")
+  here("chapter-3", "data", "input", "itu", "itu_decision_making.csv")
 )
 
 gdp_pc <- read_csv(
-    here("chapter 4", "data", "input", "world-bank", "gdp_pc_ppp.csv")
+    here("chapter-3", "data", "input", "world-bank", "gdp_pc_ppp.csv")
 ) |> 
     pivot_longer(
         cols = c(`1960`:`2022`),
@@ -85,7 +81,7 @@ gdp_pc <- read_csv(
 
 # bready
 bready_files <- fs::dir_ls(
-    here("chapter 4", "data", "input", "world-bank", "bready"),
+    here("chapter-3", "data", "input", "world-bank", "bready"),
     glob = "*.csv$"
 )
 
@@ -115,12 +111,12 @@ bready_raw <- bready_files |>
     clean_names()
 
 gsr_raw <- read_xlsx(
-  here("chapter 4", "data", "input", "oecd", "oecd_gsr.xlsx"),
+  here("chapter-3", "data", "input", "oecd", "oecd_gsr.xlsx"),
   sheet = "Clean"
 )
 
 gsr_original_raw <- read_xlsx(
-  here("chapter 4", "data", "input", "oecd", "oecd_gsr_original.xlsx"),
+  here("chapter-3", "data", "input", "oecd", "oecd_gsr_original.xlsx"),
   skip = 2,
   sheet = "Database"
 )
@@ -129,7 +125,7 @@ gsr_original_raw <- read_xlsx(
 # url: https://datacatalog.worldbank.org/int/search/dataset/0038632
 # 2021 edition
 bank_regulator_raw <- read_csv(
-  here("chapter 4", "data", "input", "world-bank", "brss", "banking_regulator.csv")
+  here("chapter-3", "data", "input", "world-bank", "brss", "banking_regulator.csv")
 )
 
 countryclass_raw <- read.xlsx(
@@ -490,30 +486,30 @@ countryclass <- countryclass_raw |>
 # ==============================================================================
 itu_complete |> 
     write_csv(
-        here("chapter 4", "data", "output", "itu.csv")
+        here("chapter-3", "data", "output", "itu.csv")
     )
 
 bready |> 
     write_csv(
-        here("chapter 4", "data", "output", "bready.csv")
+        here("chapter-3", "data", "output", "bready.csv")
     )
 
 gsr |> 
   write_csv(
-    here("chapter 4", "data", "output", "oecd_gsr.csv")
+    here("chapter-3", "data", "output", "oecd_gsr.csv")
   )
 
 gsr_original |> 
   write_csv(
-    here("chapter 4", "data", "output", "oecd_gsr_original.csv")
+    here("chapter-3", "data", "output", "oecd_gsr_original.csv")
   )
 
 bank_regulator |> 
   write_csv(
-    here("chapter 4", "data", "output", "wb_bank_regulator.csv")
+    here("chapter-3", "data", "output", "wb_bank_regulator.csv")
   )
 
 countryclass |> 
   write_csv(
-    here("chapter 4", "data", "output", "countryclass.csv")
+    here("chapter-3", "data", "output", "countryclass.csv")
   )
