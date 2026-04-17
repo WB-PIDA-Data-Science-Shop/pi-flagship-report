@@ -43,25 +43,25 @@ filter_last_value <- function(data, var){
 }
 
 source(
-  here("chapter 4", "source", "funs.R")
+  here("chapter-3", "source", "funs.R")
 )
 
 # read-in data ------------------------------------------------------------
 
 countryclass <- read_csv(
-  here("chapter 4", "data", "output", "countryclass.csv")
+  here("chapter-3", "data", "output", "countryclass.csv")
 )
 
 itu <- read_csv(
-    here("chapter 4", "data", "output", "itu.csv")
+    here("chapter-3", "data", "output", "itu.csv")
 )
 
 boost <- read_csv(
-    here("chapter 4", "data", "output", "boost.csv.gz")
+    here("chapter-3", "data", "output", "boost.csv.gz")
 )
 
 wb_map <- st_read(
-    here("chapter 4", "data", "input", "world-bank", "wb_shapefiles", "WB_countries_Admin0_10m")
+    here("chapter-3", "data", "input", "world-bank", "wb_shapefiles", "WB_countries_Admin0_10m")
 ) |> 
     rename(
         country_iso = ISO_A3,
@@ -69,7 +69,7 @@ wb_map <- st_read(
     )
 
 girg <- read_csv(
-    here("chapter 4", "data", "input", "world-bank", "girg", "regulatory_governance_questions.csv")
+    here("chapter-3", "data", "input", "world-bank", "girg", "regulatory_governance_questions.csv")
 ) 
 
 girg_questions <- girg |> 
@@ -85,12 +85,12 @@ girg_clean <- girg|>
     )
 
 afdb <- read_csv(
-    here("chapter 4", "data", "input", "afdb", "afdb_regulatory_gov.csv")
+    here("chapter-3", "data", "input", "afdb", "afdb_regulatory_gov.csv")
 ) |> 
     clean_names()
 
 gdp_pc <- read_csv(
-    here("chapter 4", "data", "input", "world-bank", "gdp_pc_ppp.csv")
+    here("chapter-3", "data", "input", "world-bank", "gdp_pc_ppp.csv")
 ) |> 
     pivot_longer(
         cols = c(`1960`:`2022`),
@@ -112,15 +112,15 @@ gdp_pc_last <- gdp_pc |>
   ungroup()
 
 bready <- read_csv(
-    here("chapter 4", "data", "output", "bready.csv")
+    here("chapter-3", "data", "output", "bready.csv")
 )
 
 enterprise_surveys <- read_csv(
-    here("chapter 4", "data", "output", "enterprise_surveys.csv")
+    here("chapter-3", "data", "output", "enterprise_surveys.csv")
 )
 
 wdi <- read_csv(
-    here("chapter 4", "data", "output", "wdi.csv")
+    here("chapter-3", "data", "output", "wdi.csv")
 )
 
 bready_implementation_gap <- bready |> 
@@ -139,7 +139,7 @@ bready_implementation_gap_topic <- bready |>
     )
 
 bready_competition <- read_csv(
-  here("chapter 4", "data", "output", "bready_competition.csv")
+  here("chapter-3", "data", "output", "bready_competition.csv")
 ) |> 
   inner_join(
     countryclass, by = c("economy_code" = "country_code")
@@ -155,15 +155,15 @@ bready_competition <- read_csv(
   )) 
 
 gsr <- read_csv(
-  here("chapter 4", "data", "output", "oecd_gsr.csv")
+  here("chapter-3", "data", "output", "oecd_gsr.csv")
 )
 
 gsr_original <- read_csv(
-  here("chapter 4", "data", "output", "oecd_gsr_original.csv")
+  here("chapter-3", "data", "output", "oecd_gsr_original.csv")
 )
 
 bank_regulator <- read_csv(
-  here("chapter 4", "data", "output", "wb_bank_regulator.csv")
+  here("chapter-3", "data", "output", "wb_bank_regulator.csv")
 ) |> 
   left_join(
     countryclass,
@@ -174,318 +174,103 @@ bank_regulator <- read_csv(
   )
 
 pmr <- read_rds(
-  here("chapter 4", "data", "output", "pmr.rds")
+  here("chapter-3", "data", "output", "pmr.rds")
 )
 
-# analysis: framework ----------------------------------------------------
-## organizational: personnel ----------------------------------------------
-# itu_latest_workforce <- itu |> 
-#   mutate(
-#     workforce_per_revenue = ppl_workforce/telecoms_revenue
-#   ) |> 
-#   filter_last_value(workforce_per_revenue)
-# 
-# wb_map |> 
-#     left_join(
-#         by = "country_iso"
-#     ) |> 
-#     ggplot() +
-#     geom_sf(
-#         aes(
-#             fill = cut(
-#             workforce_per_revenue, 
-#             breaks = quantile(workforce_per_revenue, probs = seq(0, 1, 0.1), na.rm = TRUE), 
-#             include.lowest = TRUE)
-#         ),
-#         size = 0
-#     ) +
-#     theme_void(
-#         base_size = 18
-#     ) +
-#     ggtitle(
-#         "People: Size of Workforce in Telecoms Regulator",
-#         subtitle = "Normalized by Total Revenue in Telecoms Sector"
-#     ) +
-#     labs(
-#         caption = "Source: International Telecoms Union. Latest Available Data by Country."
-#     ) +
-#     theme(
-#         legend.position = "bottom"
-#     )
-# 
-# ggsave(
-#     here("chapter 4", "figs", "fig_4_3_a.png"),
-#     bg = "white",
-#     height = 10,
-#     width = 14
-# )
 
-# people: banking regulator
-bank_regulator |>
+# figure 3.2 -------------------------------------------------------------
+# implementation (pillar 2) by topic
+bready_implementation_gap_topic |> 
   filter(
-    personnel_share_specialized <= 1
+    topic %in% c(
+      "business_entry",
+      "financial_services",
+      "market_competition",
+      "utility_services"
+    )
   ) |>
-  ggplot(
-    aes(personnel_share_specialized, fct_reorder(income_group, personnel_share_specialized, .na_rm = TRUE))
-  ) +
-  geom_boxplot(
-    aes(fill = income_group),
-    width = 0.35,
-    outlier.shape = NA
-  ) +
-  geom_jitter(
-    aes(fill  = income_group, size = personnel_workforce),
-    shape = 21,
-    alpha = 0.6
-  ) +
-  labs(
-    x = "Share of Specialized Regulators",
-    y = ""
-  ) +
-  scale_x_continuous(
-    labels = scales::percent_format()
-  ) +
-  scale_size(range = c(1, 10)) +
-  scale_color_brewer(
-    palette = "Paired"
-  ) +
-  scale_fill_brewer(
-    palette = "Paired"
-  ) +
-  theme(legend.position = "none")
-
-ggsave(
-  here("chapter 4", "figs", "bank_regulator_specialized.png"),
-  height = 8,
-  width = 14,
-  bg = "white"
-)
-
-## organizational: financial resources ------------------------------------
-boost_func_summary <- boost |> 
-    group_by(year, func2) |> 
-    summarise(
-        expenditure = sum(paid, na.rm = TRUE),
-        revenue = sum(as.numeric(approved), na.rm = TRUE),
-        .groups = "drop"
-    )
-
-boost_annual_expenditure <- boost |> 
-    group_by(year) |> 
-    summarise(
-        total_approved = sum(as.numeric(approved), na.rm = TRUE),
-        total_expenditure = sum(paid, na.rm = TRUE)
-    )
-
-boost_regulation <- boost |> 
-    filter(
-        str_detect(admin2, "agência nacional") &
-        !str_detect(admin2, "recursos|petróleo")
-    ) |> 
-    # remove codigo
-    mutate(
-        admin2 = str_replace(admin2, "\\d+ - ", "")
-    )
-    
-# produce graph for each main regulatory sector
-boost_regulation |> 
-    mutate(
-        admin2 = case_when(
-            str_detect(admin2, "\\bana\\b") ~ "Water",
-            str_detect(admin2, "\\baneel\\b") ~ "Electricity",
-            str_detect(admin2, "\\banatel\\b") ~ "Telecoms",
-            str_detect(admin2, "\\btransportes\\b") ~ "Transportation",
-            T ~ NA_character_
-        )
-    ) |> 
-    filter(!is.na(admin2)) |> 
-    group_by(year, admin2) |> 
-    summarise(
-        total_approved = sum(
-            as.numeric(approved), na.rm = TRUE
-        ),
-        total_paid = sum(paid, na.rm = TRUE),
-        budget_execution = total_paid/total_approved
-    ) |> 
-    ggplot() +
-    geom_line(
-        aes(year, budget_execution, color = admin2)
-    ) +
-    geom_hline(
-        yintercept = 1,
-        linetype = "dashed"
-    ) +
-    scale_color_manual(
-        values = palette()
-    ) +
-    scale_y_continuous(
-        labels = scales::percent_format()
-    ) +
-    facet_wrap(
-        ~ admin2,
-        ncol = 2,
-        labeller = label_wrap_gen(20)
-    ) +
-    theme(
-        legend.position = "none",
-        strip.text = element_text(size = 20)
-    ) +
-    labs(
-        x = "Year",
-        y = "Budget Execution"
-    )
-
-ggsave(
-    here("chapter 4", "figs", "fig_4_4.png"),
-    bg = "white",
-    height = 16,
-    width = 20
-)
-
-boost |> 
-    group_by(year) |> 
-    summarise(
-        regulatory_expenditure = sum(paid[func2 == "125 - normatização e fiscalização"],
-        na.rm = TRUE),
-        total_expenditure = sum(paid, na.rm = TRUE)
-    ) |> 
-    mutate(
-        share_regulatory = regulatory_expenditure/total_expenditure
-    ) |> 
-    # plot share of regulatory expenditure over time
-    ggplot() + 
-    geom_line(
-        aes(year, share_regulatory),
-        color = "#00ADE4",
-        size = 1.5
-    )
-
-## organizational: information systems ------------------------------------
-bank_regulator |> 
-    select(
-        country,
-        infosys_risk_basic = Q12_19b_2016,
-        infosys_risk_advanced = Q12_19c_2016
-    ) |> 
-    filter(country != "Euro Area") |> 
-    mutate(
-        region = countrycode(
-            country,
-            origin = "country.name",
-            destination = "region"
-        )
-    ) |> 
-    group_by(region) |> 
-    summarise(
-        share_risk_advanced = sum(infosys_risk_advanced == "X", na.rm = TRUE)/n()
-    ) |> 
-    ggplot() + 
-    geom_col(
-        aes(share_risk_advanced, reorder(region, share_risk_advanced)),
-        fill = "#00ADE4"
-    ) +
-    scale_x_continuous(
-        labels = scales::percent_format()
-    ) +
-    labs(
-        x = "Share of banking regulatory institutions",
-        y = ""
-    ) +
-    theme(
-        legend.position = "none"
-    )
-
-ggsave(
-    here("chapter 4", "figs", "fig_4_5.png"),
-    bg = "white",
-    width = 14
-)
-
-
-# information systems
-bready |> 
-  filter(
-    topic %in% c("business_entry", "business_location", "financial_services")
-  ) |> 
+  # only retain economies that have scores for all four topics
+  add_count(economy) |> 
+  filter(n == 4) |> 
   mutate(
-    economy = iconv(economy, from = "latin1", to = "UTF-8")
-  ) |>
-  rename(
-    information_systems = category_2_2_overall
+    global_average = mean(pillar_ii_overall, na.rm = TRUE)
   ) |> 
-  group_by(topic) |> 
-  mutate(
-    information_systems = scale(information_systems)
-  ) |> 
-  ungroup() |> 
-  group_by(economy) |> 
-  mutate(
-    score_min = min(information_systems),
-    score_max = max(information_systems),
-    score_mean = mean(information_systems)
-  ) |> 
-  ungroup() |> 
-  mutate(
-    economy = fct_reorder(economy, information_systems, .fun = mean)
-  ) |> 
-  ggplot() +
-  # segment between min and max
-  geom_segment(
-    aes(
-      x = score_min,
-      xend = score_max,
-      y = economy,
-      yend = economy
-    ),
-    color = "grey70"
-  ) +
-  geom_point(
-    aes(
-      x = score_mean,
-      y = economy
-    ),
-    shape = 1,
-    size = 6,
-    color = "grey50"
-  ) +
-  geom_point(
-    aes(
-      information_systems,
-      economy,
-      color = topic
-    ),
-    size = 4
-  ) +
-  scale_color_brewer(
-    name = "Topic",
-    palette = "Paired",
-    labels = c(
-      business_entry = "Business Entry",
-      business_location = "Business Location",
-      financial_services = "Financial Services"
-    )
-  ) +
-  geom_vline(
-    xintercept = 0,
-    linetype = "dashed",
-    linewidth = 1.5,
-    color = "grey50"
-  ) +
-  guides(
-    color = guide_legend(nrow = 1)
+  plot_scores(
+    pillar_ii_overall,
+    economy,
+    color_col = topic
   ) +
   theme(
-    legend.position = "bottom"
+    # axis.text.x = element_text(size = 14, angle = 45, hjust = 1),
+    legend.position = "bottom",
+    legend.justification = "center"
   ) +
-  labs(x = "Information Systems", y = "")
+  geom_vline(
+    aes(xintercept = global_average),
+    linetype = "dashed",
+    color = "coral2"
+  ) +
+  labs(
+    y = "",
+    x = "Public Services (by Topic)"
+  ) +
+  scale_color_brewer(
+    palette = "Paired",
+    name = "Topic",
+    labels = c(
+      business_entry = "Business Entry",
+      financial_services = "Financial Services",
+      utility_services = "Utility Services",
+      market_competition = "Market Competition"
+    )
+  ) +
+  annotate(
+    "text",
+    x = mean(bready_implementation_gap_topic$pillar_ii_overall, na.rm = TRUE) - 8, # same as global_average
+    y = length(unique(bready_implementation_gap_topic$economy_code)) - 8,   # just beyond last category
+    label = "Global Average",
+    color = "coral2",
+    size = 6,
+    hjust = 0
+  )
 
-
-ggplot2::ggsave(
-  here("chapter 4", "figs", "bready_information_systems.png"),
+ggsave(
+  here("chapter-3", "figs", "bready_pillar_ii_topic.png"),
   width = 14,
   height = 16,
   bg = "white"
 )
+
+# figure 3.3 -------------------------------------------------------------
+
+
+# figure 3.4 -------------------------------------------------------------
+
+
+# figure 3.5 -------------------------------------------------------------
+
+
+# figure 3.6 -------------------------------------------------------------
+
+
+# figure 3.7 -------------------------------------------------------------
+
+
+# figure 3.8 -------------------------------------------------------------
+
+
+# figure 3.9 -------------------------------------------------------------
+
+
+# figure 3.10 ------------------------------------------------------------
+
+
+# figure 3.11 ------------------------------------------------------------
+
+
+# figure 3.12 ------------------------------------------------------------
+
+
 
 ## organizational: management practices -----------------------------------
 gsr_original |> 
@@ -557,7 +342,7 @@ gsr_original |>
   )
 
 ggsave(
-  here("chapter 4", "figs", "gsr_management_practices.png"),
+  here("chapter-3", "figs", "gsr_management_practices.png"),
   height = 12,
   width = 18,
   bg = "white"
@@ -569,7 +354,7 @@ gsr_original |>
   adorn_percentages("col") |> 
   adorn_pct_formatting() |> 
   write_csv(
-    here("chapter 4", "tables", "gsr_management_practices.csv")
+    here("chapter-3", "tables", "gsr_management_practices.csv")
   )
 
 
@@ -610,7 +395,7 @@ wb_map |>
     guides(fill = guide_legend(nrow = 2))
 
 wrggsave(
-    here("chapter 4", "figs", "itu_accountability_map.png"),
+    here("chapter-3", "figs", "itu_accountability_map.png"),
     bg = "white",
     height = 10,
     width = 14
@@ -685,7 +470,7 @@ gsr |>
   labs(x = "Accountability", y = "")
 
 ggsave(
-  here("chapter 4", "figs", "gsr_accountability.png"),
+  here("chapter-3", "figs", "gsr_accountability.png"),
   bg = "white", 
   height = 12,
   width = 14
@@ -741,7 +526,7 @@ gsr_original |>
   )
 
 ggsave(
-  here("chapter 4", "figs", "gsr_accountability_type.png"),
+  here("chapter-3", "figs", "gsr_accountability_type.png"),
   bg = "white", 
   height = 12,
   width = 16
@@ -776,7 +561,7 @@ wb_map |>
     )
 
 ggsave(
-  here("chapter 4", "figs", "afdb_transparency_map.png"),
+  here("chapter-3", "figs", "afdb_transparency_map.png"),
   bg = "white",
   height = 10,
   width = 14
@@ -849,7 +634,7 @@ itu |>
     )
 
 ggsave(
-    here("chapter 4", "figs", "fig_4_9.png"),
+    here("chapter-3", "figs", "fig_4_9.png"),
     width = 14,
     bg = "white"
 )
@@ -924,7 +709,7 @@ gsr |>
   labs(x = "Independence", y = "")
 
 ggsave(
-  here("chapter 4", "figs", "gsr_independence.png"),
+  here("chapter-3", "figs", "gsr_independence.png"),
   bg = "white", 
   height = 12,
   width = 14
@@ -1018,7 +803,7 @@ gsr_original |>
   labs(x = "Independence: Financial Resources", y = "")
 
 ggsave(
-  here("chapter 4", "figs", "gsr_independence_financial.png"),
+  here("chapter-3", "figs", "gsr_independence_financial.png"),
   bg = "white", 
   height = 12,
   width = 14
@@ -1070,7 +855,7 @@ bready |>
     ) 
    
 ggplot2::ggsave(
-    here("chapter 4", "figs", "bready_public_services.png"),
+    here("chapter-3", "figs", "bready_public_services.png"),
     width = 20,
     height = 16,
     bg = "white"
@@ -1131,7 +916,7 @@ bready_implementation_gap_topic |>
   )
 
 ggsave(
-  here("chapter 4", "figs", "bready_implementation_gap_topic.png"),
+  here("chapter-3", "figs", "bready_implementation_gap_topic.png"),
   width = 14,
   height = 10,
   bg = "white"
@@ -1193,7 +978,7 @@ bready_implementation_gap_topic |>
   )
 
 ggsave(
-  here("chapter 4", "figs", "bready_pillar_ii_topic.png"),
+  here("chapter-3", "figs", "bready_pillar_ii_topic.png"),
   width = 14,
   height = 16,
   bg = "white"
@@ -1218,7 +1003,7 @@ bready_competition |>
   )
 
 ggplot2::ggsave(
-  here("chapter 4", "figs", "bready_competition_independence_regulatory_gap.png"),
+  here("chapter-3", "figs", "bready_competition_independence_regulatory_gap.png"),
   width = 10,
   height = 8,
   bg = "white"
@@ -1243,7 +1028,7 @@ bready_competition |>
   )
 
 ggplot2::ggsave(
-  here("chapter 4", "figs", "bready_competition_transparency_regulatory_gap.png"),
+  here("chapter-3", "figs", "bready_competition_transparency_regulatory_gap.png"),
   width = 10,
   height = 8,
   bg = "white"
@@ -1277,7 +1062,7 @@ bready_competition |>
   )
 
 ggplot2::ggsave(
-  here("chapter 4", "figs", "bready_competition_transparency_independence.png"),
+  here("chapter-3", "figs", "bready_competition_transparency_independence.png"),
   width = 14,
   height = 12,
   bg = "white"
@@ -1310,7 +1095,7 @@ itu |>
     )
 
 ggsave(
-    here("chapter 4", "figs", "itu_investment_by_term.png"),
+    here("chapter-3", "figs", "itu_investment_by_term.png"),
     height = 6,
     width = 8,
     bg = "white"
@@ -1425,7 +1210,7 @@ itu_independence |>
   )
 
 ggsave(
-  here("chapter 4", "figs", "itu_independence_investment.png"),
+  here("chapter-3", "figs", "itu_independence_investment.png"),
   height = 12,
   width = 14,
   bg = "white"
@@ -1492,7 +1277,7 @@ itu |>
   )
 
 ggsave(
-  here("chapter 4", "figs", "itu_independence.png"),
+  here("chapter-3", "figs", "itu_independence.png"),
   height = 6,
   width = 8,
   bg = "white"
