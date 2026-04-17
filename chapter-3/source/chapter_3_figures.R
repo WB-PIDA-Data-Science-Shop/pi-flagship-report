@@ -56,32 +56,12 @@ itu <- read_csv(
     here("chapter-3", "data", "output", "itu.csv")
 )
 
-boost <- read_csv(
-    here("chapter-3", "data", "output", "boost.csv.gz")
-)
-
 wb_map <- st_read(
     here("chapter-3", "data", "input", "world-bank", "wb_shapefiles", "WB_countries_Admin0_10m")
 ) |> 
     rename(
         country_iso = ISO_A3,
         country = NAME_EN
-    )
-
-girg <- read_csv(
-    here("chapter-3", "data", "input", "world-bank", "girg", "regulatory_governance_questions.csv")
-) 
-
-girg_questions <- girg |> 
-    colnames() |> 
-    str_subset("\\d\\. ")
-
-girg_clean <- girg|> 
-    select(
-        country = `WDI Code`,
-        economy = Economy,
-        region = Region,
-
     )
 
 afdb <- read_csv(
@@ -115,44 +95,10 @@ bready <- read_csv(
     here("chapter-3", "data", "output", "bready.csv")
 )
 
-enterprise_surveys <- read_csv(
-    here("chapter-3", "data", "output", "enterprise_surveys.csv")
-)
-
-wdi <- read_csv(
-    here("chapter-3", "data", "output", "wdi.csv")
-)
-
-bready_implementation_gap <- bready |> 
-    group_by(economy_code) |>
-    summarise(
-        pillar_i_overall = mean(pillar_i_overall, na.rm = TRUE),
-        pillar_ii_overall = mean(pillar_ii_overall, na.rm = TRUE)
-    ) |> 
-    mutate(
-        regulatory_gap = pillar_ii_overall - pillar_i_overall
-    )
-
 bready_implementation_gap_topic <- bready |> 
     mutate(
         regulatory_gap = pillar_ii_overall - pillar_i_overall
     )
-
-bready_competition <- read_csv(
-  here("chapter-3", "data", "output", "bready_competition.csv")
-) |> 
-  inner_join(
-    countryclass, by = c("economy_code" = "country_code")
-  ) |>
-  mutate(income_group = fct_relevel(
-    income_group,
-    c(
-      "Low income",
-      "Lower middle income",
-      "Upper middle income",
-      "High income"
-    )
-  )) 
 
 gsr <- read_csv(
   here("chapter-3", "data", "output", "oecd_gsr.csv")
@@ -172,10 +118,6 @@ bank_regulator <- read_csv(
   filter(
     !is.na(income_group)
   )
-
-pmr <- read_rds(
-  here("chapter-3", "data", "output", "pmr.rds")
-)
 
 
 # figure 3.2 -------------------------------------------------------------
@@ -273,10 +215,6 @@ itu |>
     scale_x_continuous(
         labels = scales::percent
     ) +
-    ggtitle(
-        "Distribution of Appointment Authority for Telecoms Regulatory Institutions",
-        subtitle = "Latest Available Data per Country"
-    ) +
     labs(
         x = "Share of Countries",
         y = "",
@@ -286,6 +224,7 @@ itu |>
 ggsave(
     here("chapter-3", "figs", "fig_3_4.png"),
     width = 14,
+    height = 10,
     bg = "white"
 )
 
@@ -428,11 +367,13 @@ gsr_original |>
     )
   ) |> 
   left_join(
-    gdp_pc_last,
+    gdp_pc_last |> select(-year),
     by = c("country_code" = "country_iso")
   ) |> 
   filter(
-    !is.na(response_score)
+    !is.na(response_score) &
+      # filter only questions regarding strategic objectives
+      str_detect(question_code, "b.b.9$")
   ) |> 
   add_count(country_code) |> 
   filter(n == 4) |> 
@@ -542,7 +483,6 @@ ggsave(
 )
 
 # figure 3.10 ------------------------------------------------------------
-
 wb_map |> 
     filter(
         WB_REGION %in% c("AFR") |
@@ -556,8 +496,7 @@ wb_map |>
     geom_sf(
         aes(
             fill = transparency
-        ),
-        size = 0
+        )
     ) +
     scale_fill_distiller(
         palette = "Blues",
