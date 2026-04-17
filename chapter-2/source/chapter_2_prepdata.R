@@ -3,16 +3,10 @@
 # reproducibility file
 # prepare data for capter 3
 # ==============================================================================
-
 # ==============================================================================
 # preamble
 # ==============================================================================
-
-# directory -- CHANGE TO USERS DIRECTORY
-setwd("C:/Users/wb582704/OneDrive - WBG/EGVPI/Public institutions flagship/replication/")
-
 # load
-rm(list = ls())
 library(readxl)
 library(tidyverse)
 library(ggplot2)

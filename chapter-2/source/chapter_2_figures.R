@@ -43,7 +43,7 @@ GTMIwide <- read_csv(
 MAPS <- read_csv("chapter-2/data/output/maps_clean.csv", show_col_types = F)
 
 # ==============================================================================
-### figure 3.2
+### figure 2.2
 # ==============================================================================
 
 # merge MAPS and CwG
@@ -83,42 +83,7 @@ personnel_cwg_cor_resid <- cor(
   cwg_personnel_resid$personnel_residuals
 )
 
-# figure 3.2 - MAPS personnel score v CwG residualized
-cwg_personnel_resid %>%
-  ggplot(aes(x = personnel_residuals, y = cwg_residuals)) +
-  geom_point(
-    aes(fill = incomegroup),
-    position = position_jitter(width = 0.02),
-    pch = 21,
-    size = 6
-  ) +
-  geom_smooth(method = "lm", se = F, color = "red", linetype = 2) +
-  geom_text_repel(aes(label = country_code), size = 6) +
-  # annotate("text", label = "Correlation:\n.40", x = 0.36, y = 11, color = "red") +
-  scale_y_continuous(limits = c(-25, 25), breaks = seq(-25, 25, 5)) +
-  scale_x_continuous(limits = c(-0.4, 0.4), breaks = seq(-0.4, 0.4, 0.1)) +
-  scale_fill_manual(values = egvpi_colors[c(1:3, 6)], name = "Income group") +
-  guides(fill = guide_legend(nrow = 2)) +
-  labs(
-    x = "'Personnel'\n(Residuals)",
-    y = "Contracting with the Government score\n(Residuals)"
-  ) +
-  #  caption = "Note: The variables on either axis are the residuals of each variable regressed on GDP per capita.
-  #   After controlling for GDP per capita, the relationship is statistically significant at the 90% confidence level.") +
-  theme(legend.position = "bottom") +
-  theme(
-    axis.text = element_text(size = 16),
-    axis.title = element_text(size = 20)
-  )
-ggsave(
-  plot = last_plot(),
-  filename = "chapter-2/figs/fig3_2.png",
-  width = 12,
-  height = 9,
-  bg = "white"
-)
-
-# figure 3.2 - MAPS personnel score v CwG (raw)
+# figure 2.2 - MAPS personnel score v CwG (raw)
 CwG %>%
   ggplot(aes(x = perc_concept_personnel, y = score_cwg)) +
   geom_point(
@@ -156,68 +121,17 @@ CwG %>%
 
 ggsave(
   plot = last_plot(),
-  filename = "chapter-2/figs/fig3_2raw.png",
+  filename = "chapter-2/figs/fig2_2.png",
   width = 12,
   height = 9,
   bg = "white"
 )
 
 # ==============================================================================
-### figure 3.3
+### figure 2.3
 # ==============================================================================
 
-# figure 3.3 - financial resources in BFA BOOST data
-BFA %>%
-  mutate(
-    flag = case_when(
-      ADMIN1 == "30 Ministere des Infrastructures" ~ "1",
-      ADMIN1 == "21 Ministere de la  Sante" ~ "1",
-      ADMIN1 == "54 Conseil Constitutionnel" ~ "1",
-      TRUE ~ "0"
-    )
-  ) %>%
-  filter(perc_proc_paid > 0) %>%
-  ggplot(aes(x = log(perc_proc_paid), y = 100 * perc_econ1)) +
-  geom_point(aes(color = flag), size = 3) +
-  scale_color_manual(values = egvpi_colors[c(1, 6)]) +
-  annotate(
-    "text",
-    label = "Infrastructure\nministry",
-    x = -7.5,
-    y = 92,
-    color = egvpi_colors[6],
-    size = 5
-  ) +
-  annotate(
-    "text",
-    label = "Health\nministry",
-    x = -10,
-    y = 30,
-    color = egvpi_colors[6],
-    size = 5
-  ) +
-  annotate(
-    "text",
-    label = "Constitutional\ncourt",
-    x = -3,
-    y = 72,
-    color = egvpi_colors[6],
-    size = 5
-  ) +
-  labs(
-    x = "Log of procurement office spending\n (% of total institution spending)",
-    y = "Investment spending\n (% of total institution spending)"
-  ) +
-  theme(legend.position = "none")
-ggsave(
-  plot = last_plot(),
-  filename = "chapter-2/figs/fig3_3.png",
-  width = 12,
-  height = 9,
-  bg = "white"
-)
-
-# revised plot
+# figure 2.3 - financial resources in BFA BOOST data
 BFA %>%
   mutate(
     ratio = (admin1_paid / admin2_paid),
@@ -255,17 +169,17 @@ BFA %>%
 
 ggsave(
   plot = last_plot(),
-  filename = "chapter-2/figs/fig3_3rev.png",
+  filename = "chapter-2/figs/fig2_3.png",
   width = 12,
   height = 9,
   bg = "white"
 )
 
 # ==============================================================================
-### figure 3.4
+### figure 2.4
 # ==============================================================================
 
-# figure 3.4 - e-GP systems over years
+# figure 2.4 - e-GP systems over years
 GTMIpanel %>%
   filter(!is.na(year)) %>%
   group_by(year) %>%
@@ -304,43 +218,14 @@ GTMIpanel %>%
 
 ggsave(
   plot = last_plot(),
-  filename = "chapter-2/figs/fig3_4.png",
+  filename = "chapter-2/figs/fig2_4.png",
   height = 9,
   width = 12,
   bg = "white"
 )
 
 # ==============================================================================
-### figure B3.1.1
-# ==============================================================================
-
-# first of the year
-firstofyear <- data.frame(
-  "firstofyear" = as.Date(paste0(c(2014:2021), "-01-01"), format = "%Y-%m-%d")
-)
-
-# figure B3.1.1 - ARCOP decisions over time
-ARCOP %>%
-  filter(!is.na(yrmonth_decision)) %>%
-  group_by(year, yrmonth_decision) %>%
-  summarise(n = n()) %>%
-  filter(yrmonth_decision != "2022-11-01") %>%
-  ggplot(aes(x = yrmonth_decision, y = n)) +
-  geom_bar(stat = "identity", fill = egvpi_colors[1]) +
-  geom_vline(data = firstofyear, aes(xintercept = firstofyear), linetype = 2) +
-  scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
-  labs(x = "Month the decision was published", y = "Number of ARCOP dispute")
-
-ggsave(
-  plot = last_plot(),
-  filename = "chapter-2/figs/figB3_1_1.png",
-  height = 9,
-  width = 12,
-  bg = "white"
-)
-
-# ==============================================================================
-### figure 3.5
+### figure 2.5
 # ==============================================================================
 
 # gov variable
@@ -387,7 +272,7 @@ GTMIwide %>%
   )
 
 ggsave(
-  filename = "chapter-2/figs/fig3_5.png",
+  filename = "chapter-2/figs/fig2_5.png",
   width = 12,
   height = 9,
   bg = "white"
