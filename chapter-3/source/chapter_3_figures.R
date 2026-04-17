@@ -235,44 +235,187 @@ bready_implementation_gap_topic |>
   )
 
 ggsave(
-  here("chapter-3", "figs", "bready_pillar_ii_topic.png"),
+  here("chapter-3", "figs", "fig_3_2.png"),
   width = 14,
   height = 16,
   bg = "white"
 )
 
-# figure 3.3 -------------------------------------------------------------
-
-
 # figure 3.4 -------------------------------------------------------------
+itu |> 
+    filter(
+        ppl_authority_appointment != "None of the above,"
+    ) |> 
+    mutate(
+        ppl_authority_appointment = if_else(
+            ppl_authority_appointment == "Head of Government",
+            "President/Head of State",
+            ppl_authority_appointment
+        )
+    ) |> 
+    filter_last_value(ppl_authority_appointment) |> 
+    group_by(ppl_authority_appointment) |> 
+    summarise(
+        total = n()
+    ) |> 
+    ungroup() |> 
+    mutate(
+        share_total = total/sum(total)
+    ) |> 
+    ggplot() +
+    geom_col(
+        aes(
+            share_total,
+            reorder(ppl_authority_appointment, share_total)
+        ),
+        fill = "#00ADE4"
+    ) +
+    scale_x_continuous(
+        labels = scales::percent
+    ) +
+    ggtitle(
+        "Distribution of Appointment Authority for Telecoms Regulatory Institutions",
+        subtitle = "Latest Available Data per Country"
+    ) +
+    labs(
+        x = "Share of Countries",
+        y = "",
+        caption = "Source: ITU. Excludes non-responses and Other category."
+    )
 
+ggsave(
+    here("chapter-3", "figs", "fig_3_4.png"),
+    width = 14,
+    bg = "white"
+)
 
 # figure 3.5 -------------------------------------------------------------
+bank_regulator |>
+  filter(
+    personnel_share_specialized <= 1
+  ) |>
+  ggplot(
+    aes(personnel_share_specialized, fct_reorder(income_group, personnel_share_specialized, .na_rm = TRUE))
+  ) +
+  geom_boxplot(
+    aes(fill = income_group),
+    width = 0.35,
+    outlier.shape = NA
+  ) +
+  geom_jitter(
+    aes(fill  = income_group, size = personnel_workforce),
+    shape = 21,
+    alpha = 0.6
+  ) +
+  labs(
+    x = "Share of Specialized Regulators",
+    y = ""
+  ) +
+  scale_x_continuous(
+    labels = scales::percent_format()
+  ) +
+  scale_size(range = c(1, 10)) +
+  scale_color_brewer(
+    palette = "Paired"
+  ) +
+  scale_fill_brewer(
+    palette = "Paired"
+  ) +
+  theme(legend.position = "none")
 
-
-# figure 3.6 -------------------------------------------------------------
-
+ggsave(
+  here("chapter-3", "figs", "fig_3_5.png"),
+  height = 8,
+  width = 14,
+  bg = "white"
+)
 
 # figure 3.7 -------------------------------------------------------------
+bready |> 
+  filter(
+    topic %in% c("business_entry", "business_location", "financial_services")
+  ) |> 
+  mutate(
+    economy = iconv(economy, from = "latin1", to = "UTF-8")
+  ) |>
+  rename(
+    information_systems = category_2_2_overall
+  ) |> 
+  group_by(topic) |> 
+  mutate(
+    information_systems = scale(information_systems)
+  ) |> 
+  ungroup() |> 
+  group_by(economy) |> 
+  mutate(
+    score_min = min(information_systems),
+    score_max = max(information_systems),
+    score_mean = mean(information_systems)
+  ) |> 
+  ungroup() |> 
+  mutate(
+    economy = fct_reorder(economy, information_systems, .fun = mean)
+  ) |> 
+  ggplot() +
+  # segment between min and max
+  geom_segment(
+    aes(
+      x = score_min,
+      xend = score_max,
+      y = economy,
+      yend = economy
+    ),
+    color = "grey70"
+  ) +
+  geom_point(
+    aes(
+      x = score_mean,
+      y = economy
+    ),
+    shape = 1,
+    size = 6,
+    color = "grey50"
+  ) +
+  geom_point(
+    aes(
+      information_systems,
+      economy,
+      color = topic
+    ),
+    size = 4
+  ) +
+  scale_color_brewer(
+    name = "Topic",
+    palette = "Paired",
+    labels = c(
+      business_entry = "Business Entry",
+      business_location = "Business Location",
+      financial_services = "Financial Services"
+    )
+  ) +
+  geom_vline(
+    xintercept = 0,
+    linetype = "dashed",
+    linewidth = 1.5,
+    color = "grey50"
+  ) +
+  guides(
+    color = guide_legend(nrow = 1)
+  ) +
+  theme(
+    legend.position = "bottom"
+  ) +
+  labs(x = "Information Systems", y = "")
 
+
+ggplot2::ggsave(
+  here("chapter-3", "figs", "fig_3_7.png"),
+  width = 14,
+  height = 16,
+  bg = "white"
+)
 
 # figure 3.8 -------------------------------------------------------------
-
-
-# figure 3.9 -------------------------------------------------------------
-
-
-# figure 3.10 ------------------------------------------------------------
-
-
-# figure 3.11 ------------------------------------------------------------
-
-
-# figure 3.12 ------------------------------------------------------------
-
-
-
-## organizational: management practices -----------------------------------
 gsr_original |> 
   filter(
     year == 2023 & sector != "Water"
@@ -333,148 +476,14 @@ gsr_original |>
     legend.justification = "center"
   )
 
-gsr_original |> 
-  filter(year == 2023 & sector != "Water" & !is.na(response_score)) |> 
-  count(response) |> 
-  mutate(
-    total = sum(n),
-    share = n/total
-  )
-
 ggsave(
-  here("chapter-3", "figs", "gsr_management_practices.png"),
+  here("chapter-3", "figs", "fig_3_8.png"),
   height = 12,
   width = 18,
   bg = "white"
 )
 
-gsr_original |> 
-  filter(response != ".") |> 
-  tabyl(response, sector) |>
-  adorn_percentages("col") |> 
-  adorn_pct_formatting() |> 
-  write_csv(
-    here("chapter-3", "tables", "gsr_management_practices.csv")
-  )
-
-
-## governance: accountability ---------------------------------------------
-wb_map |> 
-    left_join(
-        itu |> filter_last_value(mgmt_dispute_resolution),
-        by = "country_iso"
-    ) |> 
-    mutate(
-        mgmt_dispute_resolution = str_replace(mgmt_dispute_resolution, "\\(.*\\)", "")
-    ) |> 
-    ggplot() +
-    geom_sf(
-        aes(
-            fill = mgmt_dispute_resolution
-        ),
-        size = 0
-    ) +
-    scale_fill_brewer(
-        palette = "Set2",
-        na.value = "grey80",
-        name = "Type of Dispute Resolution Mechanism"
-    ) +
-    theme_void(
-        base_size = 18
-    ) +
-    ggtitle(
-        "Accountability: Type of Dispute Resolution Mechanism",
-        subtitle = "Main DRM Reported"
-    ) +
-    labs(
-        caption = "Source: International Telecoms Union. Latest Available Data by Country."
-    ) +
-    theme(
-        legend.position = "bottom"
-    ) +
-    guides(fill = guide_legend(nrow = 2))
-
-wrggsave(
-    here("chapter-3", "figs", "itu_accountability_map.png"),
-    bg = "white",
-    height = 10,
-    width = 14
-)
-
-gsr |> 
-  pivot_longer(
-    cols = c(energy_average:water_scope),
-    names_pattern = "(.*)_(.*)",
-    names_to = c("sector", "score_type"),
-    values_to = "score"
-  ) |> 
-  filter(
-    score_type == "account" &
-      year == 2023
-  ) |> 
-  group_by(countryname) |> 
-  mutate(
-    score_min = min(score, na.rm = TRUE),
-    score_max = max(score, na.rm = TRUE),
-    score_mean = mean(score, na.rm = TRUE)
-  ) |> 
-  ungroup() |> 
-  mutate(
-    countryname = fct_reorder(countryname, score, .fun = mean)
-  ) |> 
-  ggplot() +
-  # segment between min and max
-  geom_segment(
-    aes(
-      x = score_min,
-      xend = score_max,
-      y = countryname,
-      yend = countryname
-    ),
-    color = "grey70"
-  ) +
-  geom_point(
-    aes(
-      x = score_mean,
-      y = countryname
-    ),
-    shape = 1,
-    size = 6,
-    color = "grey50"
-  ) +
-  # actual sector points
-  geom_point(
-    aes(
-      score,
-      countryname,
-      color = sector
-    ),
-    size = 4
-  ) +
-  scale_color_brewer(
-    palette = "Paired",
-    labels = c(
-      air = "Air Transport",
-      comms = "E-communications",
-      energy = "Energy",
-      rail = "Rail transport",
-      water = "Water"
-    )
-  ) +
-  guides(
-    color = guide_legend(nrow = 2)
-  ) +
-  theme(
-    legend.position = "bottom"
-  ) +
-  labs(x = "Accountability", y = "")
-
-ggsave(
-  here("chapter-3", "figs", "gsr_accountability.png"),
-  bg = "white", 
-  height = 12,
-  width = 14
-)
+# figure 3.9 -------------------------------------------------------------
 
 gsr_original |> 
   filter(
@@ -526,13 +535,13 @@ gsr_original |>
   )
 
 ggsave(
-  here("chapter-3", "figs", "gsr_accountability_type.png"),
+  here("chapter-3", "figs", "fig_3_9.png"),
   bg = "white", 
   height = 12,
   width = 16
 )
 
-## governance: transparency ----------------------------------------------
+# figure 3.10 ------------------------------------------------------------
 
 wb_map |> 
     filter(
@@ -561,85 +570,14 @@ wb_map |>
     )
 
 ggsave(
-  here("chapter-3", "figs", "afdb_transparency_map.png"),
+  here("chapter-3", "figs", "fig_3_10.png"),
   bg = "white",
   height = 10,
   width = 14
 )
 
-afdb |> 
-  mutate(
-    country_iso = countrycode(country, "country.name.en", "wb"),
-    country_iso = if_else(
-      country == "CAR",
-      "CAF",
-      country_iso
-    )
-  ) |> 
-  left_join(
-    gdp_pc_last,
-    by = c("country_iso")
-  ) |> 
-  ggplot(
-    aes(gdp_pc_ppp, transparency)
-  ) +
-  geom_point() +
-  scale_x_continuous(
-    trans = "log10",
-    labels = scales::comma
-  )
-  
-
-
-## personnel: independence ------------------------------------------------
-itu |> 
-    filter(
-        ppl_authority_appointment != "None of the above,"
-    ) |> 
-    mutate(
-        ppl_authority_appointment = if_else(
-            ppl_authority_appointment == "Head of Government",
-            "President/Head of State",
-            ppl_authority_appointment
-        )
-    ) |> 
-    filter_last_value(ppl_authority_appointment) |> 
-    group_by(ppl_authority_appointment) |> 
-    summarise(
-        total = n()
-    ) |> 
-    ungroup() |> 
-    mutate(
-        share_total = total/sum(total)
-    ) |> 
-    ggplot() +
-    geom_col(
-        aes(
-            share_total,
-            reorder(ppl_authority_appointment, share_total)
-        ),
-        fill = "#00ADE4"
-    ) +
-    scale_x_continuous(
-        labels = scales::percent
-    ) +
-    ggtitle(
-        "Distribution of Appointment Authority for Telecoms Regulatory Institutions",
-        subtitle = "Latest Available Data per Country"
-    ) +
-    labs(
-        x = "Share of Countries",
-        y = "",
-        caption = "Source: ITU. Excludes non-responses and Other category."
-    )
-
-ggsave(
-    here("chapter-3", "figs", "fig_4_9.png"),
-    width = 14,
-    bg = "white"
-)
-
-## governance: independence -----------------------------------------------
+# figure 3.11 ------------------------------------------------------------
+# panel a
 # pooled
 gsr |> 
   pivot_longer(
@@ -709,11 +647,13 @@ gsr |>
   labs(x = "Independence", y = "")
 
 ggsave(
-  here("chapter-3", "figs", "gsr_independence.png"),
+  here("chapter-3", "figs", "fig_3_11a.png"),
   bg = "white", 
   height = 12,
   width = 14
 )
+
+# panel b
 
 # independence: financial resources
 gsr_original |> 
@@ -803,504 +743,8 @@ gsr_original |>
   labs(x = "Independence: Financial Resources", y = "")
 
 ggsave(
-  here("chapter-3", "figs", "gsr_independence_financial.png"),
+  here("chapter-3", "figs", "fig_3_11b.png"),
   bg = "white", 
   height = 12,
   width = 14
 )
-
-# analysis: outcomes ------------------------------------------------------
-## regulatory gap ---------------------------------------------------------
-set.seed(1789)
-sample_countries <- bready |> 
-    distinct(economy) |> 
-    slice_sample(n = 10)
-
-bready |> 
-    # subset to random sample of 10 countries
-    inner_join(sample_countries) |> 
-    ggplot(
-        aes(
-            x = pillar_ii_overall,
-            y = reorder(
-                economy, pillar_ii_overall, FUN = mean
-            )
-        )
-    ) +
-    geom_point(
-        aes(color = topic),
-        size = 5
-    ) +
-    labs(
-        x = "Public Services Overall Score",
-        y = ""
-    ) +
-    theme(
-        legend.position = "bottom"
-    ) +
-    scale_color_brewer(
-        palette = "Paired",
-        labels = c(
-            business_entry = "Business Entry",
-            business_insolvency = "Business Insolvency",
-            business_location = "Business Location",
-            dispute_resolution = "Dispute Resolution",
-            financial_services = "Financial Services",
-            utility_services = "Utility Services",
-            labor = "Labor",
-            international_trade = "International Trade",
-            market_competition = "Market Competition",
-            taxation = "Taxation"
-        )
-    ) 
-   
-ggplot2::ggsave(
-    here("chapter-3", "figs", "bready_public_services.png"),
-    width = 20,
-    height = 16,
-    bg = "white"
-)
-
-# gap between public services and regulatory frameworks
-# by topic
-bready_implementation_gap_topic |> 
-  filter(
-    topic %in% c(
-      "business_entry",
-      "financial_services",
-      "market_competition",
-      "utility_services"
-    )
-  ) |>
-  mutate(
-    global_average = mean(regulatory_gap, na.rm = TRUE)
-  ) |> 
-  plot_scores(
-    regulatory_gap,
-    economy_code,
-    color_col = topic
-  ) +
-  theme(
-    axis.text.x = element_text(size = 14, angle = 45, hjust = 1),
-    legend.position = "bottom",
-    legend.justification = "center"
-  ) +
-  geom_vline(
-    aes(xintercept = global_average),
-    linetype = "dashed",
-    color = "coral2"
-  ) +
-  coord_flip() +
-  labs(
-    y = "",
-    x = "Regulatory Implementation Gap\n (by Topic)"
-  ) +
-  scale_color_brewer(
-    palette = "Paired",
-    name = "Topic",
-    labels = c(
-      business_entry = "Business Entry",
-      financial_services = "Financial Services",
-      utility_services = "Utility Services",
-      market_competition = "Market Competition"
-    )
-  ) +
-  annotate(
-    "text",
-    x = mean(bready_implementation_gap_topic$regulatory_gap, na.rm = TRUE) - 8, # same as global_average
-    y = length(unique(bready_implementation_gap_topic$economy_code)) - 8,   # just beyond last category
-    label = "Global Average",
-    color = "coral2",
-    size = 6,
-    hjust = 0
-  )
-
-ggsave(
-  here("chapter-3", "figs", "bready_implementation_gap_topic.png"),
-  width = 14,
-  height = 10,
-  bg = "white"
-)
-
-# implementation (pillar 2) by topic
-bready_implementation_gap_topic |> 
-  filter(
-    topic %in% c(
-      "business_entry",
-      "financial_services",
-      "market_competition",
-      "utility_services"
-    )
-  ) |>
-  # only retain economies that have scores for all four topics
-  add_count(economy) |> 
-  filter(n == 4) |> 
-  mutate(
-    global_average = mean(pillar_ii_overall, na.rm = TRUE)
-  ) |> 
-  plot_scores(
-    pillar_ii_overall,
-    economy,
-    color_col = topic
-  ) +
-  theme(
-    # axis.text.x = element_text(size = 14, angle = 45, hjust = 1),
-    legend.position = "bottom",
-    legend.justification = "center"
-  ) +
-  geom_vline(
-    aes(xintercept = global_average),
-    linetype = "dashed",
-    color = "coral2"
-  ) +
-  labs(
-    y = "",
-    x = "Public Services (by Topic)"
-  ) +
-  scale_color_brewer(
-    palette = "Paired",
-    name = "Topic",
-    labels = c(
-      business_entry = "Business Entry",
-      financial_services = "Financial Services",
-      utility_services = "Utility Services",
-      market_competition = "Market Competition"
-    )
-  ) +
-  annotate(
-    "text",
-    x = mean(bready_implementation_gap_topic$pillar_ii_overall, na.rm = TRUE) - 8, # same as global_average
-    y = length(unique(bready_implementation_gap_topic$economy_code)) - 8,   # just beyond last category
-    label = "Global Average",
-    color = "coral2",
-    size = 6,
-    hjust = 0
-  )
-
-ggsave(
-  here("chapter-3", "figs", "bready_pillar_ii_topic.png"),
-  width = 14,
-  height = 16,
-  bg = "white"
-)
-
-# correlation between market competition independence and implementation gap
-bready_competition |> 
-  ggplot(
-    aes(competition_authority_independence, -regulatory_gap)
-  ) +
-  geom_point(
-    size = 6
-  ) +
-  geom_smooth(
-    method = "lm",
-    color = "orangered2",
-    se = FALSE
-  ) +
-  labs(
-    x = "Independence of Competition Authority", 
-    y = "Regulatory Implementation Gap"
-  )
-
-ggplot2::ggsave(
-  here("chapter-3", "figs", "bready_competition_independence_regulatory_gap.png"),
-  width = 10,
-  height = 8,
-  bg = "white"
-)
-
-# correlation between market competition transparency and implementation gap
-bready_competition |> 
-  ggplot(
-    aes(competition_authority_transparency, -regulatory_gap)
-  ) +
-  geom_point(
-    size = 6
-  ) +
-  geom_smooth(
-    method = "lm",
-    color = "orangered2",
-    se = FALSE
-  ) +
-  labs(
-    x = "Transparency of Competition Authority", 
-    y = "Regulatory Implementation Gap"
-  )
-
-ggplot2::ggsave(
-  here("chapter-3", "figs", "bready_competition_transparency_regulatory_gap.png"),
-  width = 10,
-  height = 8,
-  bg = "white"
-)
-
-# correlation between transparency and independence
-bready_competition |> 
-  ggplot(
-    aes(competition_authority_transparency, competition_authority_independence)
-  ) +
-  geom_point(
-    aes(color = income_group),
-    size = 7,
-    alpha = 0.6
-  ) +
-  geom_smooth(
-    method = "lm",
-    color = "orangered2",
-    se = FALSE
-  ) +
-  scale_color_brewer(
-    palette = "Paired"
-  ) +
-  guides(color = guide_legend(nrow = 2)) +
-  theme(
-    legend.position = "bottom"
-  ) +
-  labs(
-    x = "Transparency of Competition Authority", 
-    y = "Independence of Competition Authority"
-  )
-
-ggplot2::ggsave(
-  here("chapter-3", "figs", "bready_competition_transparency_independence.png"),
-  width = 14,
-  height = 12,
-  bg = "white"
-)
-
-
-# international telecoms union -------------------------------------------
-
-itu |> 
-    filter(
-        ppl_term_appointment != "Remark"
-    ) |> 
-    group_by(ppl_term_appointment) |> 
-    summarise(
-        average_investment = mean(annual_investment_telecoms/telecoms_revenue, na.rm = TRUE)/1e6,
-        total = n()
-    ) |> 
-    ggplot() +
-    geom_col(
-        aes(ppl_term_appointment, average_investment),
-        fill = "#00ADE4"
-    ) +
-    ggtitle(
-        "Average Annual Investment in Telecoms by Type of Term",
-        "Unit of Analysis: Country-Year"
-    ) +
-    labs(
-        x = "Duration of Term Appointment",
-        y = "Average Annual Investment (Millions USD)"
-    )
-
-ggsave(
-    here("chapter-3", "figs", "itu_investment_by_term.png"),
-    height = 6,
-    width = 8,
-    bg = "white"
-)
-
-# correlation between workforce (people) and calls
-itu |>
-    mutate(
-        workforce_bin = ntile(ppl_workforce, n=25)
-    ) |> 
-    group_by(workforce_bin) |> 
-    summarise(
-        dropped_call_rate = mean(dropped_call_rate, na.rm = TRUE),
-        n = n()
-    ) |> 
-    ungroup() |> 
-    ggplot() +
-    geom_point(
-        aes(workforce_bin, dropped_call_rate, size = n)
-    ) +
-    coord_cartesian(
-        ylim = c(0, 5)
-    )
-
-# correlation between term appointment (governance of people) and calls
-itu |>
-    # remove belize due to missingness
-    filter(country_iso != "BLZ" & ppl_term_appointment != "Other") |> 
-    group_by(ppl_term_appointment) |> 
-    summarise(
-        dropped_call_rate = mean(dropped_call_rate, na.rm = TRUE),
-        n = n()
-    ) |> 
-    ggplot() +
-    geom_point(
-        aes(ppl_term_appointment, dropped_call_rate, size = n),
-        outlier.shape = NA
-    ) +
-    coord_cartesian(
-        ylim = c(0, 5)
-    )
-
-# correlation between governance dimensions and investment
-itu_independence <- itu |> 
-  rowwise() |> 
-  mutate(
-    gov_independence = sum(
-      ppl_authority_appointment %in% c("Board of the Regulatory Authority", "Parliament"),
-      ppl_authority_removal %in% c("Board of the regulatory Authority", "Parliament"),
-      ppl_law_appointment_selection == "Yes",
-      ppl_law_ground_for_removal == "Yes",
-      independence_overrule == "No",
-      independence_reorg == "Yes",
-      independence_reg_autonomy == "Yes"
-    )/7
-  ) |> 
-  ungroup() |> 
-  group_by(country_iso) |> 
-  summarise(
-    average_gov_independence = mean(gov_independence, na.rm = TRUE),
-    average_investment = mean(annual_investment_telecoms/telecoms_revenue, na.rm = TRUE),
-    average_coverage_3g = mean(share_pop_coverage_3g, na.rm = TRUE),
-    .groups = "drop"
-  )
-
-itu_independence |> 
-  inner_join(
-    countryclass,
-    by = c("country_iso" = "country_code")
-  ) |> 
-  mutate(
-    income_group = fct_relevel(
-      income_group,
-      c("Low income", "Lower middle income", "Upper middle income", "High income")
-    )
-  ) |> 
-  filter(
-    !is.na(income_group)
-  ) |> 
-  ggplot(
-    aes(
-      average_gov_independence,
-      average_investment
-    )
-  ) +
-  geom_point(
-    aes(color = income_group),
-    size = 6,
-    alpha = 0.5
-  ) +
-  scale_color_brewer(
-    palette = "Paired"
-  ) +
-  geom_smooth(
-    color = "red3",
-    se = FALSE,
-    method = "lm"
-  ) +
-  coord_cartesian(
-    ylim = c(0, 0.75)
-  ) +
-  scale_y_continuous(
-    labels = percent_format()
-  ) +
-  theme(
-    legend.position = "bottom"
-  ) +
-  guides(color = guide_legend(nrow = 2)) +
-  labs(
-    x = "Independence of ICT Regulator",
-    y = "Investment in Telecoms\n (Percentage of Revenue)"
-  )
-
-ggsave(
-  here("chapter-3", "figs", "itu_independence_investment.png"),
-  height = 12,
-  width = 14,
-  bg = "white"
-)
-
-# different measures of independence
-# break down by region (?)
-itu |> 
-  mutate(
-    ppl_authority_appointment_binary = if_else(
-      ppl_authority_appointment %in% c("Board of the Regulatory Authority", "Parliament"), 1L, 0L
-    ),
-    ppl_authority_removal_binary = if_else(
-      ppl_authority_removal %in% c("Board of the regulatory Authority", "Parliament"), 1L, 0L
-    ),
-    ppl_law_appointment_selection_binary = if_else(
-      ppl_law_appointment_selection == "Yes", 1L, 0L
-    ),
-    ppl_law_ground_for_removal_binary = if_else(
-      ppl_law_ground_for_removal == "Yes", 1L, 0L
-    ),
-    independence_overrule_binary = if_else(
-      independence_overrule == "No", 1L, 0L
-    ),
-    independence_reorg_binary = if_else(
-      independence_reorg == "Yes", 1L, 0L
-    ),
-    independence_reg_autonomy_binary = if_else(
-      independence_reg_autonomy == "Yes", 1L, 0L
-    )
-  ) |> 
-  group_by(country_iso) |> 
-  slice_max(
-    n = 1,
-    order_by = year
-  ) |> 
-  ungroup() |> 
-  group_by(region) |> 
-  summarise(
-    across(
-      ends_with("binary"),
-      \(var) mean(var, na.rm = TRUE)
-    ),
-    .groups = "drop"
-  ) |>
-  select(region, starts_with("ppl")) |> 
-  pivot_longer(
-    -c(region)
-  ) |> 
-  ggplot() +
-  geom_col(
-    aes(
-      value,
-      region,
-      fill = name
-    ),
-    position = position_dodge2(preserve = "single")
-  ) +
-  scale_fill_brewer(
-    palette = "Paired"
-  ) +
-  theme(
-    legend.position = "bottom"
-  )
-
-ggsave(
-  here("chapter-3", "figs", "itu_independence.png"),
-  height = 6,
-  width = 8,
-  bg = "white"
-)
-
-# enterprise surveys
-enterprise_surveys |> 
-    left_join(
-        wdi,
-        c("year", "economy_code" = "iso3c")
-    ) |> 
-    filter(
-        !is.na(senior_management_time_reg)
-    ) |> 
-    group_by(economy_code) |> 
-    slice_max(order_by = year) |> 
-    ggplot(
-        aes(
-            senior_management_time_reg, 
-            log(gdp_pc_ppp_2005)
-        )
-    ) +
-    geom_point() +
-    geom_smooth(
-        method = "lm"
-    )
