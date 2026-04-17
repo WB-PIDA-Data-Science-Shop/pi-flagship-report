@@ -252,7 +252,7 @@ New users should follow these steps to run the package successfully:
 
 1. Ensure all required software and dependencies are installed as listed in the [Requirements](#requirements) section.
 2. For data files not included in the package (BOOST, GSPS, MAPS, AfDB), request access via the links in the [Data Sources](#data-sources) section and place them in the appropriate `data/input/` subfolder.
-3. Open an R session with the working directory set to the root of this repository (the folder containing `replication.Rproj`). All scripts use `here::here()` for path resolution, so no manual path edits are needed.
+3. Open an R session with the working directory set to the root of this repository (simply opening `replication.Rproj`). All scripts use `here::here()` for path resolution, so no manual path edits are needed.
 4. Run each chapter's scripts in order — prepdata first, then figures:
 
 ```r
