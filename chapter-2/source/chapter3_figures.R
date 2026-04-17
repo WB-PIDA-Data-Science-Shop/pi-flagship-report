@@ -75,7 +75,7 @@ cwg_personnel_resid %>% ggplot(aes(x = personnel_residuals, y = cwg_residuals)) 
   theme(legend.position = "bottom") +
   theme(axis.text = element_text(size = 16),
         axis.title = element_text(size = 20))
-ggsave(plot = last_plot(), filename = "chapter 3/figs/fig3_2.png", width = 12, height = 9)
+ggsave(plot = last_plot(), filename = "chapter 3/figs/fig3_2.png", width = 12, height = 9, bg = "white")
 
 # figure 3.2 - MAPS personnel score v CwG (raw)
 CwG %>% ggplot(aes(x = perc_concept_personnel, y = score_cwg)) +
@@ -96,7 +96,7 @@ CwG %>% ggplot(aes(x = perc_concept_personnel, y = score_cwg)) +
   theme(legend.position = "bottom") +
   theme(axis.text = element_text(size = 16),
         axis.title = element_text(size = 20))
-ggsave(plot = last_plot(), filename = "chapter 3/figs/fig3_2raw.png", width = 12, height = 9)
+ggsave(plot = last_plot(), filename = "chapter 3/figs/fig3_2raw.png", width = 12, height = 9, bg = "white")
 
 # ==============================================================================
 ### figure 3.3
@@ -122,7 +122,7 @@ BFA %>% mutate(flag = case_when(
   labs(x = "Log of procurement office spending\n (% of total institution spending)",
        y = "Investment spending\n (% of total institution spending)") +
   theme(legend.position = "none")
-ggsave(plot = last_plot(), filename = "chapter 3/figs/fig3_3.png", width = 12, height = 9)
+ggsave(plot = last_plot(), filename = "chapter 3/figs/fig3_3.png", width = 12, height = 9, bg = "white")
 
 # revised plot 
 BFA %>% mutate(ratio = (admin1_paid / admin2_paid),
@@ -140,7 +140,7 @@ BFA %>% mutate(ratio = (admin1_paid / admin2_paid),
   scale_fill_manual(values = egvpi_colors[6]) +
   theme(axis.text.x = element_blank(),
         legend.position = "none")
-ggsave(plot = last_plot(), filename = "chapter 3/figs/fig3_3rev.png", width = 12, height = 9)
+ggsave(plot = last_plot(), filename = "chapter 3/figs/fig3_3rev.png", width = 12, height = 9, bg = "white")
 
 # ==============================================================================
 ### figure 3.4 
@@ -167,7 +167,7 @@ GTMIpanel %>% filter(!is.na(year)) %>% group_by(year) %>%
   theme(axis.text.x = element_text(angle = 30, size = 12),
         axis.text.y = element_text(size = 12),
         legend.position = "none")
-ggsave(plot = last_plot(), filename = "chapter 3/figs/fig3_4.png", height = 9, width = 12)
+ggsave(plot = last_plot(), filename = "chapter 3/figs/fig3_4.png", height = 9, width = 12, bg = "white")
 
 # ==============================================================================
 ### figure B3.1.1
@@ -185,7 +185,7 @@ ARCOP %>% filter(!is.na(yrmonth_decision)) %>%
   geom_vline(data = firstofyear, aes(xintercept = firstofyear), linetype = 2) + 
   scale_x_date(date_breaks = "1 year", date_labels = "%Y") + 
   labs(x = "Month the decision was published", y = "Number of ARCOP dispute")
-ggsave(plot = last_plot(), filename = "chapter 3/figs/figB3_1_1.png", height = 9, width = 12)
+ggsave(plot = last_plot(), filename = "chapter 3/figs/figB3_1_1.png", height = 9, width = 12, bg = "white")
 
 # ==============================================================================
 ### figure 3.5 
@@ -222,7 +222,7 @@ GTMIwide %>% filter(year == "2022" & incomegroup != "" & !is.na(incomegroup)) %>
         legend.text = element_text(size = 12),
         legend.title = element_text(size = 14),
         title = element_text(size = 12))
-ggsave(filename = "chapter 3/figs/fig3_5.png", width = 12, height = 9)
+ggsave(filename = "chapter 3/figs/fig3_5.png", width = 12, height = 9, bg = "white")
 
 
 

@@ -2,7 +2,6 @@
 library(readr)
 library(dplyr)
 library(ggplot2)
-library(hrbrthemes)
 library(forcats)
 library(here)
 library(countrycode)
@@ -851,7 +850,8 @@ itu |>
 
 ggsave(
     here("chapter 4", "figs", "fig_4_9.png"),
-    width = 14
+    width = 14,
+    bg = "white"
 )
 
 ## governance: independence -----------------------------------------------
