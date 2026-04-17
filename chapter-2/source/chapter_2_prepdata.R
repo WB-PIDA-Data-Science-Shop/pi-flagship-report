@@ -1,7 +1,7 @@
 # ==============================================================================
 # public institutions report
 # reproducibility file
-# prepare data for capter 3
+# prepare data for chapter 2
 # ==============================================================================
 # ==============================================================================
 # preamble
@@ -20,18 +20,17 @@ egvpi_colors <- c("#002345", "#808080", "#D3D3D3",
                   "#ff8000", "#FCDF2D", "#00ADE4")
 
 # open data
-MAPS <- read_excel("chapter 3/data/input/maps.xlsx")
-REG <- read_dta("chapter 3/data/input/regions.dta")
-CwG <- read_xlsx("chapter 3/data/input/cwg.xlsx",
+MAPS <- read_excel("chapter-2/data/input/maps.xlsx")
+REG <- read_dta("chapter-2/data/input/regions.dta")
+CwG <- read_xlsx("chapter-2/data/input/cwg.xlsx",
                  sheet = "DB CwG score 191 economies") %>% 
   rename(country_code = EconomyCode) %>% 
   select(-Economy, -Region, -IncomeGroup)
-WDI <- read_csv("chapter 3/data/input/wdi.csv", show_col_types = F)
-GTMI <- read_xlsx("chapter 3/data/input/gtmi.xlsx",
+WDI <- read_csv("chapter-2/data/input/wdi.csv", show_col_types = F)
+GTMI <- read_xlsx("chapter-2/data/input/gtmi.xlsx",
                   sheet = "CG_GTMI_Data") %>% 
   filter(Year == 2022) 
-BFA <- read_xlsx("chapter 3/data/input/bfa.xlsx", sheet = "2017-20")
-ARCOP <- read_csv("chapter 3/data/input/arcop.csv", show_col_types = F)
+BFA <- read_xlsx("chapter-2/data/input/bfa.xlsx", sheet = "2017-20")
 
 # ==============================================================================
 # clean and save MAPS 
@@ -118,7 +117,7 @@ MAPS <- left_join(x = MAPS, y = REG, by = c("country" = "economy")) %>%
 MAPS <- MAPS %>% filter(!country_code %in% c("ZMB", "IND", "DJI"))
 
 # save 
-write_csv(MAPS, file = "chapter 3/data/output/maps_clean.csv")
+write_csv(MAPS, file = "chapter-2/data/output/maps_clean.csv")
 
 # ==============================================================================
 # clean and save CwG
@@ -148,7 +147,7 @@ CwG$gdppercap_2015usd[CwG$country_code == "LBN"] <- WDI$value[WDI$country_code =
                                                                 WDI$var_code == "gdppercap_2015usd"]
 
 # save 
-write_csv(CwG, file = "chapter 3/data/output/cwg_clean.csv")
+write_csv(CwG, file = "chapter-2/data/output/cwg_clean.csv")
 
 # ==============================================================================
 # clean and save GTMI
@@ -211,7 +210,7 @@ write_csv(CwG, file = "chapter 3/data/output/cwg_clean.csv")
     GTMIpanel <- left_join(x = GTMIpanel, y = REG, by = c("country_code"))
     
     # save GTMIpanel
-    write_csv(GTMIpanel, file = "chapter 3/data/output/gtmipanel_clean.csv")
+    write_csv(GTMIpanel, file = "chapter-2/data/output/gtmipanel_clean.csv")
 
 # prep for GTMIwide
     
@@ -433,7 +432,7 @@ write_csv(CwG, file = "chapter 3/data/output/cwg_clean.csv")
   GTMIwide <- GTMIwide %>% 
     select(year, country, country_code, economy, region, incomegroup, lendingcategory,
            fmis, tsa, customs, hrmis, payroll, proc, contains("_"))
-  write_csv(GTMIwide, file = "chapter 3/data/output/gtmiwide_clean.csv")
+  write_csv(GTMIwide, file = "chapter-2/data/output/gtmiwide_clean.csv")
   
 # ==============================================================================
 # clean and save burkina faso BOOST data
@@ -495,19 +494,5 @@ admin1_perc_proc <- admin1_perc_proc %>% filter(!(hasdmp == 1 & daf == 1))
 BFAcomb <- admin1_perc_invest %>% left_join(y = admin1_perc_proc, by = c("ADMIN1"))
 
 # save 
-write_csv(BFAcomb, file = "chapter 3/data/output/bfa_clean.csv")
-
-# ==============================================================================
-# clean and save burkina faso ARCOP data
-# ==============================================================================
-
-# first of the year
-firstofyear <- data.frame("firstofyear" = as.Date(paste0(c(2014:2021), "-01-01"), format = "%Y-%m-%d"))
-
-# plot the number of disputes by yearmonth
-ARCOP$yrmonth_decision <- paste0(ARCOP$yrmonth_decision, "-01")
-ARCOP$yrmonth_decision <- as.Date(ARCOP$yrmonth_decision, format = "%Y-%m-%d")
-
-# save 
-write_csv(ARCOP, file = "chapter 3/data/output/arcop_clean.csv")
+write_csv(BFAcomb, file = "chapter-2/data/output/bfa_clean.csv")
 

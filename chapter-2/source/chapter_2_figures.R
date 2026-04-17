@@ -29,7 +29,6 @@ egvpi_colors <- c(
 )
 
 # open data
-ARCOP <- read_csv("chapter-2/data/output/arcop_clean.csv", show_col_types = F)
 BFA <- read_csv("chapter-2/data/output/bfa_clean.csv", show_col_types = F)
 CwG <- read_csv("chapter-2/data/output/cwg_clean.csv", show_col_types = F)
 GTMIpanel <- read_csv(
