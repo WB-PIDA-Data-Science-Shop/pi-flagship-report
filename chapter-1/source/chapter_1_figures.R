@@ -397,6 +397,7 @@ GTMItrans2022 <- GTMI %>%
     )
   ) %>%
   rename(trans = value)
+
 GTMItrans2022 <- GTMItrans2022 %>%
   mutate(
     flag = case_when(
