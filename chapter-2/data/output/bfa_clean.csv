@@ -1,0 +1,41 @@
+ADMIN1,ECON1,sum_econ1,admin1_paid,perc_econ1,ADMIN2,admin2_paid,perc_proc_paid,hasdmp,daf
+01 Presidence du Faso,5 Investissements executes par l'Etat,41873265780,85167327418,0.4916587974457226,1010000311 Direction des Marches Publics,3500000,4.109557157784289e-5,1,0
+09 Ministere Administration Territoriale Decentralisat  Cohesion Sociale,5 Investissements executes par l'Etat,35262554434,168536130630,0.20922845624962477,1010000311 Direction des Marches Publics,32971500,1.9563460889217163e-4,1,0
+10 Ministere de la Justice,5 Investissements executes par l'Etat,14730588538,82438389219,0.17868603059271038,1010000311 Direction des Marches Publics,55017309,6.673748665060025e-4,1,0
+"14 Ministere de l'Economie, des Finances et du Developpement",5 Investissements executes par l'Etat,56011245093,697072686630,0.08035208690185026,1010000311 Direction des Marches Publics,46514500,6.672833535463065e-5,1,0
+21 Ministere de la  Sante,5 Investissements executes par l'Etat,129759462095,608024884712,0.2134114332449773,1010000311 Direction des Marches Publics,24848240,4.0867143146237736e-5,1,0
+23 Ministere Education Nationale Alphabetisation  Promotion Langues Nationales,5 Investissements executes par l'Etat,79753918439,1217940805794,0.06548259000732537,1010000311 Direction des Marches Publics,113972000,9.357761843417289e-5,1,0
+"24 Ministere de l'Enseignement Superieur, de la Recherche Scientifique et de l'Innovation",5 Investissements executes par l'Etat,50789134379,289870227318,0.17521335270932173,1010000311 Direction des Marches Publics,57482350,1.9830373933829159e-4,1,0
+"25 Ministere du Commerce, de l'Industrie et de l'Artisanat",5 Investissements executes par l'Etat,17463683666,43154745312,0.4046758598559934,1010000311 Direction des Marches Publics,31315482,7.256555860449519e-4,1,0
+26 Ministere des Mines et des Carrieres,5 Investissements executes par l'Etat,873409038,12949466601,0.06744749146135119,1010000311 Direction des Marches Publics,10753200,8.303971376836172e-4,1,0
+27 Ministere de l'Agriculture et des Amenagements Hydro-agricoles,5 Investissements executes par l'Etat,192759309804,242525064104,0.7948016033565117,1010000311 Direction des Marches Publics,5773885,2.3807374389659097e-5,1,0
+28 Ministere des Ressources Animales et Halieutiques,5 Investissements executes par l'Etat,37189744669,57938470746,0.6418834358269204,1010000311 Direction des Marches Publics,6938450,1.1975549079329164e-4,1,0
+"29 Ministere de l'Environnement, de l'Economie verte et du Changement Climatique",5 Investissements executes par l'Etat,13637083973,53129891400,0.2566744183670588,1010000311 Direction des Marches Publics,8233000,1.54959849964986e-4,1,0
+30 Ministere des Infrastructures,5 Investissements executes par l'Etat,326689490060,341123092004,0.9576879950893774,1010000311 Direction des Marches Publics,90540274,2.6541819103509514e-4,1,0
+31 Ministere du Developpement de l'Economie Numerique et des Postes,5 Investissements executes par l'Etat,27611170026,34989193097,0.789134232088576,1010000311 Direction des Marches Publics,15961860,4.561940012663105e-4,1,0
+37 Ministere de la Jeunesse et de la Promotion de l'Entrepreneuriat des Jeunes,5 Investissements executes par l'Etat,24978272788,47232158834,0.5288403791956133,1010000311 Direction des Marches Publics,4050000,8.574666286658516e-5,1,0
+38 Ministere de l'Urbanisme et de l'Habitat,5 Investissements executes par l'Etat,12401704531,17359915467,0.7143873802020974,1010000311 Direction des Marches Publics,3300000,1.9009309154028266e-4,1,0
+42 Ministere de l'Eau et de l'Assainissement,5 Investissements executes par l'Etat,160276598259,172353621449,0.9299288109616332,1010000311 Direction des Marches Publics,15502050,8.994327980852499e-5,1,0
+43 Ministere de l'Energie,5 Investissements executes par l'Etat,53451631431,61661979635,0.8668490980568564,1010000311 Direction des Marches Publics,11584000,1.8786292734307216e-4,1,0
+13 Ministere de la Securite,5 Investissements executes par l'Etat,42323871598,195082772374,0.21695340435730237,1010000311 Direction des Marches Publics,37208200,1.9073032204333686e-4,1,0
+98 Transferts des Ressources aux Collectivites Territoriales,5 Investissements executes par l'Etat,65400901188,136976253419,0.4774616005005159,NA,NA,NA,NA,NA
+04 Parlement,5 Investissements executes par l'Etat,11981004000,52959322000,0.22623031314486994,NA,NA,NA,NA,NA
+99 Depenses Communes Interministerielles,5 Investissements executes par l'Etat,73230581989,625196135237,0.11713217318792234,NA,NA,NA,NA,NA
+59 Commission de l'Informatique et des Libertes,5 Investissements executes par l'Etat,43041000,1148297000,0.037482463160663136,1008000311 Direction des Affaires Administratives et Finacieres,397903678,0.34651634376820634,0,0
+57 Cour de Cassation,5 Investissements executes par l'Etat,108000000,4180177148,0.025836225637392532,1008000311 Direction des Affaires Administratives et Financieres,235703641,0.056386041226212644,0,1
+54 Conseil Constitutionnel,5 Investissements executes par l'Etat,4149761000,6603313339,0.628436178469828,1008000311 Direction des Affaires Administratives et Financieres,420014724,0.06360666266120375,0,1
+52 Autorite Superieure de Controle d'Etat et de Lutte contre la Corruption,5 Investissements executes par l'Etat,3836496284,7344826639,0.5223399370148156,1008000311 Direction des Affaires Administration et des Finances,1417707250,0.19302119977511425,0,1
+51 Conseil Superieur de la Communication,5 Investissements executes par l'Etat,161002118,2461843179,0.06539901459742818,1010000311 Direction des Marches Publics,22638000,0.00919554916946235,1,0
+50 Grande Chancellerie,5 Investissements executes par l'Etat,244725000,2270900089,0.10776563935393813,1008000311 Direction des Affaires Administratives et Financieres,242682911,0.10686639723849163,0,1
+"32 Ministere des Transports, de la Mobilite Urbaine et de la Securite Routiere",5 Investissements executes par l'Etat,11866482987,18233494410,0.6508068459160484,1010000311 Direction des Marches Publics,11506000,6.310364728381212e-4,1,0
+20 Ministere des Sports et des Loisirs,5 Investissements executes par l'Etat,4126962983,24648039801,0.16743574808868023,1010000311 Direction des Marches Publics,15084706,6.120042860117418e-4,1,0
+22 Ministere de la Femme Solidarite Nationale Famille Action Humanitaire,5 Investissements executes par l'Etat,13586615121,49788914440,0.2728843412999707,1010000311 Direction des Marches Publics,4140000,8.315103967548966e-5,1,0
+18 Ministere de la Communication et des Relations avec le Parlement,5 Investissements executes par l'Etat,3834072954,34558034727,0.11094591993694769,1010000311 Direction des Marches Publics,13000000,3.761787990172709e-4,1,0
+"17 Ministere de la Fonction Publique, du Travail et de la Protection Sociale",5 Investissements executes par l'Etat,8495315864,49503357694,0.17161090196169998,1010000311 Direction des Marches Publics,15713799,3.174289529436217e-4,1,0
+"15 Ministere de la Culture, des Arts et du Tourisme",5 Investissements executes par l'Etat,917882699,21036166495,0.04363355363336603,1010000311 Direction des Marches Publics,8826000,4.19563136757727e-4,1,0
+12 Ministere des Affaires Etrangeres et de la Cooperation,5 Investissements executes par l'Etat,15701835641,114846606603,0.1367200660553939,1010000311 Direction des Marches Publics,11274450,9.81696397785034e-5,1,0
+11 Ministere de la Defense Nationale et des Anciens Combattants,5 Investissements executes par l'Etat,159416021000,493726602461,0.3228831912345506,NA,NA,NA,NA,NA
+03 Primature,5 Investissements executes par l'Etat,69165178448,87699200181,0.7886637313139899,1010000311 Direction des Marches Publics,23520500,2.6819514831898897e-4,1,0
+02 Secretariat General du Gouvernement et du Conseil des Ministres,5 Investissements executes par l'Etat,119776916,2612915682,0.04584032956942542,1010000311 Personne Responsable des Marches,16332300,0.00625060353554876,1,0
+08 Ministere de l'Integration Africaine et des Burkinabe de l'Exterieur,5 Investissements executes par l'Etat,147117253,3238404104,0.04542893606708448,1010000311 Direction des Marches Publics,3670000,0.0011332742555096515,1,0
+35 Ministere des Droits Humains et de la Promotion Civique,5 Investissements executes par l'Etat,131250000,720606101,0.18213834134607196,1010000311 Direction des Marches Publics,999000,0.001386332975274102,1,0

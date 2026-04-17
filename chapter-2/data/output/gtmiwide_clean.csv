@@ -1,0 +1,199 @@
+year,country,country_code,economy,region,incomegroup,lendingcategory,fmis,tsa,customs,hrmis,payroll,proc,fmis_year,fmis_scope,fmis_exchange,fmis_gov,tsa_year,tsa_scope,tsa_link,tsa_gov,customs_year,customs_exchange,customs_gov,hrmis_year,hrmis_selfserve,hrmis_exchange,hrmis_gov,payroll_year,payroll_gov,proc_year,proc_capab,proc_ocds,proc_exchange,proc_gov,debt_year,pims_year,pims_capab,pims_exchange,pims_pub,incomegroup_order
+2022,Afghanistan,AFG,Afghanistan,South Asia,Low income,IDA,1,1,1,1,0,1,2011,0,0,0,2002,1,1,0,2004,0,0,2012,0,0,0,NA,0,2010,1,1,0,0,2009,NA,0,0,0,1
+2022,Albania,ALB,Albania,Europe & Central Asia,Upper middle income,IBRD,1,1,1,1,1,1,2010,1,1,1,1991,1,1,0,1992,1,0,2017,2,0,0,2017,0,2008,2,1,1,0,1998,2019,3,0,0,3
+2022,Algeria,DZA,Algeria,Middle East & North Africa,Lower middle income,IBRD,1,0,1,1,0,1,2010,0,0,1,1962,0,1,0,1963,0,0,2016,1,NA,0,2023,0,2011,2,1,0,0,2005,NA,0,0,0,2
+2022,Andorra,AND,Andorra,Europe & Central Asia,High income,,1,0,0,0,0,0,2005,0,0,0,1993,NA,NA,0,1993,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,2005,NA,0,0,0,4
+2022,Angola,AGO,Angola,Sub-Saharan Africa,Lower middle income,IBRD,1,1,1,1,1,1,2004,0,0,0,1975,NA,NA,0,1975,0,0,2004,0,0,0,2004,0,2019,1,0,0,0,1999,2017,1,0,0,2
+2022,Antigua and Barbuda,ATG,Antigua and Barbuda,Latin America & Caribbean,High income,IBRD,1,0,1,1,1,1,2012,0,0,1,1981,NA,0,0,1993,0,0,2011,1,NA,0,2011,0,2019,2,1,0,0,1988,NA,0,0,0,4
+2022,Argentina,ARG,Argentina,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,1995,0,0,2,1946,1,NA,2,1997,0,2,2016,0,NA,0,2009,0,2017,2,0,0,2,1993,1995,3,0,0,3
+2022,Armenia,ARM,Armenia,Europe & Central Asia,Upper middle income,IBRD,0,1,1,1,0,1,2024,0,1,0,1996,1,1,0,1992,1,1,2020,1,0,1,2003,0,2012,3,1,0,2,2011,2023,3,1,0,3
+2022,Australia,AUS,Australia,East Asia & Pacific,High income,,1,1,1,1,1,1,1997,0,0,2,1901,1,1,0,1901,0,1,2023,2,NA,1,2023,1,2003,3,1,0,2,1997,NA,0,0,0,4
+2022,Austria,AUT,Austria,Europe & Central Asia,High income,,1,1,1,1,1,1,2013,1,0,2,1993,1,NA,0,1945,0,1,2006,2,NA,1,2006,1,2002,2,0,0,0,1993,1971,1,0,1,4
+2022,Azerbaijan,AZE,Azerbaijan,Europe & Central Asia,Upper middle income,IBRD,1,1,1,1,1,1,2020,1,1,0,2009,1,1,0,1992,1,0,2012,0,0,0,2012,0,2019,3,1,1,2,2010,NA,0,0,0,3
+2022,Bahamas,BHS,"Bahamas, The",Latin America & Caribbean,High income,,1,1,1,1,1,1,1995,1,0,1,1914,1,0,0,2018,0,2,2009,0,0,0,2009,0,2020,1,0,0,1,2022,NA,0,0,0,4
+2022,Bahrain,BHR,Bahrain,Middle East & North Africa,High income,,1,0,1,1,1,1,1998,0,0,1,1997,NA,NA,0,1970,1,1,2002,2,NA,2,2002,2,2007,2,0,0,0,2006,NA,0,0,0,4
+2022,Bangladesh,BGD,Bangladesh,South Asia,Lower middle income,IDA,1,1,1,1,1,1,2016,1,1,2,1957,1,1,2,1972,0,1,2008,2,0,2,2016,2,2011,3,1,1,2,1992,2017,3,1,1,2
+2022,Barbados,BRB,Barbados,Latin America & Caribbean,High income,,1,0,1,1,1,1,1999,0,0,0,1966,1,NA,0,1997,0,0,1999,0,NA,0,1999,0,2016,2,0,0,0,1992,NA,0,0,0,4
+2022,Belarus,BLR,Belarus,Europe & Central Asia,Upper middle income,IBRD,1,0,1,1,1,1,2002,1,0,0,1993,1,1,0,1991,0,0,2003,0,NA,0,2003,0,2012,2,0,0,0,2002,NA,0,0,0,3
+2022,Belgium,BEL,Belgium,Europe & Central Asia,High income,,1,1,1,1,1,1,2009,1,0,2,1970,1,1,2,1922,0,2,2008,2,NA,2,2008,2,2005,2,1,0,2,1998,NA,0,0,0,4
+2022,Belize,BLZ,Belize,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,1999,0,0,0,1981,0,NA,0,1955,0,0,2005,0,NA,0,2005,0,2017,2,0,0,0,1987,NA,0,0,0,3
+2022,Benin,BEN,Benin,Sub-Saharan Africa,Lower middle income,IDA,1,1,1,1,1,1,2020,0,0,2,1990,0,1,0,1993,0,0,2021,1,NA,0,2021,0,2020,1,0,0,0,1995,2021,3,0,1,2
+2022,Bhutan,BTN,Bhutan,South Asia,Lower middle income,IDA,1,0,1,1,1,1,2008,1,1,2,1961,0,0,1,2000,0,1,2020,1,0,1,2019,1,2017,3,0,1,2,2006,2019,1,0,0,2
+2022,Bolivia,BOL,Bolivia,Latin America & Caribbean,Lower middle income,IBRD,1,1,1,1,1,1,2003,1,0,0,1993,0,0,0,1990,0,0,2003,0,NA,0,2011,0,2021,2,1,0,0,1993,2020,3,0,0,2
+2022,Bosnia and Herzegovina,BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,IBRD,1,1,1,0,1,1,2004,0,0,0,1995,1,1,0,2003,0,0,NA,0,0,0,2004,0,2014,1,0,0,0,2004,2013,3,0,0,3
+2022,Botswana,BWA,Botswana,Sub-Saharan Africa,Upper middle income,IBRD,1,1,1,1,1,1,2004,1,0,1,2009,1,1,0,2004,0,0,2014,1,NA,0,2009,0,2016,1,0,0,0,1986,NA,0,0,0,3
+2022,Brazil,BRA,Brazil,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,1987,1,0,2,1986,1,1,2,1993,0,2,1990,2,NA,2,1989,2,2001,3,0,0,2,1999,2011,3,0,1,3
+2022,Brunei Darussalam,BRN,Brunei Darussalam,East Asia & Pacific,High income,,1,0,1,1,1,0,2002,0,0,1,1984,1,NA,1,1950,0,1,2021,2,NA,1,2021,1,NA,0,NA,0,0,NA,NA,0,0,0,4
+2022,Bulgaria,BGR,Bulgaria,Europe & Central Asia,Upper middle income,IBRD,1,1,1,1,1,1,2009,0,0,0,1879,1,0,0,1879,0,0,2006,2,NA,0,2006,0,2004,2,1,0,2,2002,NA,0,0,0,3
+2022,Burkina Faso,BFA,Burkina Faso,Sub-Saharan Africa,Low income,IDA,1,0,1,1,1,1,2021,1,1,2,1960,NA,NA,0,1960,0,2,2006,1,0,2,2006,2,2008,1,0,0,2,1997,NA,0,0,0,1
+2022,Burundi,BDI,Burundi,Sub-Saharan Africa,Low income,IDA,1,0,1,1,1,1,2004,0,0,0,1997,0,1,0,2009,0,2,2011,1,NA,0,2011,0,2008,1,0,0,0,1987,NA,0,0,0,1
+2022,Cabo Verde,CPV,Cabo Verde,Sub-Saharan Africa,Lower middle income,Blend,1,1,1,1,1,1,2001,1,1,2,1996,1,1,2,1960,1,2,2004,1,0,2,2000,2,2014,1,0,1,2,1997,2015,3,1,1,2
+2022,Cambodia,KHM,Cambodia,East Asia & Pacific,Lower middle income,IDA,1,1,1,1,1,0,2015,1,0,2,1990,1,1,2,1993,0,2,2020,1,NA,2,2010,2,NA,0,NA,0,0,2007,NA,0,0,0,2
+2022,Cameroon,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,Blend,1,1,1,1,1,1,2004,1,1,0,2005,NA,1,0,1960,1,0,2002,1,0,0,2002,0,2022,1,1,1,0,1995,2022,2,1,0,2
+2022,Canada,CAN,Canada,North America,High income,,1,1,1,1,1,1,1994,1,0,0,1869,1,1,0,2003,1,0,2006,2,0,0,NA,0,2013,2,0,1,0,1994,1996,1,0,1,4
+2022,Central African Republic,CAF,Central African Republic,Sub-Saharan Africa,Low income,IDA,1,1,1,0,0,0,2021,0,0,0,2017,0,NA,0,2004,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,1995,NA,0,0,0,1
+2022,Chad,TCD,Chad,Sub-Saharan Africa,Low income,IDA,1,0,1,0,0,1,2000,0,0,0,1996,NA,NA,0,1969,0,0,NA,0,0,0,NA,0,2014,1,0,0,0,2000,NA,0,0,0,1
+2022,Chile,CHL,Chile,Latin America & Caribbean,High income,IBRD,1,1,1,1,1,1,2007,0,0,1,1927,1,NA,0,1844,0,0,2011,0,NA,0,2011,0,1999,2,1,0,0,2003,2001,3,0,1,4
+2022,China,CHN,China,East Asia & Pacific,Upper middle income,IBRD,1,0,1,1,1,1,2017,0,0,0,2000,1,1,0,1958,0,0,NA,1,NA,0,NA,0,2000,1,0,0,0,2005,2008,1,0,0,3
+2022,Colombia,COL,Colombia,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,2020,1,0,2,2015,0,1,2,1992,0,2,2010,1,NA,2,2016,2,2014,3,1,1,1,2009,1989,3,0,1,3
+2022,Comoros,COM,Comoros,Sub-Saharan Africa,Lower middle income,IDA,1,0,1,0,1,1,2016,0,0,1,1999,NA,NA,0,1892,0,0,NA,0,0,0,2011,1,2003,2,1,0,0,2012,NA,0,0,0,2
+2022,"Congo, Dem. Rep.",COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,IDA,1,0,1,0,0,1,2003,1,0,0,2001,NA,NA,0,1960,0,2,NA,0,0,0,NA,0,2013,1,1,0,0,2005,NA,0,0,0,1
+2022,"Congo, Rep.",COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,Blend,1,0,1,1,1,1,2000,0,0,0,1997,NA,NA,0,1954,0,0,NA,0,0,0,2002,0,2012,1,0,0,0,2003,NA,0,0,0,2
+2022,Costa Rica,CRI,Costa Rica,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,2007,1,0,1,1962,0,1,1,1915,0,1,2005,1,0,1,2005,1,2010,2,0,0,0,1988,2009,3,0,0,3
+2022,Côte d'Ivoire,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,IDA,0,0,1,1,1,1,2022,1,0,1,1962,NA,NA,0,1964,0,0,2014,2,NA,1,2012,0,2022,1,0,0,0,1998,NA,0,0,0,2
+2022,Croatia,HRV,Croatia,Europe & Central Asia,High income,IBRD,1,1,1,1,1,1,2011,0,0,1,1990,1,1,1,1990,0,2,2011,1,0,1,2013,1,2012,3,1,1,2,2007,2019,1,1,1,4
+2022,Cuba,CUB,Cuba,Latin America & Caribbean,Upper middle income,,1,0,1,0,0,0,2002,1,0,0,1983,NA,NA,0,1996,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,2002,NA,0,0,0,3
+2022,Cyprus,CYP,Cyprus,Europe & Central Asia,High income,,1,1,1,0,0,1,2003,0,1,0,2004,1,1,0,1960,1,2,2023,1,0,1,2023,0,2009,2,1,0,0,2012,NA,0,0,0,4
+2022,Czech Republic,CZE,Czechia,Europe & Central Asia,High income,,1,0,1,1,1,1,2011,1,0,2,2001,1,1,2,1992,1,2,2015,2,NA,2,2006,2,2002,2,1,0,0,2007,NA,0,0,0,4
+2022,Denmark,DNK,Denmark,Europe & Central Asia,High income,,1,1,1,1,1,1,1998,1,0,2,1721,1,1,2,1902,0,0,2011,1,0,0,1999,0,2022,3,1,0,2,1998,2019,2,0,0,4
+2022,Djibouti,DJI,Djibouti,Middle East & North Africa,Lower middle income,IDA,1,0,1,1,1,0,2001,0,0,0,1998,NA,NA,0,1977,0,0,2008,0,0,0,2006,0,2022,1,0,0,0,1986,NA,0,0,0,2
+2022,Dominica,DMA,Dominica,Latin America & Caribbean,Upper middle income,Blend,1,0,1,1,1,0,2012,1,0,0,1978,1,1,0,1990,0,0,2012,2,NA,0,2012,0,NA,0,NA,0,0,1988,NA,0,0,0,3
+2022,Dominican Republic,DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,2004,1,0,2,1934,1,1,2,1959,0,2,2012,2,NA,2,2012,2,2012,3,1,0,2,1996,2013,3,0,1,3
+2022,Ecuador,ECU,Ecuador,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,2008,1,0,2,2008,1,1,2,1975,0,2,2018,2,0,2,2008,2,2008,2,1,1,2,2008,2009,3,0,1,3
+2022,Egypt,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,IBRD,1,1,1,1,1,1,2017,1,1,2,2006,1,1,1,1953,1,1,2005,1,0,1,2021,1,2017,1,0,0,2,2020,NA,0,0,0,2
+2022,El Salvador,SLV,El Salvador,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,2001,1,1,0,1950,0,1,2,1950,1,2,1994,0,0,1,2014,1,2021,1,0,0,1,2010,2009,2,0,1,3
+2022,Equatorial Guinea,GNQ,Equatorial Guinea,Sub-Saharan Africa,Upper middle income,IBRD,0,0,0,0,0,0,NA,NA,0,0,NA,NA,NA,0,NA,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,NA,NA,0,0,0,3
+2022,Eritrea,ERI,Eritrea,Sub-Saharan Africa,Low income,IDA,0,0,0,0,0,0,NA,NA,0,0,NA,NA,NA,0,NA,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,NA,NA,0,0,0,1
+2022,Estonia,EST,Estonia,Europe & Central Asia,High income,,1,1,1,1,1,1,2020,0,0,2,1918,1,1,2,1991,1,1,2013,2,0,2,2013,2,2011,3,0,1,2,2001,2004,1,0,0,4
+2022,Eswatini,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,IBRD,1,0,1,1,1,1,2005,0,0,0,1974,0,1,2,2015,0,2,2000,0,NA,0,1994,0,2022,1,1,0,2,1993,NA,0,0,0,2
+2022,Ethiopia,ETH,Ethiopia,Sub-Saharan Africa,Low income,IDA,1,0,1,1,1,1,2014,1,0,0,1980,0,0,0,2020,0,0,2014,2,NA,0,2014,0,2021,3,1,0,0,2015,NA,0,0,0,1
+2022,Fiji,FJI,Fiji,East Asia & Pacific,Upper middle income,Blend,1,1,1,1,1,1,2005,0,0,2,1982,0,0,0,1999,0,2,2020,2,0,2,1988,2,2018,2,1,0,2,2007,NA,0,0,0,3
+2022,Finland,FIN,Finland,Europe & Central Asia,High income,,1,1,1,1,1,1,2016,0,0,1,1876,1,1,0,1812,0,2,2014,2,NA,1,2014,1,2006,2,0,0,2,2003,NA,0,0,0,4
+2022,France,FRA,France,Europe & Central Asia,High income,,1,1,1,1,1,1,2011,1,0,2,2001,1,1,2,1791,1,2,2012,2,0,1,2012,2,2005,2,1,1,1,2000,2018,1,0,0,4
+2022,Gabon,GAB,Gabon,Sub-Saharan Africa,Upper middle income,IBRD,1,0,1,0,0,1,1999,0,0,0,1912,NA,NA,0,1960,0,0,NA,0,0,0,NA,0,2014,1,0,0,0,2001,NA,0,0,0,3
+2022,Gambia,GMB,"Gambia, The",Sub-Saharan Africa,Low income,IDA,1,0,1,1,1,1,2007,1,0,0,1996,NA,NA,0,1996,0,0,2011,0,NA,0,2011,0,2022,0,0,0,0,2022,NA,0,0,0,1
+2022,Georgia,GEO,Georgia,Europe & Central Asia,Upper middle income,IBRD,1,1,1,1,1,1,2011,1,0,0,1995,1,1,0,2005,0,0,2015,1,NA,0,2012,0,2011,2,1,0,0,2014,NA,0,0,0,3
+2022,Germany,DEU,Germany,Europe & Central Asia,High income,,1,0,1,1,1,1,1999,1,0,2,1949,NA,NA,0,1992,0,2,2006,1,NA,0,2006,0,2006,2,1,0,0,1999,2014,1,0,0,4
+2022,Ghana,GHA,Ghana,Sub-Saharan Africa,Lower middle income,IDA,1,0,1,1,1,1,2013,0,0,0,2003,1,1,0,2009,0,0,2016,1,0,0,1995,0,2012,1,1,0,0,1989,2018,2,0,0,2
+2022,Greece,GRC,Greece,Europe & Central Asia,High income,,1,1,1,1,1,1,2013,0,1,0,1967,0,1,1,1974,0,1,2010,1,0,0,2011,2,2012,2,0,1,1,1998,2015,2,0,0,4
+2022,Grenada,GRD,Grenada,Latin America & Caribbean,Upper middle income,Blend,1,0,1,1,1,0,2012,1,0,0,1988,1,0,0,1998,0,0,2017,0,NA,0,2012,0,NA,0,NA,0,0,2022,NA,0,0,0,3
+2022,Guatemala,GTM,Guatemala,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,2011,1,0,2,1945,1,1,2,1997,0,2,2011,2,NA,2,2011,2,2004,3,1,0,2,2022,2010,3,0,1,3
+2022,Guinea,GIN,Guinea,Sub-Saharan Africa,Lower middle income,IDA,1,0,1,0,0,0,2012,0,0,0,1958,NA,NA,0,1990,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,2003,NA,0,0,0,2
+2022,Guinea-Bissau,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,IDA,1,0,1,1,1,0,2010,1,0,0,1973,NA,NA,0,1973,0,0,2011,0,0,0,2011,0,NA,0,NA,0,0,1997,NA,0,0,0,1
+2022,Guyana,GUY,Guyana,Latin America & Caribbean,High income,IDA,1,1,1,1,1,1,2004,0,0,0,1970,1,1,0,2000,0,0,2008,0,0,0,2008,0,2016,1,0,0,0,1988,NA,0,0,0,4
+2022,Haiti,HTI,Haiti,Latin America & Caribbean,Lower middle income,IDA,1,1,1,0,1,1,2005,0,0,0,1987,0,0,0,1961,0,0,NA,0,0,0,NA,0,2014,1,0,0,0,1985,NA,0,0,0,2
+2022,Honduras,HND,Honduras,Latin America & Caribbean,Lower middle income,IDA,1,1,1,1,1,1,2006,1,0,0,1995,1,1,1,1994,0,1,2006,2,NA,1,2006,1,2005,2,1,0,0,1988,2018,3,0,1,2
+2022,"Hong Kong SAR, China",HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,,1,1,1,1,1,1,2009,0,1,0,2002,NA,1,0,1909,1,0,2017,2,0,0,2003,0,2009,3,0,0,0,2009,NA,0,0,0,4
+2022,Hungary,HUN,Hungary,Europe & Central Asia,High income,,1,1,1,1,1,1,2002,1,1,2,1996,0,1,2,2011,0,1,2021,2,0,2,2015,1,2018,3,0,0,1,2002,NA,0,0,0,4
+2022,Iceland,ISL,Iceland,Europe & Central Asia,High income,,1,1,1,1,1,1,2001,0,0,0,1917,1,1,2,1929,0,2,2010,2,NA,0,2001,2,2019,1,0,0,2,2022,NA,0,0,0,4
+2022,India,IND,India,South Asia,Lower middle income,IBRD,1,1,1,1,1,1,2007,1,0,2,1947,0,1,2,1964,0,2,2017,2,NA,2,2016,2,2016,3,1,1,2,2012,2019,3,0,1,2
+2022,Indonesia,IDN,Indonesia,East Asia & Pacific,Upper middle income,IBRD,1,1,1,1,1,1,2013,1,1,0,1945,0,1,0,1955,1,0,2018,0,0,0,2018,0,2008,3,1,1,0,1988,2021,2,1,0,3
+2022,Iran,IRN,"Iran, Islamic Rep.",Middle East & North Africa,Lower middle income,IBRD,1,1,1,1,1,1,2018,1,0,2,1934,1,1,2,1957,1,2,2018,2,0,2,2020,2,2010,2,1,1,2,2015,NA,0,0,0,2
+2022,Iraq,IRQ,Iraq,Middle East & North Africa,Upper middle income,IBRD,0,0,0,0,0,0,NA,NA,0,0,2003,NA,NA,0,1987,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,2022,2008,1,0,1,3
+2022,Ireland,IRL,Ireland,Europe & Central Asia,High income,,1,0,1,1,0,1,2005,1,0,0,1919,NA,NA,0,1923,0,0,NA,0,0,0,NA,0,2002,2,0,0,0,2005,NA,0,0,0,4
+2022,Israel,ISR,Israel,Middle East & North Africa,High income,,1,1,1,1,1,1,2010,1,0,0,1948,1,1,2,2003,0,0,2010,0,0,0,2010,0,2009,2,1,0,0,2002,NA,0,0,0,4
+2022,Italy,ITA,Italy,Europe & Central Asia,High income,,1,1,1,1,1,1,2006,1,0,2,1893,1,1,2,1946,0,2,2002,1,NA,2,2012,2,2003,2,0,0,2,2006,2014,3,0,1,4
+2022,Jamaica,JAM,Jamaica,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,2015,0,0,1,1959,0,1,1,1868,0,0,2018,2,NA,1,2018,0,2015,2,1,0,1,1986,2022,3,0,0,3
+2022,Japan,JPN,Japan,East Asia & Pacific,High income,,1,0,1,1,1,1,2009,1,0,0,1949,0,1,2,1946,0,2,2010,2,NA,0,2010,0,2022,2,1,0,0,2004,NA,0,0,0,4
+2022,Jordan,JOR,Jordan,Middle East & North Africa,Lower middle income,IBRD,1,1,1,1,1,1,2011,0,0,0,1920,1,1,0,1922,1,2,2007,2,0,1,2007,1,2016,2,1,1,2,1998,NA,0,0,0,2
+2022,Kazakhstan,KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,IBRD,1,1,1,1,1,1,2002,1,1,1,1994,1,1,0,1991,1,0,2022,2,0,0,2022,0,2009,2,1,1,0,2000,NA,0,0,0,3
+2022,Kenya,KEN,Kenya,Sub-Saharan Africa,Lower middle income,Blend,1,0,1,1,1,1,2011,0,1,1,1963,1,1,0,1995,1,0,2010,2,0,0,2010,0,2014,1,1,1,2,1988,2018,0,1,0,2
+2022,Kiribati,KIR,Kiribati,East Asia & Pacific,Lower middle income,IDA,1,1,1,0,0,1,2004,0,0,0,1979,0,NA,0,2005,0,0,NA,0,0,0,NA,0,2021,2,0,0,0,NA,NA,0,0,0,2
+2022,"Korea, DPR",PRK,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income,,0,0,0,0,0,0,NA,NA,0,0,NA,NA,NA,0,NA,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,NA,NA,0,0,0,1
+2022,"Korea, Rep.",KOR,"Korea, Rep.",East Asia & Pacific,High income,,1,1,1,1,1,1,2007,1,1,2,1948,1,1,2,1907,1,2,2001,2,0,2,2001,2,2002,3,1,1,2,2007,2007,3,0,1,4
+2022,Kosovo,KSV,NA,NA,NA,NA,1,1,1,1,1,1,2006,1,0,0,2003,0,0,0,1999,0,0,2013,2,0,0,2013,0,2013,1,1,0,0,2006,NA,0,0,0,NA
+2022,Kuwait,KWT,Kuwait,Middle East & North Africa,High income,,1,0,1,1,1,1,1997,0,0,2,1979,1,1,0,1963,0,2,2005,2,NA,2,2005,2,2019,1,0,0,0,1993,NA,0,0,0,4
+2022,Kyrgyz Republic,KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,IDA,1,1,1,1,1,1,2008,1,0,0,1994,0,1,0,1991,0,0,2017,0,NA,0,2017,0,2011,1,0,0,0,2001,NA,0,0,0,2
+2022,Lao PDR,LAO,Lao PDR,East Asia & Pacific,Lower middle income,IDA,1,1,1,1,1,1,2011,1,0,0,1991,NA,NA,0,2005,0,0,2011,0,0,0,2011,0,2021,1,0,0,0,2011,NA,0,0,0,2
+2022,Latvia,LVA,Latvia,Europe & Central Asia,High income,,1,1,1,0,0,1,2009,0,0,1,1918,NA,1,0,1992,0,0,2023,0,0,0,2023,0,2005,3,0,1,2,2009,2017,1,0,0,4
+2022,Lebanon,LBN,Lebanon,Middle East & North Africa,Lower middle income,IBRD,1,0,1,1,1,1,2001,1,1,0,1920,0,1,0,1970,0,0,2000,0,0,0,2014,0,2022,2,0,0,0,1993,NA,0,0,0,2
+2022,Lesotho,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,IDA,1,1,1,1,1,0,2009,0,0,1,1996,0,1,1,2012,1,2,2010,1,0,2,2010,2,NA,0,NA,0,0,1995,NA,0,0,0,2
+2022,Liberia,LBR,Liberia,Sub-Saharan Africa,Low income,IDA,1,0,1,1,1,1,2012,0,0,0,2003,NA,NA,0,2013,0,0,2013,0,0,0,2013,0,2010,1,0,0,0,2013,NA,0,0,0,1
+2022,Libya,LBY,Libya,Middle East & North Africa,Upper middle income,IBRD,1,0,1,0,0,0,2014,0,0,0,2011,NA,NA,0,2009,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,2005,NA,0,0,0,3
+2022,Liechtenstein,LIE,Liechtenstein,Europe & Central Asia,High income,,0,0,0,0,0,1,NA,NA,0,0,1866,NA,NA,0,NA,0,0,NA,0,0,0,NA,0,2014,1,0,0,0,NA,NA,0,0,0,4
+2022,Lithuania,LTU,Lithuania,Europe & Central Asia,High income,,1,1,1,1,1,1,2000,0,0,2,1995,0,1,2,1990,0,1,2002,1,0,1,2002,0,2003,3,0,0,2,2007,2011,3,0,0,4
+2022,Luxembourg,LUX,Luxembourg,Europe & Central Asia,High income,,1,1,1,1,1,1,2006,1,0,2,1931,1,1,0,1944,0,1,2007,2,NA,0,2007,0,2006,2,0,0,0,2023,NA,0,0,0,4
+2022,"Macao SAR, China",MAC,"Macao SAR, China",East Asia & Pacific,High income,,1,0,1,1,1,1,1999,0,0,0,1999,NA,NA,0,2001,0,0,2007,0,0,0,2007,0,NA,1,NA,0,0,NA,NA,0,0,0,4
+2022,Madagascar,MDG,Madagascar,Sub-Saharan Africa,Low income,IDA,1,0,1,1,1,1,2011,1,0,0,1962,0,0,0,1961,0,0,2004,1,NA,0,1999,0,2010,1,0,0,0,2001,NA,0,0,0,1
+2022,Malawi,MWI,Malawi,Sub-Saharan Africa,Low income,IDA,1,1,1,1,1,0,2020,0,0,2,1994,NA,NA,0,1998,0,0,2006,1,NA,1,2006,1,NA,0,NA,0,0,1989,NA,0,0,0,1
+2022,Malaysia,MYS,Malaysia,East Asia & Pacific,Upper middle income,IBRD,1,1,1,1,1,1,2006,1,0,0,1957,1,1,0,1952,0,0,2005,2,NA,1,2018,1,1999,3,1,0,2,2006,2020,2,0,0,3
+2022,Maldives,MDV,Maldives,South Asia,Upper middle income,IDA,1,1,1,1,1,1,2010,1,1,0,1965,0,1,0,1980,0,0,2010,1,0,0,2010,0,2022,0,0,0,0,1987,2010,1,0,0,3
+2022,Mali,MLI,Mali,Sub-Saharan Africa,Low income,IDA,1,0,1,1,1,1,1997,0,0,2,1961,1,1,2,1960,0,0,2010,0,0,0,1994,0,2010,1,0,0,0,2018,2016,1,0,0,1
+2022,Malta,MLT,Malta,Middle East & North Africa,High income,,1,0,1,1,1,1,2020,0,0,0,1962,1,1,0,1776,0,1,2014,1,NA,0,2011,1,2011,3,0,0,1,NA,NA,0,0,0,4
+2022,Marshall Islands,MHL,Marshall Islands,East Asia & Pacific,Upper middle income,IDA,0,0,0,0,0,0,2022,0,0,0,1989,NA,NA,0,NA,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,NA,NA,0,0,0,3
+2022,Mauritania,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,IDA,1,0,1,1,1,1,2006,0,0,0,1960,NA,0,0,1960,0,0,2014,0,0,0,2014,0,2023,3,1,0,0,1995,2022,1,0,0,2
+2022,Mauritius,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,IBRD,1,1,1,1,1,1,2000,1,1,2,1968,1,1,2,2004,1,2,2021,1,0,2,1990,2,2015,2,0,1,2,1987,2021,3,1,0,3
+2022,Mexico,MEX,Mexico,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,2012,0,0,0,1821,NA,0,0,1995,0,0,2011,1,0,0,2012,0,1996,2,1,0,0,1987,2016,3,0,1,3
+2022,"Micronesia, Fed. Sts.",FSM,"Micronesia, Fed. Sts.",East Asia & Pacific,Lower middle income,IDA,1,1,1,0,1,0,2010,0,0,2,1986,0,NA,0,1966,0,2,NA,0,0,0,NA,2,NA,0,NA,0,0,NA,NA,0,0,0,2
+2022,Moldova,MDA,Moldova,Europe & Central Asia,Upper middle income,IBRD,1,1,1,0,1,1,2015,1,1,1,1993,1,1,1,1991,1,1,2023,0,0,1,NA,0,2012,2,1,1,1,1997,2018,3,0,0,3
+2022,Monaco,MCO,Monaco,Europe & Central Asia,High income,,1,0,0,0,0,0,2002,0,0,0,1910,NA,NA,0,NA,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,NA,NA,0,0,0,4
+2022,Mongolia,MNG,Mongolia,East Asia & Pacific,Lower middle income,IBRD,1,1,1,1,1,1,2005,1,0,2,1923,1,1,2,2021,1,2,2010,1,0,2,2019,2,2016,2,1,1,2,2002,2020,1,1,1,2
+2022,Montenegro,MNE,Montenegro,Europe & Central Asia,Upper middle income,IBRD,1,1,1,1,1,1,2003,1,0,0,2005,0,1,2,2006,0,0,2008,1,NA,2,2003,0,2013,1,0,1,0,2003,NA,0,0,0,3
+2022,Morocco,MAR,Morocco,Middle East & North Africa,Lower middle income,IBRD,1,1,1,1,1,1,2009,1,0,1,1916,1,1,1,2008,0,2,2012,2,NA,1,2010,0,2007,3,0,0,1,1996,2021,0,0,0,2
+2022,Mozambique,MOZ,Mozambique,Sub-Saharan Africa,Low income,IDA,1,1,1,1,1,1,2009,0,0,0,1975,0,1,0,2006,0,0,2010,0,NA,0,2010,0,2016,2,0,0,0,1990,2019,2,0,0,1
+2022,Myanmar,MMR,Myanmar,East Asia & Pacific,Lower middle income,IDA,1,0,1,0,0,0,2011,0,0,0,1948,NA,NA,0,2010,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,2016,NA,0,0,0,2
+2022,Namibia,NAM,Namibia,Sub-Saharan Africa,Upper middle income,IBRD,1,1,1,0,1,1,2006,0,0,2,1990,0,1,0,1990,0,0,NA,0,0,0,1999,0,2021,1,0,0,0,1993,NA,0,0,0,3
+2022,Nauru,NRU,Nauru,East Asia & Pacific,High income,IBRD,1,0,0,1,1,0,2012,0,0,0,1968,NA,NA,0,2012,0,0,2009,0,0,0,2009,0,NA,0,NA,0,0,1993,NA,0,0,0,4
+2022,Nepal,NPL,Nepal,South Asia,Lower middle income,IDA,1,1,1,1,1,1,2006,1,0,0,1968,NA,NA,0,1968,0,0,2005,0,0,0,2004,0,2014,2,0,0,0,1997,NA,0,0,0,2
+2022,Netherlands,NLD,Netherlands,Europe & Central Asia,High income,,1,1,1,1,1,1,2003,1,0,1,1841,1,1,0,1798,0,0,2010,2,NA,0,2010,0,2011,2,1,0,2,2003,2018,1,0,0,4
+2022,New Zealand,NZL,New Zealand,East Asia & Pacific,High income,,1,1,1,1,1,1,1999,1,0,0,1840,1,1,0,1840,0,2,2000,0,NA,2,NA,0,2002,2,1,0,2,1988,2014,3,0,0,4
+2022,Nicaragua,NIC,Nicaragua,Latin America & Caribbean,Lower middle income,IDA,1,1,1,0,1,1,2017,1,0,2,1998,1,1,2,1957,0,2,2006,0,NA,2,2006,2,2006,3,0,0,2,1988,2003,3,0,0,2
+2022,Niger,NER,Niger,Sub-Saharan Africa,Low income,IDA,1,0,1,0,1,1,2003,0,0,0,1972,NA,NA,0,1960,0,0,NA,0,0,0,2009,0,2011,1,1,0,2,2002,NA,0,0,0,1
+2022,Nigeria,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,Blend,1,1,1,1,1,1,2012,1,0,0,1988,1,1,0,1922,0,0,2007,0,NA,0,2007,0,2007,1,0,0,0,1990,NA,0,0,0,2
+2022,North Macedonia,MKD,North Macedonia,Europe & Central Asia,Upper middle income,IBRD,1,0,1,1,1,1,2001,1,1,0,2002,1,1,2,1992,0,1,2003,1,0,2,2003,1,2007,2,1,0,1,2011,NA,0,0,0,3
+2022,Norway,NOR,Norway,Europe & Central Asia,High income,,1,1,1,1,1,1,2013,1,0,2,1814,1,1,0,1814,0,1,2008,2,NA,1,2008,1,2008,2,0,0,2,1985,NA,0,0,0,4
+2022,Oman,OMN,Oman,Middle East & North Africa,High income,,1,0,1,1,1,1,1988,1,0,1,1941,1,0,2,2015,1,2,2004,2,NA,2,1992,1,2011,3,1,1,2,2022,NA,0,0,0,4
+2022,Pakistan,PAK,Pakistan,South Asia,Lower middle income,Blend,1,0,1,1,1,1,2011,1,0,0,1947,NA,NA,0,1924,0,0,2011,0,NA,0,2011,0,2011,1,0,0,0,1985,2012,2,0,0,2
+2022,Palau,PLW,Palau,East Asia & Pacific,Upper middle income,IBRD,1,0,1,1,1,0,2019,1,0,2,1994,NA,NA,0,1994,0,0,2018,2,NA,2,2018,0,NA,0,NA,0,0,2022,NA,0,0,0,3
+2022,Panama,PAN,Panama,Latin America & Caribbean,High income,IBRD,1,0,1,1,1,1,2015,0,0,2,1997,1,NA,0,2008,0,2,2017,0,0,2,1998,2,2006,2,1,0,2,1995,2007,1,0,0,4
+2022,Papua New Guinea,PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,Blend,1,0,1,0,1,1,2011,0,0,2,1975,0,1,2,1966,0,2,2023,1,NA,0,2002,2,2019,1,1,0,2,1987,NA,0,0,0,2
+2022,Paraguay,PRY,Paraguay,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,1997,1,0,2,1992,0,1,2,1846,0,2,1997,0,NA,2,1997,2,2006,2,1,1,1,1995,2012,2,0,1,3
+2022,Peru,PER,Peru,Latin America & Caribbean,Upper middle income,IBRD,1,1,1,1,1,1,1999,1,0,2,1821,1,0,2,2002,0,1,2006,1,NA,2,2014,2,2002,2,0,0,2,1998,2017,3,0,1,3
+2022,Philippines,PHL,Philippines,East Asia & Pacific,Lower middle income,IBRD,1,0,1,1,1,1,2019,1,0,0,1897,1,1,0,1965,0,1,2017,1,NA,0,2015,0,2000,2,1,0,2,1987,2017,1,0,0,2
+2022,Poland,POL,Poland,Europe & Central Asia,High income,IBRD,1,1,1,1,1,1,2011,1,0,0,1996,1,1,0,1919,0,1,2014,2,NA,2,2014,0,2022,0,1,0,2,2001,2014,1,0,1,4
+2022,Portugal,PRT,Portugal,Europe & Central Asia,High income,,1,1,1,1,1,1,2003,0,0,2,2007,0,1,2,1976,1,0,2012,0,0,1,2012,1,2020,3,1,1,0,1999,2019,0,0,0,4
+2022,Qatar,QAT,Qatar,Middle East & North Africa,High income,,1,1,1,1,1,1,2016,1,1,1,1960,0,1,1,1970,1,1,2012,2,0,1,2012,1,2016,3,1,1,1,2016,2004,1,0,1,4
+2022,Romania,ROU,Romania,Europe & Central Asia,High income,IBRD,1,1,1,1,1,1,2003,1,0,0,1947,1,1,0,1947,0,0,2007,1,NA,0,2005,0,2002,2,1,0,0,1993,NA,0,0,0,4
+2022,Russian Federation,RUS,Russian Federation,Europe & Central Asia,Upper middle income,IBRD,1,1,1,1,1,1,2011,1,1,2,1992,NA,NA,0,2004,0,2,2014,2,0,2,2011,2,2006,3,0,1,2,2002,2009,3,1,1,3
+2022,Rwanda,RWA,Rwanda,Sub-Saharan Africa,Low income,IDA,1,1,1,1,1,1,2013,1,0,2,1997,1,1,2,1997,0,2,2009,2,NA,0,2009,2,2018,3,1,0,2,1990,NA,0,0,0,1
+2022,Samoa,WSM,Samoa,East Asia & Pacific,Lower middle income,IDA,1,0,1,1,1,1,2006,1,0,0,2001,NA,NA,0,1962,0,0,1998,2,NA,0,2005,0,2010,1,1,0,0,1989,NA,0,0,0,2
+2022,San Marino,SMR,San Marino,Europe & Central Asia,High income,,1,0,0,0,0,0,2006,0,0,0,1993,NA,NA,0,NA,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,NA,NA,0,0,0,4
+2022,São Tomé and Principe,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,IDA,1,1,1,1,1,1,2012,0,0,0,1975,NA,NA,0,2001,0,0,2009,0,0,0,2012,0,2011,1,0,0,0,2006,NA,0,0,0,2
+2022,Saudi Arabia,SAU,Saudi Arabia,Middle East & North Africa,High income,,1,1,1,1,1,1,2008,1,1,2,1927,1,1,2,1926,1,2,2008,2,0,2,2018,2,2018,3,1,1,2,2021,2021,3,1,0,4
+2022,Senegal,SEN,Senegal,Sub-Saharan Africa,Lower middle income,IDA,1,0,1,1,1,1,2005,0,0,0,1970,NA,NA,0,1962,0,0,2014,0,NA,0,2005,0,2008,1,0,0,0,1997,NA,0,0,0,2
+2022,Serbia,SRB,Serbia,Europe & Central Asia,Upper middle income,IBRD,1,1,1,1,1,1,2008,1,1,1,2005,1,1,1,1875,0,1,2022,2,0,1,2023,1,2020,3,0,0,1,2019,2023,3,0,0,3
+2022,Seychelles,SYC,Seychelles,Sub-Saharan Africa,High income,IBRD,1,1,1,1,1,1,2003,0,0,1,1976,NA,NA,0,1976,0,2,2012,0,NA,1,2010,1,2011,1,0,0,1,1997,NA,0,0,0,4
+2022,Sierra Leone,SLE,Sierra Leone,Sub-Saharan Africa,Low income,IDA,1,0,1,1,1,0,2009,0,0,1,1991,1,0,2,2002,0,2,2008,0,NA,0,2009,2,NA,0,NA,0,0,1993,NA,0,0,0,1
+2022,Singapore,SGP,Singapore,East Asia & Pacific,High income,,1,1,1,1,1,1,2012,1,1,0,1963,1,1,0,2003,1,0,2011,2,0,0,2011,0,2000,3,1,1,0,2005,NA,0,0,0,4
+2022,Slovak Republic,SVK,Slovak Republic,Europe & Central Asia,High income,,1,1,1,1,1,1,2007,1,0,0,2002,1,NA,0,1993,0,0,2004,0,0,0,2004,0,2010,2,1,0,0,2004,2013,1,0,0,4
+2022,Slovenia,SVN,Slovenia,Europe & Central Asia,High income,,1,1,1,1,1,1,1998,1,0,1,2002,1,1,2,1991,0,1,2003,0,NA,1,2003,1,2018,3,0,0,2,2008,2009,1,0,0,4
+2022,Solomon Islands,SLB,Solomon Islands,East Asia & Pacific,Lower middle income,IDA,1,1,1,0,1,1,2021,1,0,0,1978,0,1,0,1978,0,0,NA,0,0,0,2009,0,2010,1,0,0,0,1989,2017,1,0,0,2
+2022,Somalia,SOM,Somalia,Sub-Saharan Africa,Low income,IDA,1,1,0,0,1,0,2015,0,0,1,2013,1,1,2,2007,0,0,2023,0,NA,1,2016,0,NA,0,NA,0,0,2015,NA,0,0,0,1
+2022,South Africa,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,IBRD,1,1,1,1,1,1,2018,1,0,0,1910,1,1,0,1997,0,0,1992,1,NA,0,1992,0,2002,1,1,0,0,2002,NA,0,0,0,3
+2022,South Sudan,SSD,South Sudan,Sub-Saharan Africa,Low income,IDA,1,0,0,1,1,0,2013,0,0,0,2011,NA,NA,0,2011,0,0,2010,0,NA,0,2010,0,NA,0,NA,0,0,2014,NA,0,0,0,1
+2022,Spain,ESP,Spain,Europe & Central Asia,High income,,1,1,1,1,1,1,2002,1,1,2,1714,0,NA,0,1992,0,0,2003,2,0,2,1990,0,2008,3,1,1,2,2002,2012,1,0,1,4
+2022,Sri Lanka,LKA,Sri Lanka,South Asia,Lower middle income,IDA,1,0,1,1,1,1,2017,0,1,2,1947,0,NA,0,1809,0,0,2012,1,0,2,2017,2,2022,2,1,0,2,1985,NA,0,0,0,2
+2022,St. Kitts and Nevis,KNA,St. Kitts and Nevis,Latin America & Caribbean,High income,IBRD,1,0,1,0,0,0,2008,0,0,0,1983,NA,NA,0,1983,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,1987,NA,0,0,0,4
+2022,St. Lucia,LCA,St. Lucia,Latin America & Caribbean,Upper middle income,Blend,1,1,1,0,1,1,1997,1,1,1,1979,1,NA,1,1967,0,1,NA,0,0,0,2012,1,2021,2,1,0,0,1998,NA,0,0,0,3
+2022,St. Vincent and the Grenadines,VCT,St. Vincent and the Grenadines,Latin America & Caribbean,Upper middle income,Blend,1,0,1,1,1,1,2012,1,0,0,1979,1,NA,0,1979,0,0,2012,0,0,0,2012,0,2012,2,0,0,0,1988,NA,0,0,0,3
+2022,Sudan,SDN,Sudan,Sub-Saharan Africa,Low income,IDA,1,0,1,0,0,0,2015,0,0,0,1956,NA,NA,0,1905,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,1998,NA,0,0,0,1
+2022,Suriname,SUR,Suriname,Latin America & Caribbean,Upper middle income,IBRD,1,0,1,1,1,0,2014,1,0,0,1975,NA,NA,0,1864,0,0,2009,0,0,0,2014,0,NA,0,NA,0,0,2002,NA,0,0,0,3
+2022,Sweden,SWE,Sweden,Europe & Central Asia,High income,,1,1,1,1,1,1,2006,1,1,1,1789,1,1,2,1636,0,1,2012,2,0,1,2012,1,2010,2,0,0,2,2011,NA,0,0,0,4
+2022,Switzerland,CHE,Switzerland,Europe & Central Asia,High income,,1,0,1,1,1,1,2007,1,0,1,1907,NA,NA,0,1849,0,1,NA,2,NA,1,2007,1,2009,2,1,0,1,2007,NA,0,0,0,4
+2022,Syrian Arab Republic,SYR,Syrian Arab Republic,Middle East & North Africa,Low income,IDA,1,0,1,0,0,0,2007,1,0,0,1973,NA,NA,0,1946,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,2001,NA,0,0,0,1
+2022,"Taiwan, China",TWN,"Taiwan, China",East Asia & Pacific,High income,,1,1,1,1,1,1,2001,1,0,0,1999,1,1,0,1854,1,2,2010,1,NA,0,1997,0,1999,2,0,0,0,1999,NA,0,0,0,4
+2022,Tajikistan,TJK,Tajikistan,Europe & Central Asia,Lower middle income,IDA,1,1,1,1,0,1,2015,1,0,0,1997,1,1,0,1989,0,0,2021,0,NA,0,NA,0,2012,2,1,0,0,2011,NA,0,0,0,2
+2022,Tanzania,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,IDA,1,1,1,1,1,1,2018,0,1,1,1964,1,1,1,1995,0,1,2017,2,0,1,2000,1,2018,3,1,0,2,2020,2022,3,1,0,2
+2022,Thailand,THA,Thailand,East Asia & Pacific,Upper middle income,IBRD,1,1,1,1,1,1,2004,1,0,1,1875,0,1,2,1874,1,2,2019,1,NA,2,2010,2,2010,3,0,1,2,2005,2018,3,0,1,3
+2022,Timor-Leste,TLS,Timor-Leste,East Asia & Pacific,Lower middle income,Blend,1,1,1,1,1,1,2010,1,0,0,2002,1,1,0,2002,0,0,2011,2,0,0,2011,0,2011,1,1,0,0,2010,NA,0,0,0,2
+2022,Togo,TGO,Togo,Sub-Saharan Africa,Low income,IDA,1,0,1,1,0,1,2010,1,0,0,1923,NA,0,2,1964,0,1,2000,0,0,0,NA,0,2010,1,1,0,0,1984,NA,0,0,0,1
+2022,Tonga,TON,Tonga,East Asia & Pacific,Upper middle income,IDA,1,0,1,1,1,0,2005,0,0,0,1970,NA,NA,0,1970,0,0,2003,1,0,0,2005,0,NA,0,NA,0,0,1992,NA,0,0,0,3
+2022,Trinidad and Tobago,TTO,Trinidad and Tobago,Latin America & Caribbean,High income,IBRD,0,0,1,1,1,1,2022,0,0,0,1938,1,0,0,1938,0,0,2002,1,NA,1,2005,0,2022,0,0,0,2,2014,NA,0,0,0,4
+2022,Tunisia,TUN,Tunisia,Middle East & North Africa,Lower middle income,IBRD,1,1,1,1,1,1,2000,1,0,0,1975,NA,0,2,1957,0,2,1983,1,NA,0,1989,2,2013,3,1,0,2,2011,2019,2,0,0,2
+2022,Türkiye,TUR,Türkiye,Europe & Central Asia,Upper middle income,IBRD,1,1,1,1,1,1,2017,1,1,1,1923,1,1,1,1993,0,0,2019,2,0,1,2009,1,2010,3,0,0,2,2004,2019,3,0,1,3
+2022,Turkmenistan,TKM,Turkmenistan,Europe & Central Asia,Upper middle income,IBRD,0,0,1,0,0,0,2008,1,0,0,2008,NA,NA,0,1991,0,0,NA,0,0,0,NA,0,NA,0,NA,0,0,2001,NA,0,0,0,3
+2022,Tuvalu,TUV,Tuvalu,East Asia & Pacific,Upper middle income,IDA,1,0,0,0,0,1,2021,0,0,0,1986,NA,NA,0,1975,0,0,NA,0,0,0,NA,0,2020,1,0,0,0,NA,NA,0,0,0,3
+2022,Uganda,UGA,Uganda,Sub-Saharan Africa,Low income,IDA,1,1,1,1,1,1,2016,1,1,2,1995,0,1,2,1991,0,2,2011,2,0,1,2021,2,2019,3,1,1,2,1985,2019,3,0,1,1
+2022,Ukraine,UKR,Ukraine,Europe & Central Asia,Lower middle income,IBRD,1,1,1,0,1,1,2004,1,0,0,1996,1,1,2,2019,1,2,2022,1,NA,2,2022,2,2015,3,1,0,2,2012,NA,0,0,0,2
+2022,United Arab Emirates,ARE,United Arab Emirates,Middle East & North Africa,High income,,1,1,1,1,1,1,2008,1,0,2,1971,1,1,2,2003,1,2,2012,2,0,2,2008,1,2006,3,0,0,2,2008,NA,0,0,0,4
+2022,United Kingdom,GBR,United Kingdom,Europe & Central Asia,High income,,1,1,1,1,1,1,2014,1,0,1,1660,1,1,1,2005,0,1,2011,1,NA,1,2020,1,1991,3,1,0,1,2019,NA,0,0,0,4
+2022,United States of America,USA,United States,North America,High income,,1,1,1,1,1,1,1996,0,0,0,1789,1,1,2,2003,0,0,NA,2,NA,0,NA,0,2013,3,1,0,2,1996,NA,0,0,0,4
+2022,Uruguay,URY,Uruguay,Latin America & Caribbean,High income,IBRD,1,1,1,1,1,1,1999,1,0,1,1950,1,NA,1,1853,1,1,2011,0,NA,0,2011,2,2002,3,1,1,1,2011,2011,1,0,0,4
+2022,Uzbekistan,UZB,Uzbekistan,Europe & Central Asia,Lower middle income,Blend,1,1,1,1,1,1,2017,1,1,2,2004,1,0,0,1997,1,2,2020,2,0,2,2011,2,2018,1,0,1,2,2023,2022,3,0,0,2
+2022,Vanuatu,VUT,Vanuatu,East Asia & Pacific,Lower middle income,IDA,1,0,1,1,0,0,2003,1,0,0,1980,1,1,0,1999,0,0,2002,1,NA,0,NA,0,2022,1,0,0,0,1995,NA,0,0,0,2
+2022,"Venezuela, RB",VEN,"Venezuela, RB",Latin America & Caribbean,,IBRD,1,1,1,1,1,0,2001,1,0,0,1958,1,1,0,1994,0,0,2007,0,0,0,2007,0,NA,0,NA,0,0,1998,NA,0,0,0,NA
+2022,Vietnam,VNM,Vietnam,East Asia & Pacific,Lower middle income,IBRD,1,1,1,0,1,1,2012,1,1,1,1990,1,1,2,1945,1,0,NA,0,0,0,2013,0,2009,2,0,0,2,1998,2016,2,0,1,2
+2022,West Bank and Gaza,WBG,NA,NA,NA,NA,1,1,1,1,1,0,2008,1,0,1,2008,1,NA,0,2008,0,0,2015,0,0,0,1996,0,NA,0,NA,0,0,2000,2014,1,0,1,NA
+2022,Yemen,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,IDA,1,1,1,1,1,1,2007,0,0,0,1990,1,0,0,1990,0,0,1993,0,0,0,2001,0,2011,2,1,0,0,1999,NA,0,0,0,1
+2022,Zambia,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,IDA,1,0,1,1,1,1,2006,0,1,1,2001,1,1,1,2006,0,2,2006,1,0,1,2006,1,2015,2,1,0,1,2006,NA,0,0,0,2
+2022,Zimbabwe,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,Blend,1,0,1,1,1,1,2008,1,0,1,1980,NA,NA,0,2001,0,0,2013,0,NA,0,2013,1,2022,1,1,0,1,1986,2021,2,0,0,2

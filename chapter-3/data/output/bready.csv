@@ -1,0 +1,501 @@
+economy,economy_code,pillar_i_overall,pillar_ii_overall,pillar_iii_overall,category_2_2_overall,topic
+Bangladesh,BGD,80,56.5,85.75,10,business_entry
+Barbados,BRB,81.85,57.33,95.5,10,business_entry
+Bosnia and Herzegovina,BIH,87.37,31.08,48.75,15,business_entry
+Botswana,BWA,96.25,89,92.25,20,business_entry
+Bulgaria,BGR,93.75,84,98.5,20,business_entry
+Cambodia,KHM,81.56,40.83,9,10,business_entry
+Central African Republic,CAF,72.78,17.5,48.5,5,business_entry
+Chad,TCD,77.86,13.33,51.25,10,business_entry
+Colombia,COL,96.61,85,84.25,15,business_entry
+Costa Rica,CRI,82.5,72,58.75,15,business_entry
+Côte dIvoire,CIV,87.62,42.33,61.5,15,business_entry
+Croatia,HRV,80.83,75.83,79.5,20,business_entry
+El Salvador,SLV,62.23,34.83,40.5,5,business_entry
+Estonia,EST,92.5,88.75,91,20,business_entry
+"Gambia, The",GMB,78.75,8.33,52.75,5,business_entry
+Georgia,GEO,83.75,65.5,91,20,business_entry
+Ghana,GHA,71.87,38.83,12.25,15,business_entry
+Greece,GRC,96.25,94.5,99,20,business_entry
+"Hong Kong SAR, China",HKG,91.87,65.33,99.25,5,business_entry
+Hungary,HUN,85,85.17,87.25,20,business_entry
+Indonesia,IDN,80.42,84.25,26.5,17.5,business_entry
+Iraq,IRQ,78.75,26.67,51.25,0,business_entry
+Kyrgyz Republic,KGZ,80.98,50.5,63,20,business_entry
+Lesotho,LSO,74.06,64,91.25,15,business_entry
+Madagascar,MDG,78.21,18.83,90,0,business_entry
+Mauritius,MUS,77.81,53.17,95.75,10,business_entry
+Mexico,MEX,90.42,38.67,55.5,5,business_entry
+Montenegro,MNE,95,57.17,87,10,business_entry
+Morocco,MAR,94.11,47.33,88.75,12.5,business_entry
+Nepal,NPL,75,53.33,70.75,15,business_entry
+New Zealand,NZL,77.5,77.42,99,20,business_entry
+North Macedonia,MKD,95,78.5,99,15,business_entry
+Pakistan,PAK,90,87,97.5,17.5,business_entry
+Paraguay,PRY,91.19,31.33,39.25,10,business_entry
+Peru,PER,77.5,73.17,39,20,business_entry
+Philippines,PHL,88.54,42.67,14.25,5,business_entry
+Portugal,PRT,95,89,94,20,business_entry
+Romania,ROM,91.25,86,61.25,15,business_entry
+Rwanda,RWA,87.5,68.67,100,20,business_entry
+Samoa,WSM,66.25,56.67,97.25,5,business_entry
+Seychelles,SYC,81.04,30.17,52.25,10,business_entry
+Sierra Leone,SLE,73.75,21.83,49.75,5,business_entry
+Singapore,SGP,87.71,94,99,20,business_entry
+Slovak Republic,SVK,90.62,86,80.25,20,business_entry
+Tanzania,TZA,87.19,72.5,47.75,15,business_entry
+Timor-Leste,TMP,85.77,23.5,40.5,10,business_entry
+Togo,TGO,77.86,54.67,99.25,5,business_entry
+Vanuatu,VUT,71.25,47,14,5,business_entry
+Viet Nam,VNM,72.23,58.17,66,17.5,business_entry
+West Bank and Gaza,WBG,85,40.92,61.5,2.5,business_entry
+Bangladesh,BGD,36.83,18.33,66,0,business_insolvency
+Barbados,BRB,59.42,30.83,46,0,business_insolvency
+Bosnia and Herzegovina,BIH,66.28,26.67,90.75,0,business_insolvency
+Botswana,BWA,57.53,13.33,44.5,0,business_insolvency
+Bulgaria,BGR,67.28,66.67,65.25,20,business_insolvency
+Cambodia,KHM,55.56,3.33,0,0,business_insolvency
+Central African Republic,CAF,83.11,23.33,16,0,business_insolvency
+Chad,TCD,71.56,11.67,43.5,0,business_insolvency
+Colombia,COL,87.06,71.67,64.75,20,business_insolvency
+Costa Rica,CRI,71.94,63.33,0,10,business_insolvency
+Côte dIvoire,CIV,71.56,15,64.75,0,business_insolvency
+Croatia,HRV,65.78,91.67,72,20,business_insolvency
+El Salvador,SLV,39.78,0,14.25,0,business_insolvency
+Estonia,EST,56.33,83.33,98,20,business_insolvency
+Gambia,GMB,37,6.67,86.75,0,business_insolvency
+Georgia,GEO,80.61,48.33,98,5,business_insolvency
+Ghana,GHA,76.03,57.5,61.25,5,business_insolvency
+Greece,GRC,70.22,36.67,24.25,0,business_insolvency
+Hong Kong SAR China,HKG,65.06,26.67,49,0,business_insolvency
+Hungary,HUN,73.5,65,58.75,10,business_insolvency
+Indonesia,IDN,50.56,53.33,67,5,business_insolvency
+Iraq,IRQ,20.22,0,0,0,business_insolvency
+Kyrgyz Republic,KGZ,65.11,13.33,78.5,0,business_insolvency
+Lesotho,LSO,49.72,8.33,53,0,business_insolvency
+Madagascar,MDG,52.22,13.33,41.75,0,business_insolvency
+Mauritius,MUS,78.56,31.25,73.25,0,business_insolvency
+Mexico,MEX,67.44,33.33,61,0,business_insolvency
+Montenegro,MNE,71.56,33.33,81,0,business_insolvency
+Morocco,MAR,56.67,30.83,52.25,10,business_insolvency
+Nepal,NPL,46.11,20,90,0,business_insolvency
+New Zealand,NZL,64.89,26.67,87,0,business_insolvency
+North Macedonia,MKD,73.78,40,66.5,10,business_insolvency
+Pakistan,PAK,69.78,3.33,73.25,0,business_insolvency
+Paraguay,PRY,38.17,53.33,44.5,20,business_insolvency
+Peru,PER,60.06,41.67,83.25,0,business_insolvency
+Philippines,PHL,71.94,18.33,46.25,0,business_insolvency
+Portugal,PRT,69.56,76.67,91.5,20,business_insolvency
+Romania,ROM,76.83,46.67,53.5,0,business_insolvency
+Rwanda,RWA,73.78,68.33,98.5,10,business_insolvency
+Samoa,WSM,30.22,15.83,24.5,0,business_insolvency
+Seychelles,SYC,36.83,10.83,83.5,0,business_insolvency
+Sierra Leone,SLE,58.44,18.33,44,0,business_insolvency
+Singapore,SGP,93.17,76.67,99.25,10,business_insolvency
+Slovak Republic,SVK,72.78,75,70,5,business_insolvency
+Tanzania,TZA,36.28,36.67,45.75,10,business_insolvency
+Timor-Leste,TMP,0,0,0,0,business_insolvency
+Togo,TGO,84.78,43.33,50.25,10,business_insolvency
+Vanuatu,VUT,47.67,16.67,0,0,business_insolvency
+Vietnam,VNM,75.78,38.33,51.25,0,business_insolvency
+West Bank and Gaza,WBG,30.97,5,0,0,business_insolvency
+Bangladesh,BGD,61.55,63.45,75.73,12.5,business_location
+Barbados,BRB,51.38,30.28,51.5,10,business_location
+Bosnia and Herzegovina,BIH,70.29,26.93,94.27,7.5,business_location
+Botswana,BWA,53.66,36.89,79.8,15,business_location
+Bulgaria,BGR,77.71,51.14,85.67,10,business_location
+Cambodia,KHM,48.14,14.45,84.4,5,business_location
+Central African Republic,CAF,69.32,15.98,49.63,8.75,business_location
+Chad,TCD,48.97,14.31,59.83,7.5,business_location
+Colombia,COL,77.98,49.31,89.83,10,business_location
+Costa Rica,CRI,74.46,77.28,67.23,12.5,business_location
+Côte dIvoire,CIV,58.46,22.23,51.93,10,business_location
+Croatia,HRV,87.07,70.47,71.2,20,business_location
+El Salvador,SLV,60.9,51.4,73.4,7.5,business_location
+Estonia,EST,87.39,84.97,68.83,20,business_location
+Gambia,GMB,43.56,6.41,50.3,0,business_location
+Georgia,GEO,87.37,66.17,95.5,17.5,business_location
+Ghana,GHA,87.58,33.86,59.73,5,business_location
+Greece,GRC,77.88,46.7,49,10,business_location
+Hong Kong SAR China,HKG,83.36,53.3,76.87,5,business_location
+Hungary,HUN,86.63,65.51,68.43,7.5,business_location
+Indonesia,IDN,69.15,51.36,83.77,17.5,business_location
+Iraq,IRQ,52.99,18.08,74.33,5,business_location
+Kyrgyz Republic,KGZ,73.01,34.89,94.2,12.5,business_location
+Lesotho,LSO,36.37,18.91,82.5,5,business_location
+Madagascar,MDG,59.48,18.48,49.37,10,business_location
+Mauritius,MUS,74.89,56.71,74.33,5,business_location
+Mexico,MEX,81.5,45.06,58.87,5,business_location
+Montenegro,MNE,73.99,44.5,81.17,12.5,business_location
+Morocco,MAR,84.55,67.82,79.8,17.5,business_location
+Nepal,NPL,50.06,37.41,94.07,7.5,business_location
+New Zealand,NZL,80.26,77.18,83.7,17.5,business_location
+North Macedonia,MKD,65.64,39.23,62.17,10,business_location
+Pakistan,PAK,41.69,31.82,89.23,2.5,business_location
+Paraguay,PRY,60.79,32.57,88.13,5,business_location
+Peru,PER,79.98,55.44,59.27,5,business_location
+Philippines,PHL,67.03,40.17,73.63,5,business_location
+Portugal,PRT,85.61,63.08,61.83,12.5,business_location
+Romania,ROM,84.67,48.64,75.37,7.5,business_location
+Rwanda,RWA,67.46,77.34,71.23,20,business_location
+Samoa,WSM,46.66,40.52,93.13,17.5,business_location
+Seychelles,SYC,56.28,40.9,76.3,15,business_location
+Sierra Leone,SLE,44.75,18.82,75.5,7.5,business_location
+Singapore,SGP,84.21,67.08,83.43,12.5,business_location
+Slovak Republic,SVK,83.77,64.11,65.5,12.5,business_location
+Tanzania,TZA,66.14,32.83,61.9,10,business_location
+Timor-Leste,TMP,51.1,3.2,66.63,0,business_location
+Togo,TGO,68.38,43.7,91.2,10,business_location
+Vanuatu,VUT,64.22,18.38,72.3,5,business_location
+Vietnam,VNM,78.23,48.36,62.17,10,business_location
+West Bank and Gaza,WBG,45.5,27.17,92.47,5,business_location
+Bangladesh,BGD,52.49,16.88,56.33,10,dispute_resolution
+Barbados,BRB,59.07,59.44,66.38,19.73,dispute_resolution
+Bosnia and Herzegovina,BIH,65.59,42.59,41.57,16.67,dispute_resolution
+Botswana,BWA,79,43.14,46.05,14.59,dispute_resolution
+Bulgaria,BGR,76.15,65.22,64.95,17.5,dispute_resolution
+Cambodia,KHM,72.58,29.57,83.13,18.06,dispute_resolution
+Central African Republic,CAF,67.13,12.43,35.82,0,dispute_resolution
+Chad,TCD,83.44,17.99,46.27,5.56,dispute_resolution
+Colombia,COL,81.25,80.05,57.27,27.92,dispute_resolution
+Costa Rica,CRI,83.38,58.71,37.63,19.31,dispute_resolution
+Croatia,HRV,82.31,70.18,63.02,21.12,dispute_resolution
+Côte dIvoire,CIV,72.87,44.88,66.58,13.34,dispute_resolution
+El Salvador,SLV,65.38,41.44,77.52,17.5,dispute_resolution
+Estonia,EST,78.2,75.24,87.27,20,dispute_resolution
+"Gambia, The",GMB,68.21,26.97,56.88,10.84,dispute_resolution
+Georgia,GEO,84.95,68.98,92.33,22.23,dispute_resolution
+Ghana,GHA,69.24,43.08,52.22,15.84,dispute_resolution
+Greece,GRC,83.28,44.38,69.17,22.78,dispute_resolution
+"Hong Kong SAR, China",HKG,74.63,76.7,66.7,25.63,dispute_resolution
+Hungary,HUN,87.32,62.64,75.65,22.44,dispute_resolution
+Indonesia,IDN,56.09,61.89,74.75,18.61,dispute_resolution
+Iraq,IRQ,50.38,12.43,56.8,0,dispute_resolution
+Kyrgyz Republic,KGZ,74.55,45.36,67.72,17.78,dispute_resolution
+Lesotho,LSO,62.35,35.7,52.23,5.28,dispute_resolution
+Madagascar,MDG,58.84,21.79,62.5,7.5,dispute_resolution
+Mauritius,MUS,55.27,51.78,46.9,11.6,dispute_resolution
+Mexico,MEX,87.39,54.43,61.25,16.39,dispute_resolution
+Montenegro,MNE,78.05,50.74,77.58,20,dispute_resolution
+Morocco,MAR,55.95,29.6,45.45,8.75,dispute_resolution
+Nepal,NPL,69.67,41.07,82.45,18.48,dispute_resolution
+New Zealand,NZL,55.94,53.95,73.32,11.11,dispute_resolution
+North Macedonia,MKD,71.79,53.39,58.1,19.73,dispute_resolution
+Pakistan,PAK,58.02,26.64,41.32,10.9,dispute_resolution
+Paraguay,PRY,84.65,56.23,45.95,24.03,dispute_resolution
+Peru,PER,68.64,61.23,39.97,21.95,dispute_resolution
+Philippines,PHL,80.57,62.39,45.68,21.39,dispute_resolution
+Portugal,PRT,89.96,65.16,62.1,21.05,dispute_resolution
+Romania,ROM,75.93,60.22,87.12,20.28,dispute_resolution
+Rwanda,RWA,79.77,74.19,94.63,20.28,dispute_resolution
+Samoa,WSM,48.09,37.7,57.67,11.11,dispute_resolution
+Seychelles,SYC,48.45,13.49,51.58,1.67,dispute_resolution
+Sierra Leone,SLE,60.56,21.03,45.18,0,dispute_resolution
+Singapore,SGP,62.99,63.17,87.07,26.53,dispute_resolution
+Slovak Republic,SVK,79.41,75.24,80.28,22.23,dispute_resolution
+Tanzania,TZA,71.53,35.98,82.88,4.17,dispute_resolution
+Timor-Leste,TMP,60.35,7.8,41.25,0,dispute_resolution
+Togo,TGO,94.59,53.58,60.27,11.95,dispute_resolution
+Vanuatu,VUT,47.3,30.63,51.2,0,dispute_resolution
+Viet Nam,VNM,79.87,42.65,70.18,20.28,dispute_resolution
+West Bank and Gaza,WBG,52.79,35.16,21.58,8.34,dispute_resolution
+Bangladesh,BGD,74.22,48.19,61.93,23.75,financial_services
+Barbados,BRB,64.94,30.28,88.9,1.67,financial_services
+Bosnia and Herzegovina,BIH,57.98,20.56,90.7,1.67,financial_services
+Botswana,BWA,81.62,46.11,80.17,12.5,financial_services
+Bulgaria,BGR,77.24,41.11,87.33,14.17,financial_services
+Cambodia,KHM,81.87,83.61,92.6,48.33,financial_services
+Central African Republic,CAF,77.85,8.33,15.77,0,financial_services
+Chad,TCD,76.32,36.25,20.2,27.92,financial_services
+Colombia,COL,79.14,52.78,93.67,18.33,financial_services
+Costa Rica,CRI,76.76,53.33,68.33,14.17,financial_services
+Côte dIvoire,CIV,53.51,42.78,30.27,10,financial_services
+Croatia,HRV,73.92,37.78,78.13,13.33,financial_services
+El Salvador,SLV,70.15,85.28,57.53,45,financial_services
+Estonia,EST,70.78,23.06,90.8,1.67,financial_services
+"Gambia, The",GMB,56.4,15.83,54.37,14.17,financial_services
+Georgia,GEO,76.39,50.28,98.23,18.33,financial_services
+Ghana,GHA,75.14,44.44,60,18.33,financial_services
+Greece,GRC,65.28,41.11,69.5,10,financial_services
+"Hong Kong SAR, China",HKG,80.28,51.67,77.93,14.17,financial_services
+Hungary,HUN,99.44,61.94,80.7,35,financial_services
+Indonesia,IDN,69.37,40.28,59.87,1.67,financial_services
+Iraq,IRQ,69.31,32.22,30.63,8.33,financial_services
+Kyrgyz Republic,KGZ,70.76,54.44,86.67,22.5,financial_services
+Lesotho,LSO,60.94,41.11,60.83,12.5,financial_services
+Madagascar,MDG,47.85,48.33,55.8,10,financial_services
+Mauritius,MUS,78.13,42.78,59.6,10,financial_services
+Mexico,MEX,88.99,83.06,80.87,50,financial_services
+Montenegro,MNE,63.75,50.83,74.9,18.33,financial_services
+Morocco,MAR,73.74,68.33,45.9,29.17,financial_services
+Nepal,NPL,84.61,77.36,49.77,47.92,financial_services
+New Zealand,NZL,77.47,80.83,96.8,45.83,financial_services
+North Macedonia,MKD,73.72,49.44,97.1,14.17,financial_services
+Pakistan,PAK,83.26,61.11,59.53,29.17,financial_services
+Paraguay,PRY,59.87,47.78,84.03,14.17,financial_services
+Peru,PER,83.72,62.5,89,18.33,financial_services
+Philippines,PHL,77.89,41.94,62.27,1.67,financial_services
+Portugal,PRT,72.31,48.89,92.17,21.67,financial_services
+Romania,ROM,88.89,59.17,72.2,18.33,financial_services
+Rwanda,RWA,86.56,47.22,74.07,14.17,financial_services
+Samoa,WSM,72.53,13.33,70.4,12.5,financial_services
+Seychelles,SYC,74.21,33.06,60.93,14.17,financial_services
+Sierra Leone,SLE,68.54,20,36.17,18.33,financial_services
+Singapore,SGP,74.1,52.22,93.67,29.17,financial_services
+Slovak Republic,SVK,69.35,51.11,76.13,18.33,financial_services
+Tanzania,TZA,76.53,45.28,50.03,8.33,financial_services
+Timor-Leste,TMP,30.2,5.83,38.43,4.17,financial_services
+Togo,TGO,61.49,49.03,50.4,16.25,financial_services
+Vanuatu,VUT,54.93,28.89,39.9,18.33,financial_services
+Viet Nam,VNM,41.4,39.17,90.93,0,financial_services
+West Bank and Gaza,WBG,58.96,33.61,41.23,4.17,financial_services
+Bangladesh,BGD,51.56,29.52,80.5,9.88,international_trade
+Barbados,BRB,63.59,33.39,75.65,17.5,international_trade
+Bosnia and Herzegovina,BIH,73.97,41.53,90.45,24.29,international_trade
+Botswana,BWA,74.77,53.85,76.15,37.56,international_trade
+Bulgaria,BGR,86.37,52,89.1,35.65,international_trade
+Cambodia,KHM,61.02,56.01,56,21.43,international_trade
+Central African Republic,CAF,55.74,20.12,28.6,14.29,international_trade
+Chad,TCD,70.42,12.1,47.4,9.05,international_trade
+Colombia,COL,80.94,44.46,36.65,27.62,international_trade
+Costa Rica,CRI,75.05,79.13,67.6,38.33,international_trade
+Côte d'Ivoire,CIV,77.76,48.97,26.5,20.71,international_trade
+Croatia,HRV,79.36,85.12,89.7,48.33,international_trade
+El Salvador,SLV,78.68,53.49,53,27.44,international_trade
+Estonia,EST,81.87,83.21,91.7,37.26,international_trade
+Gambia,GMB,65.25,17.54,32.95,10.71,international_trade
+Georgia,GEO,77.17,56.55,96.45,26.07,international_trade
+Ghana,GHA,66.85,53,48.9,11.07,international_trade
+Greece,GRC,81,96.11,84,48.33,international_trade
+Hong Kong SAR China,HKG,84.81,89.56,97.95,42.62,international_trade
+Hungary,HUN,85.25,58.33,91.1,35.06,international_trade
+Indonesia,IDN,69.41,78.13,46.2,35.83,international_trade
+Iraq,IRQ,49.2,34.05,43.15,22.14,international_trade
+Kyrgyz Republic,KGZ,63.48,30.62,87.85,3.93,international_trade
+Lesotho,LSO,59.22,49.05,75.9,26.79,international_trade
+Madagascar,MDG,67.41,48.08,49,21.25,international_trade
+Mauritius,MUS,72.86,64.96,85.25,25.83,international_trade
+Mexico,MEX,78.73,72.18,40.4,30.95,international_trade
+Montenegro,MNE,77.69,35.75,88.15,26.43,international_trade
+Morocco,MAR,76.85,70.58,79.1,37.62,international_trade
+Nepal,NPL,50.65,66.67,83,25,international_trade
+New Zealand,NZL,78.66,69.8,61.35,35,international_trade
+North Macedonia,MKD,60.45,48.35,87.2,23.57,international_trade
+Pakistan,PAK,61.01,54.82,21.3,17.38,international_trade
+Paraguay,PRY,77.12,57.54,59,29.29,international_trade
+Peru,PER,78.5,37.06,33.85,13.75,international_trade
+Philippines,PHL,61.88,66.37,86.15,18.75,international_trade
+Portugal,PRT,88.41,65.48,72.3,40,international_trade
+Romania,ROM,85.82,82.38,89.2,47.14,international_trade
+Rwanda,RWA,65.38,95.48,85.4,45.48,international_trade
+Samoa,WSM,54.55,35.04,64.5,25,international_trade
+Seychelles,SYC,65.55,54.94,63.8,27.5,international_trade
+Sierra Leone,SLE,47.69,29.68,35.7,11.96,international_trade
+Singapore,SGP,78.08,69.05,92.35,36.9,international_trade
+Slovak Republic,SVK,83.76,64.17,94.7,36.25,international_trade
+Tanzania,TZA,52.24,67.18,60.9,29.29,international_trade
+Timor-Leste,TMP,46.49,55.14,44.2,28.93,international_trade
+Togo,TGO,71.09,54.66,56.9,20.95,international_trade
+Vanuatu,VUT,44.5,66.15,13.2,45.83,international_trade
+Vietnam,VNM,80.5,47.86,88.8,20.48,international_trade
+West Bank and Gaza,WBG,56.17,19.21,72.1,11.43,international_trade
+Bangladesh,BGD,78.71,41.67,71.67,41.67,labor
+Barbados,BRB,70.85,75,63.08,41.67,labor
+Bosnia and Herzegovina,BIH,83.5,76.79,49.33,39.29,labor
+Botswana,BWA,73.88,41.07,75.58,32.74,labor
+Bulgaria,BGR,80.66,75,50.5,50,labor
+Cambodia,KHM,80.66,54.17,70.5,41.67,labor
+Central African Republic,CAF,45.9,47.62,56.33,39.29,labor
+Chad,TCD,52.55,47.62,66.83,39.29,labor
+Colombia,COL,67.44,55.95,62.83,39.29,labor
+Costa Rica,CRI,74.32,48.21,53.67,35.71,labor
+Côte dIvoire,CIV,80.92,58.33,68.58,41.67,labor
+Croatia,HRV,87.39,87.5,51.92,41.67,labor
+El Salvador,SLV,60.34,39.88,68.33,27.38,labor
+Estonia,EST,69.83,70.83,66,50,labor
+"Gambia, The",GMB,66.85,39.88,40.92,27.38,labor
+Georgia,GEO,84.2,87.5,78.67,50,labor
+Ghana,GHA,60.46,54.17,91.08,41.67,labor
+Greece,GRC,76.8,83.33,34,50,labor
+"Hong Kong SAR, China",HKG,69.69,54.17,82.58,50,labor
+Hungary,HUN,80.2,91.67,73.75,50,labor
+Indonesia,IDN,67.36,83.33,65.92,41.67,labor
+Iraq,IRQ,77.71,34.52,48.75,26.19,labor
+Kyrgyz Republic,KGZ,60.12,37.5,65.42,37.5,labor
+Lesotho,LSO,70.01,48.81,69.25,32.14,labor
+Madagascar,MDG,64.94,38.1,49,29.76,labor
+Mauritius,MUS,75.06,91.67,63.08,50,labor
+Mexico,MEX,69.22,50,60,37.5,labor
+Montenegro,MNE,80.24,63.69,45.83,34.52,labor
+Morocco,MAR,57.63,87.5,32.17,50,labor
+Nepal,NPL,72.67,58.33,66.08,41.67,labor
+New Zealand,NZL,68.18,100,71.67,50,labor
+North Macedonia,MKD,76.83,68.45,65.92,47.62,labor
+Pakistan,PAK,61.3,36.31,62.75,32.14,labor
+Paraguay,PRY,74.62,70.83,53.25,45.83,labor
+Peru,PER,61.42,70.24,62.17,45.24,labor
+Philippines,PHL,70.53,79.17,76.92,50,labor
+Portugal,PRT,88.23,91.67,41.08,50,labor
+Romania,ROM,75.34,76.79,36.17,47.62,labor
+Rwanda,RWA,65.32,39.88,75.25,27.38,labor
+Samoa,WSM,83.75,56.55,70.42,31.55,labor
+Seychelles,SYC,67.38,83.33,67.42,41.67,labor
+Sierra Leone,SLE,61.08,69.05,76.92,44.05,labor
+Singapore,SGP,67.18,70.24,63.08,45.24,labor
+Slovak Republic,SVK,84.01,75,53.58,50,labor
+Tanzania,TZA,72.19,45.24,74.42,36.9,labor
+Timor-Leste,TMP,68.58,52.98,49.17,27.98,labor
+Togo,TGO,59.39,40.48,69.5,32.14,labor
+Vanuatu,VUT,50.02,38.1,75,25.6,labor
+Viet Nam,VNM,68.7,85.12,65.75,47.62,labor
+West Bank and Gaza,WBG,63.69,32.74,63,28.57,labor
+Bangladesh,BGD,36.92,43.46,47.57,8.95,market_competition
+Barbados,BRB,41.1,31.79,44.61,6.48,market_competition
+Bosnia and Herzegovina,BIH,57.77,38.69,60.21,9.26,market_competition
+Botswana,BWA,56.95,45.64,50.17,10.34,market_competition
+Bulgaria,BGR,69.2,67.27,56.56,23.92,market_competition
+Cambodia,KHM,41.29,19.14,38.86,8.02,market_competition
+Central African Republic,CAF,49.84,3.7,47.99,0,market_competition
+Chad,TCD,46.53,12.19,38.84,4.78,market_competition
+Colombia,COL,71.6,75.17,47.76,26.54,market_competition
+Costa Rica,CRI,60.72,75.13,69.81,17.28,market_competition
+Côte dIvoire,CIV,55.59,25.38,23.07,9.26,market_competition
+Croatia,HRV,57.8,73.21,58.72,23.15,market_competition
+El Salvador,SLV,61.24,41.35,45.98,14.35,market_competition
+Estonia,EST,57.6,72.7,63.77,25.31,market_competition
+Gambia,GMB,31.68,18.22,30.39,2.47,market_competition
+Georgia,GEO,54.22,62.08,48.48,16.05,market_competition
+Ghana,GHA,36.9,19.68,40,7.56,market_competition
+Greece,GRC,71.03,69.64,51.86,21.3,market_competition
+Hong Kong SAR China,HKG,39.26,71.49,62.64,25.15,market_competition
+Hungary,HUN,68.4,62.97,58.14,16.98,market_competition
+Indonesia,IDN,50.67,67.53,38.82,16.67,market_competition
+Iraq,IRQ,29.54,2.78,31.81,2.78,market_competition
+Kyrgyz Republic,KGZ,54.42,58.55,45.14,20.06,market_competition
+Lesotho,LSO,31.85,9.5,35.24,6.48,market_competition
+Madagascar,MDG,49.08,32.52,38.11,9.57,market_competition
+Mauritius,MUS,48.42,58.53,64.12,12.96,market_competition
+Mexico,MEX,60.11,65.5,29.46,17.28,market_competition
+Montenegro,MNE,59,53.53,46.82,18.98,market_competition
+Morocco,MAR,64.76,66.76,42.91,30.56,market_competition
+Nepal,NPL,36.28,26.42,36.48,4.94,market_competition
+New Zealand,NZL,39.56,62.95,59.09,26.54,market_competition
+North Macedonia,MKD,63.18,58.57,65.02,10.8,market_competition
+Pakistan,PAK,48.74,47.2,42.78,7.41,market_competition
+Paraguay,PRY,50.69,56.19,38.13,20.99,market_competition
+Peru,PER,61.93,64.46,64.89,21.3,market_competition
+Philippines,PHL,52.09,54.85,43.46,12.96,market_competition
+Portugal,PRT,65.99,64.61,53.95,19.6,market_competition
+Romania,ROM,62.6,58.88,61.68,20.83,market_competition
+Rwanda,RWA,61.28,70.27,60.49,12.65,market_competition
+Samoa,WSM,49.94,40.01,63.55,21.45,market_competition
+Seychelles,SYC,42.86,20.59,44.25,4.01,market_competition
+Sierra Leone,SLE,38.9,23.97,27.63,6.48,market_competition
+Singapore,SGP,42.12,75.13,69.62,26.54,market_competition
+Slovak Republic,SVK,62.05,66.83,53.54,20.99,market_competition
+Tanzania,TZA,60.12,53.77,30.98,18.6,market_competition
+Timor-Leste,TMP,22.25,2.28,25.54,0,market_competition
+Togo,TGO,57.93,29.03,36.77,18.98,market_competition
+Vanuatu,VUT,25.83,7.35,35.86,5.86,market_competition
+Vietnam,VNM,63.73,61.84,47.43,22.53,market_competition
+West Bank and Gaza,WBG,30.42,14.29,31.16,8.95,market_competition
+Bangladesh,BGD,44.75,48.09,76.25,10.94,taxation
+Barbados,BRB,38.5,52.97,65.56,14.84,taxation
+Bosnia and Herzegovina,BIH,51,25,64.75,3.13,taxation
+Botswana,BWA,35,51.25,66.4,9.9,taxation
+Bulgaria,BGR,46.5,61.77,71.6,22.4,taxation
+Cambodia,KHM,50.13,41.39,84.3,10.42,taxation
+Central African Republic,CAF,26,14.38,29.45,3.13,taxation
+Chad,TCD,30.75,39.86,59.55,11.46,taxation
+Colombia,COL,54,71.53,47.6,16.67,taxation
+Costa Rica,CRI,40.63,41.98,44.05,10.94,taxation
+Côte dIvoire,CIV,46,44.41,69.75,9.9,taxation
+Croatia,HRV,31.5,35.63,52.45,10.42,taxation
+El Salvador,SLV,47.75,43.4,37.95,11.46,taxation
+Estonia,EST,71.75,68.4,72,22.92,taxation
+"Gambia, The",GMB,49.5,28.68,38.85,9.38,taxation
+Georgia,GEO,66.5,62.67,76.35,18.23,taxation
+Ghana,GHA,50.5,60.94,58.9,10.42,taxation
+Greece,GRC,57.5,64.9,45.65,16.15,taxation
+"Hong Kong SAR, China",HKG,67,58.92,85.75,20.83,taxation
+Hungary,HUN,40.75,61.56,75.75,22.92,taxation
+Indonesia,IDN,66.75,61.67,51.3,13.54,taxation
+Iraq,IRQ,12.75,17.15,58.3,7.47,taxation
+Kyrgyz Republic,KGZ,36.5,34.48,68.8,9.9,taxation
+Lesotho,LSO,47.5,53.87,79.2,12.24,taxation
+Madagascar,MDG,46.25,43.78,64.95,7.94,taxation
+Mauritius,MUS,48,71.01,88.65,16.15,taxation
+Mexico,MEX,63,61.67,72,11.11,taxation
+Montenegro,MNE,47.25,30.21,54.65,6.25,taxation
+Morocco,MAR,54.25,56.56,32.25,9.9,taxation
+Nepal,NPL,49.75,44.97,79.25,10.24,taxation
+New Zealand,NZL,75,62.92,77.31,16.67,taxation
+North Macedonia,MKD,44,36.67,59.85,12.5,taxation
+Pakistan,PAK,31.25,57.74,83.45,13.02,taxation
+Paraguay,PRY,34.25,55.8,75.75,10.94,taxation
+Peru,PER,50.5,61.6,37.8,13.54,taxation
+Philippines,PHL,57.75,47.59,64.65,6.51,taxation
+Portugal,PRT,56,57.99,44.6,17.36,taxation
+Romania,ROM,48.5,41.88,61.45,13.54,taxation
+Rwanda,RWA,51.25,61.39,86.3,13.54,taxation
+Samoa,WSM,55,50.83,65,9.9,taxation
+Seychelles,SYC,59,46.01,70.05,9.9,taxation
+Sierra Leone,SLE,34,30.03,60.31,4.69,taxation
+Singapore,SGP,59.42,64.58,87.15,20.49,taxation
+Slovak Republic,SVK,55.4,41.91,52.25,11.98,taxation
+Tanzania,TZA,52.25,56.67,75.8,8.85,taxation
+Timor-Leste,TMP,37.25,38.33,71.1,6.25,taxation
+Togo,TGO,43.75,59.79,72.5,10.24,taxation
+Vanuatu,VUT,51,12.03,87.6,2.34,taxation
+Viet Nam,VNM,33.5,46.04,89.85,12.5,taxation
+West Bank and Gaza,WBG,0,32.26,67,5.21,taxation
+Bangladesh,BGD,52.81,50.29,83.21,16.74,utility_services
+Barbados,BRB,57.43,62.68,68.33,19.79,utility_services
+Bosnia and Herzegovina,BIH,60.76,48.23,69.75,18.34,utility_services
+Botswana,BWA,51.42,64.89,66.25,19.15,utility_services
+Bulgaria,BGR,88.4,76.14,78.75,24.41,utility_services
+Cambodia,KHM,56.56,48.95,87.83,22.52,utility_services
+Central African Republic,CAF,63.4,20.11,75.54,8.33,utility_services
+Chad,TCD,53.82,29.73,46.83,4.17,utility_services
+Colombia,COL,68.96,76.85,79.17,25.83,utility_services
+Costa Rica,CRI,74.37,66.74,69.54,21.95,utility_services
+Croatia,HRV,88.82,74.98,66.5,24.07,utility_services
+Côte dIvoire,CIV,77.36,59.13,40.13,16.93,utility_services
+El Salvador,SLV,57.4,62.52,76.79,14.39,utility_services
+Estonia,EST,62.15,82.58,73.42,26.4,utility_services
+"Gambia, The",GMB,36.46,32.55,40.29,9.09,utility_services
+Georgia,GEO,81.53,65.25,72.46,25.02,utility_services
+Ghana,GHA,74.48,71.16,59.92,20.28,utility_services
+Greece,GRC,76.74,67.78,63.38,23.37,utility_services
+Hong Kong SAR China,HKG,68.07,78.56,86.5,26.88,utility_services
+Hungary,HUN,75.83,80.26,37.25,24.73,utility_services
+Indonesia,IDN,60,52.69,98.96,19.56,utility_services
+Iraq,IRQ,53.06,36.63,72.88,9.01,utility_services
+Kyrgyz Republic,KGZ,73.3,52.63,89.83,23.7,utility_services
+Lesotho,LSO,57.33,49.6,61.21,16.08,utility_services
+Madagascar,MDG,49.55,33.18,22.38,8.66,utility_services
+Mauritius,MUS,36.53,40.91,47,15.55,utility_services
+Mexico,MEX,63.89,68.57,97.92,19.67,utility_services
+Montenegro,MNE,78.26,69.47,73.17,23.66,utility_services
+Morocco,MAR,70.68,61.25,98,14.51,utility_services
+Nepal,NPL,58.58,67.33,70.25,23.94,utility_services
+New Zealand,NZL,57.01,77.35,54.63,27.54,utility_services
+North Macedonia,MKD,75.09,62.99,97.25,18.33,utility_services
+Pakistan,PAK,45.97,43.73,87.92,5.6,utility_services
+Paraguay,PRY,37.67,45.25,78,9.7,utility_services
+Peru,PER,72.85,70.21,52.83,24.79,utility_services
+Philippines,PHL,78.61,54.51,66.29,24.7,utility_services
+Portugal,PRT,70.07,72.73,91.79,23.66,utility_services
+Romania,ROM,72.01,71.31,59.5,22.52,utility_services
+Rwanda,RWA,65.19,70.89,67.21,19.81,utility_services
+Samoa,WSM,64.34,53.96,76.79,20.53,utility_services
+Seychelles,SYC,56.94,38.79,65.58,16.48,utility_services
+Sierra Leone,SLE,53.14,54.56,73.92,18.3,utility_services
+Singapore,SGP,74.74,71.87,98.67,22.61,utility_services
+Slovak Republic,SVK,91.74,82.33,85.21,27.92,utility_services
+Tanzania,TZA,75.56,69.5,91.13,22.94,utility_services
+Timor-Leste,TMP,60.09,48.99,71.5,18.58,utility_services
+Togo,TGO,71.04,67.54,56.54,21.89,utility_services
+Vanuatu,VUT,47.67,55.37,50.38,14.6,utility_services
+Vietnam,VNM,74.17,66.56,95.46,25.27,utility_services
+West Bank and Gaza,WBG,51.91,43.86,77.5,14.66,utility_services
