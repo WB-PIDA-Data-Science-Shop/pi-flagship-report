@@ -127,7 +127,7 @@ ggsave(
 )
 ggsave(
   plot = last_plot(),
-  filename = "chapter-2/figs/fig2_2.eps",
+  filename = "figs_editable/chapter-2/fig2_2.eps",
   width = 12,
   height = 9,
   bg = "white",
@@ -183,7 +183,7 @@ ggsave(
 )
 ggsave(
   plot = last_plot(),
-  filename = "chapter-2/figs/fig2_3.eps",
+  filename = "figs_editable/chapter-2/fig2_3.eps",
   width = 12,
   height = 9,
   bg = "white",
@@ -240,7 +240,7 @@ ggsave(
 )
 ggsave(
   plot = last_plot(),
-  filename = "chapter-2/figs/fig2_4.eps",
+  filename = "figs_editable/chapter-2/fig2_4.eps",
   height = 9,
   width = 12,
   bg = "white",
@@ -301,7 +301,7 @@ ggsave(
   bg = "white"
 )
 ggsave(
-  filename = "chapter-2/figs/fig2_5.eps",
+  filename = "figs_editable/chapter-2/fig2_5.eps",
   width = 12,
   height = 9,
   bg = "white",

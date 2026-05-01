@@ -97,7 +97,7 @@ ggsave(
   bg = "white"
 )
 ggsave(
-  here("chapter-1", "figs", "fig_1_2.eps"),
+  here("figs_editable", "chapter-1", "fig_1_2.eps"),
   height = 8,
   width = 12,
   bg = "white",
@@ -152,7 +152,7 @@ ggsave(
 )
 ggsave(
   plot = last_plot(),
-  filename = "chapter-1/figs/fig_1_3.eps",
+  filename = "figs_editable/chapter-1/fig_1_3.eps",
   width = 12,
   height = 9,
   bg = "white",
@@ -270,7 +270,7 @@ ggsave(
 )
 ggsave(
   plot = last_plot(),
-  filename = "chapter-1/figs/fig_1_4.eps",
+  filename = "figs_editable/chapter-1/fig_1_4.eps",
   bg = "white",
   device = "eps"
 )
@@ -315,7 +315,7 @@ ggsave(
   bg = "white"
 )
 ggsave(
-  here("chapter-1", "figs", "fig_1_5.eps"),
+  here("figs_editable", "chapter-1", "fig_1_5.eps"),
   height = 8,
   width = 12,
   bg = "white",
@@ -367,7 +367,7 @@ ggsave(
   bg = "white"
 )
 ggsave(
-  here("chapter-1", "figs", "fig_1_6.eps"),
+  here("figs_editable", "chapter-1", "fig_1_6.eps"),
   height = 8,
   width = 12,
   bg = "white",
@@ -489,7 +489,7 @@ ggsave(
   bg = "white"
 )
 ggsave(
-  filename = "chapter-1/figs/fig_1_7.eps",
+  filename = "figs_editable/chapter-1/fig_1_7.eps",
   width = 12,
   height = 9,
   bg = "white",

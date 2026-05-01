@@ -183,7 +183,7 @@ ggsave(
   bg = "white"
 )
 ggsave(
-  here("chapter-3", "figs", "fig_3_2.eps"),
+  here("figs_editable", "chapter-3", "fig_3_2.eps"),
   width = 14,
   height = 16,
   bg = "white",
@@ -235,7 +235,7 @@ ggsave(
     bg = "white"
 )
 ggsave(
-    here("chapter-3", "figs", "fig_3_4.eps"),
+    here("figs_editable", "chapter-3", "fig_3_4.eps"),
     width = 14,
     height = 10,
     bg = "white",
@@ -283,7 +283,7 @@ ggsave(
   bg = "white"
 )
 ggsave(
-  here("chapter-3", "figs", "fig_3_5.eps"),
+  here("figs_editable", "chapter-3", "fig_3_5.eps"),
   height = 8,
   width = 14,
   bg = "white",
@@ -375,7 +375,7 @@ ggplot2::ggsave(
   bg = "white"
 )
 ggplot2::ggsave(
-  here("chapter-3", "figs", "fig_3_7.eps"),
+  here("figs_editable", "chapter-3", "fig_3_7.eps"),
   width = 14,
   height = 16,
   bg = "white",
@@ -452,7 +452,7 @@ ggsave(
   bg = "white"
 )
 ggsave(
-  here("chapter-3", "figs", "fig_3_8.eps"),
+  here("figs_editable", "chapter-3", "fig_3_8.eps"),
   height = 12,
   width = 18,
   bg = "white",
@@ -517,7 +517,7 @@ ggsave(
   width = 16
 )
 ggsave(
-  here("chapter-3", "figs", "fig_3_9.eps"),
+  here("figs_editable", "chapter-3", "fig_3_9.eps"),
   bg = "white",
   height = 12,
   width = 16,
@@ -557,7 +557,7 @@ ggsave(
   width = 14
 )
 ggsave(
-  here("chapter-3", "figs", "fig_3_10.eps"),
+  here("figs_editable", "chapter-3", "fig_3_10.eps"),
   bg = "white",
   height = 10,
   width = 14,
@@ -641,7 +641,7 @@ ggsave(
   width = 14
 )
 ggsave(
-  here("chapter-3", "figs", "fig_3_11a.eps"),
+  here("figs_editable", "chapter-3", "fig_3_11a.eps"),
   bg = "white",
   height = 12,
   width = 14,
@@ -744,7 +744,7 @@ ggsave(
   width = 14
 )
 ggsave(
-  here("chapter-3", "figs", "fig_3_11b.eps"),
+  here("figs_editable", "chapter-3", "fig_3_11b.eps"),
   bg = "white",
   height = 12,
   width = 14,
