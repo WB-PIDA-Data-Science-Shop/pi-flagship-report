@@ -96,6 +96,13 @@ ggsave(
   width = 12,
   bg = "white"
 )
+ggsave(
+  here("chapter-1", "figs", "fig_1_2.eps"),
+  height = 8,
+  width = 12,
+  bg = "white",
+  device = "eps"
+)
 
 # figure 1.3 -------------------------------------------------------------
 theme_set(theme_cowplot())
@@ -142,6 +149,14 @@ ggsave(
   width = 12,
   height = 9,
   bg = "white"
+)
+ggsave(
+  plot = last_plot(),
+  filename = "chapter-1/figs/fig_1_3.eps",
+  width = 12,
+  height = 9,
+  bg = "white",
+  device = "eps"
 )
 
 # figure 1.4 -------------------------------------------------------------
@@ -253,6 +268,12 @@ ggsave(
   filename = "chapter-1/figs/fig_1_4.png",
   bg = "white"
 )
+ggsave(
+  plot = last_plot(),
+  filename = "chapter-1/figs/fig_1_4.eps",
+  bg = "white",
+  device = "eps"
+)
 
 # figure 1.5 -------------------------------------------------------------
 gsps_management |>
@@ -292,6 +313,13 @@ ggsave(
   height = 8,
   width = 12,
   bg = "white"
+)
+ggsave(
+  here("chapter-1", "figs", "fig_1_5.eps"),
+  height = 8,
+  width = 12,
+  bg = "white",
+  device = "eps"
 )
 
 # figure 1.6 -------------------------------------------------------------
@@ -337,6 +365,13 @@ ggsave(
   height = 8,
   width = 12,
   bg = "white"
+)
+ggsave(
+  here("chapter-1", "figs", "fig_1_6.eps"),
+  height = 8,
+  width = 12,
+  bg = "white",
+  device = "eps"
 )
 
 # figure 1.7 -------------------------------------------------------------
@@ -452,4 +487,11 @@ ggsave(
   width = 12,
   height = 9,
   bg = "white"
+)
+ggsave(
+  filename = "chapter-1/figs/fig_1_7.eps",
+  width = 12,
+  height = 9,
+  bg = "white",
+  device = "eps"
 )

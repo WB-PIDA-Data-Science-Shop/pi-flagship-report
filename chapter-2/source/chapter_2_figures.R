@@ -125,6 +125,14 @@ ggsave(
   height = 9,
   bg = "white"
 )
+ggsave(
+  plot = last_plot(),
+  filename = "chapter-2/figs/fig2_2.eps",
+  width = 12,
+  height = 9,
+  bg = "white",
+  device = "eps"
+)
 
 # ==============================================================================
 ### figure 2.3
@@ -172,6 +180,14 @@ ggsave(
   width = 12,
   height = 9,
   bg = "white"
+)
+ggsave(
+  plot = last_plot(),
+  filename = "chapter-2/figs/fig2_3.eps",
+  width = 12,
+  height = 9,
+  bg = "white",
+  device = "eps"
 )
 
 # ==============================================================================
@@ -221,6 +237,14 @@ ggsave(
   height = 9,
   width = 12,
   bg = "white"
+)
+ggsave(
+  plot = last_plot(),
+  filename = "chapter-2/figs/fig2_4.eps",
+  height = 9,
+  width = 12,
+  bg = "white",
+  device = "eps"
 )
 
 # ==============================================================================
@@ -275,4 +299,11 @@ ggsave(
   width = 12,
   height = 9,
   bg = "white"
+)
+ggsave(
+  filename = "chapter-2/figs/fig2_5.eps",
+  width = 12,
+  height = 9,
+  bg = "white",
+  device = "eps"
 )

@@ -182,6 +182,13 @@ ggsave(
   height = 16,
   bg = "white"
 )
+ggsave(
+  here("chapter-3", "figs", "fig_3_2.eps"),
+  width = 14,
+  height = 16,
+  bg = "white",
+  device = "eps"
+)
 
 # figure 3.4 -------------------------------------------------------------
 itu |> 
@@ -227,6 +234,13 @@ ggsave(
     height = 10,
     bg = "white"
 )
+ggsave(
+    here("chapter-3", "figs", "fig_3_4.eps"),
+    width = 14,
+    height = 10,
+    bg = "white",
+    device = "eps"
+)
 
 # figure 3.5 -------------------------------------------------------------
 bank_regulator |>
@@ -267,6 +281,13 @@ ggsave(
   height = 8,
   width = 14,
   bg = "white"
+)
+ggsave(
+  here("chapter-3", "figs", "fig_3_5.eps"),
+  height = 8,
+  width = 14,
+  bg = "white",
+  device = "eps"
 )
 
 # figure 3.7 -------------------------------------------------------------
@@ -353,6 +374,13 @@ ggplot2::ggsave(
   height = 16,
   bg = "white"
 )
+ggplot2::ggsave(
+  here("chapter-3", "figs", "fig_3_7.eps"),
+  width = 14,
+  height = 16,
+  bg = "white",
+  device = "eps"
+)
 
 # figure 3.8 -------------------------------------------------------------
 gsr_original |> 
@@ -423,6 +451,13 @@ ggsave(
   width = 18,
   bg = "white"
 )
+ggsave(
+  here("chapter-3", "figs", "fig_3_8.eps"),
+  height = 12,
+  width = 18,
+  bg = "white",
+  device = "eps"
+)
 
 # figure 3.9 -------------------------------------------------------------
 
@@ -481,6 +516,13 @@ ggsave(
   height = 12,
   width = 16
 )
+ggsave(
+  here("chapter-3", "figs", "fig_3_9.eps"),
+  bg = "white",
+  height = 12,
+  width = 16,
+  device = "eps"
+)
 
 # figure 3.10 ------------------------------------------------------------
 wb_map |> 
@@ -513,6 +555,13 @@ ggsave(
   bg = "white",
   height = 10,
   width = 14
+)
+ggsave(
+  here("chapter-3", "figs", "fig_3_10.eps"),
+  bg = "white",
+  height = 10,
+  width = 14,
+  device = "eps"
 )
 
 # figure 3.11 ------------------------------------------------------------
@@ -590,6 +639,13 @@ ggsave(
   bg = "white", 
   height = 12,
   width = 14
+)
+ggsave(
+  here("chapter-3", "figs", "fig_3_11a.eps"),
+  bg = "white",
+  height = 12,
+  width = 14,
+  device = "eps"
 )
 
 # panel b
@@ -686,4 +742,11 @@ ggsave(
   bg = "white", 
   height = 12,
   width = 14
+)
+ggsave(
+  here("chapter-3", "figs", "fig_3_11b.eps"),
+  bg = "white",
+  height = 12,
+  width = 14,
+  device = "eps"
 )
