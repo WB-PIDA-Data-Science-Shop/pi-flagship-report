@@ -289,6 +289,6 @@ maps_trans <- MAPS %>% ggplot(aes(x = reorder(country, perc_concept_trans), y = 
   coord_flip() +
   theme(legend.position = "bottom")
 
-ggsave(filename = "chapter-2/figs/fig2_5.png", width = 12, height = 9)
+ggsave(filename = here("chapter-2", "figs", "fig2_5.png"), width = 12, height = 9)
 
-ggsave(filename = "chapter-2/figs/fig2_5.eps", width = 12, height = 9)
+ggsave(filename = here("figs_editable", "chapter-2", "fig2_5.eps"), width = 12, height = 9)
