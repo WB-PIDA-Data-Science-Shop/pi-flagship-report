@@ -251,59 +251,44 @@ ggsave(
 ### figure 2.5
 # ==============================================================================
 
-# gov variable
-GTMIwide %>%
-  filter(year == "2022" & incomegroup != "" & !is.na(incomegroup)) %>%
-  mutate(
-    fmis_pub = ifelse(fmis_gov == 2, 1, 0),
-    tsa_pub = ifelse(tsa_gov == 2, 1, 0),
-    customs_pub = ifelse(customs_gov == 2, 1, 0),
-    hrmis_pub = ifelse(hrmis_gov == 2, 1, 0),
-    payroll_pub = ifelse(payroll_gov == 2, 1, 0),
-    proc_pub = ifelse(proc_gov == 2, 1, 0)
-  ) %>%
-  group_by(incomegroup, incomegroup_order) %>%
-  summarise(
-    `FMIS` = sum(fmis_pub) / sum(fmis == 1),
-    `Treasury single account` = sum(tsa_pub) / sum(tsa == 1),
-    `Customs` = sum(customs_pub) / sum(customs == 1),
-    `HRMIS` = sum(hrmis_pub) / sum(hrmis == 1),
-    `Payroll` = sum(payroll_pub) / sum(payroll == 1),
-    `Procurement` = sum(proc_pub) / sum(proc == 1)
-  ) %>%
-  melt(id.vars = c("incomegroup", "incomegroup_order")) %>%
-  ggplot(aes(
-    x = value,
-    y = variable,
-    fill = reorder(incomegroup, -incomegroup_order)
-  )) +
-  geom_bar(stat = "identity", position = "dodge") +
-  scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.2)) +
-  scale_fill_manual(values = egvpi_colors[c(3, 2, 1, 6)]) +
-  scale_y_discrete(labels = ~ str_wrap(as.character(.x), 14)) +
-  labs(
-    x = "Percent of countries in income group with the system\nand whose system publishes governance information",
-    y = "Management information system",
-    title = "Does each information system publish key governance information like audits?"
-  ) +
-  guides(fill = guide_legend(title = "Income group")) +
-  theme(
-    legend.position = "bottom",
-    legend.text = element_text(size = 12),
-    legend.title = element_text(size = 14),
-    title = element_text(size = 12)
-  )
+# prep 
+trans_mean <- MAPS %>% ungroup() %>% summarise(mean = mean(perc_concept_trans)) %>% unlist()
 
-ggsave(
-  filename = "chapter-2/figs/fig2_5.png",
-  width = 12,
-  height = 9,
-  bg = "white"
-)
-ggsave(
-  filename = "figs_editable/chapter-2/fig2_5.eps",
-  width = 12,
-  height = 9,
-  bg = "white",
-  device = "eps"
-)
+MAPS <- MAPS %>% mutate(eGP = case_when(
+  country == "Chile" ~ 1,
+  country == "Ecuador" ~ 1,
+  country == "Bangladesh" ~ 1,
+  country == "Philippines" ~ 1,
+  country == "Mauritius" ~ 1,
+  country == "Kazakhstan" ~ 1,
+  country == "Burkina Faso" ~ 1,
+  country == "Senegal" ~ 1,
+  country == "Uganda" ~ 1,
+  country == "Rwanda" ~ 1,
+  country == "Benin" ~ 1,
+  country == "Malawi" ~ 0,
+  country == "Mozambique" ~ 1,
+  country == "Ethiopia" ~ 1,
+  country == "Angola" ~ 1,
+  country == "Tunisia" ~ 1,
+  country == "Argentina" ~ 1,
+  country == "Gabon" ~ 1,
+  country == "Lebanon" ~ 1,
+))
+
+# plot
+maps_trans <- MAPS %>% ggplot(aes(x = reorder(country, perc_concept_trans), y = perc_concept_trans, fill = as.character(eGP))) + 
+  geom_bar(stat = "identity", position = "dodge") + 
+  geom_hline(yintercept = trans_mean, linetype = 2, color = "red") +
+  scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.2)) + 
+  scale_fill_manual(values = egvpi_colors[c(6, 1)], labels = c("No e-GP system", "Country has an e-GP system")) +
+  labs(x = "Country", y = "Percent of possible points",
+       caption = "Note: There are 14 MAPS criteria related to the 'transparency' concept.",
+       fill = "Procurement information system?") + 
+  guides(fill = guide_legend(nrow = 2)) +
+  coord_flip() +
+  theme(legend.position = "bottom")
+
+ggsave(filename = "chapter-2/figs/fig2_5.png", width = 12, height = 9)
+
+ggsave(filename = "chapter-2/figs/fig2_5.eps", width = 12, height = 9)

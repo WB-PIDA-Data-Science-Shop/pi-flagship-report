@@ -119,7 +119,6 @@ bank_regulator <- read_csv(
     !is.na(income_group)
   )
 
-
 # figure 3.2 -------------------------------------------------------------
 # implementation (pillar 2) by topic
 bready_implementation_gap_topic |> 
@@ -295,8 +294,15 @@ bready |>
   filter(
     topic %in% c("business_entry", "business_location", "financial_services")
   ) |> 
+  # fix economy names
   mutate(
-    economy = iconv(economy, from = "latin1", to = "UTF-8")
+    economy = iconv(economy, from = "latin1", to = "UTF-8"),
+    economy = case_when(
+      str_detect(economy, "Ivoire") ~ "Cote d'Ivoire",
+      str_detect(economy, "^Viet") ~ "Viet Nam",
+      str_detect(economy, "Gambia") ~ "The Gambia",
+      T ~ economy
+    )
   ) |>
   rename(
     information_systems = category_2_2_overall
@@ -367,13 +373,13 @@ bready |>
   ) +
   labs(x = "Information Systems", y = "")
 
-
 ggplot2::ggsave(
   here("chapter-3", "figs", "fig_3_7.png"),
   width = 14,
   height = 16,
   bg = "white"
 )
+
 ggplot2::ggsave(
   here("figs_editable", "chapter-3", "fig_3_7.eps"),
   width = 14,
