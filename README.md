@@ -239,10 +239,68 @@ Replicators should begin by reviewing the [Requirements](#requirements) section 
 
 ---
 
-### Statement about Rights
+---
 
-- [ ] I certify that the author(s) of the manuscript have legitimate access to and permission to use the data used in this manuscript.
-- [ ] I certify that the author(s) of the manuscript have documented permission to redistribute/publish the data contained within this replication package. Appropriate permissions are documented in the LICENSE file.
+- **Filename:** `Updated_PMR Sector Indicator_2023-24 and 2018.xlsx` (sheet `PMR_Sector_Network_2023-24_clea`)
+- **Source:** OECD Product Market Regulation (PMR) Sector Indicators, 2023–24 wave
+- **URL:** https://www.oecd.org/content/dam/oecd/en/topics/policy-sub-issues/product-market-regulation/PMR_Sector_Indicator_2023-24_and_2018_March2026.xlsx
+- **Access year:** 2025 (August)
+- **Description:** PMR sector sub-indicators used to measure regulatory stringency in e-communications. Variable on the x-axis: `e_communications_mobile_ecomm`. Column names were manually adjusted to comply with Stata naming rules before import. Albania (ALB) is dropped as an outlier.
+- **License:** OECD terms of use
+- **Note:** The OECD has refreshed this file since the access date; replication against the current version may yield slightly different values.
+
+---
+
+- **Filename:** `ITU_ICTPriceBaskets_2008-2024.xlsx` (sheet `economies_2008-2024`)
+- **Source:** ITU ICT Price Baskets, 2008–2024
+- **URL:** https://www.itu.int/en/ITU-D/Statistics/Pages/ICTprices/default.aspx
+- **Access year:** 2025 (June 12)
+- **Description:** Mobile-broadband basket prices expressed as a percent of GNI per capita (`i271mb_ts_gni`), restricted to the year 2023. Used on the y-axis of Figure 3.3.
+- **License:** ITU terms of use
+- **Note:** ITU has refreshed the data since the access date; replication against the current version may yield different results.
+
+---
+
+- **Filename:** `CLASS_2025_07_02.xlsx`
+- **Source:** World Bank country income classification, July 2025 release
+- **URL:** https://datahelpdesk.worldbank.org/knowledgebase/articles/906519
+- **Access year:** 2025
+- **Description:** Used to assign income group labels (HIC, UMC, LMC) to countries in the PMR dataset via a VLOOKUP step applied to the Excel input before Stata import. Must be applied before running `1_Figures.do`.
+- **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+---
+
+- **Filename:** `GSR_Data.xlsx` (sheet `Database_clean`)
+- **Source:** OECD 2023 Indicators on the Governance of Sector Regulators (GSR)
+- **URL:** https://www.oecd.org/content/dam/oecd/en/publications/support-materials/2025/03/the-2023-indicators-on-the-governance-of-sector-regulators_eb33f9bb/2023%20Indicators%20on%20the%20Governance%20of%20Sector%20Regulators%20(February%202025).xlsx
+- **Access year:** 2025 (September)
+- **Description:** Question-level governance data for sector regulators across telecoms, rail, air, and energy sectors. Used in Figure 3.6 panels (a–d) to show financing mechanisms by income tercile. Brazil's second regulator entries (variables suffixed `BRA2`) are dropped to avoid double-counting. The original OECD file was lightly cleaned (sheet structure flattened) before import.
+- **License:** OECD terms of use
+
+---
+
+- **Filename:** World Development Indicators (pulled live via `wbopendata`)
+- **Source:** World Bank World Development Indicators
+- **URL:** https://databank.worldbank.org/source/world-development-indicators
+- **Access year:** 2025
+- **Description:** Retrieved live in Stata using the `wbopendata` package. Indicators used: `NY.GNP.PCAP.CD` (GNI per capita, current USD, for income tercile construction in Figure 3.6) and `NY.GDP.PCAP.PP.KD` (GDP per capita, PPP, retained for reference).
+- **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+---
+
+- **Filename:** Excel compilation workbook and PDF norms in `Datain/Ministerial_Turn_Over/`
+- **Source:** Ministry of Justice of Peru (legal norms appointing ministers); Ministry of Transportation and Communications of Peru; OSIPTEL; ProInversión; Plataforma Digital Única del Estado Peruano
+- **URLs:** https://spijweb.minjus.gob.pe/ · https://www.gob.pe/institucion/mtc/normas-legales/ · https://www.osiptel.gob.pe/ · https://www.investinperu.pe/ · https://www.gob.pe/
+- **Access year:** 2025
+- **Description:** Individual legal norms recording ministerial appointments and key regulatory milestones for Peru's telecommunications sector. Used to produce Figure 3.12 (ministerial turnover and regulatory milestones) entirely in Excel. The compilation workbook contains hyperlinks to each source norm; the corresponding PDF files are stored in `Datain/Ministerial_Turn_Over/MCT_appointments/` and `Datain/Ministerial_Turn_Over/Milestones/`.
+- **License:** Public domain (Peruvian government legal records)
+
+---
+
+## Statement about rights
+
+- [x] I certify that the author(s) of the manuscript have legitimate access to and permission to use the data used in this manuscript.
+- [x] I certify that the author(s) of the manuscript have documented permission to redistribute/publish the data contained within this replication package. Appropriate permissions are documented in the LICENSE file.
 
 ---
 
@@ -269,6 +327,11 @@ source("chapter-3/source/chapter_3_prepdata.R")
 source("chapter-3/source/chapter_3_figures.R")
 ```
 
+5. For the Stata/Excel figures in Chapter 3 (Figures 3.3, 3.6, and 3.12), use the materials in `chapter-3/stata-excel/`:
+   - Set the `global root` macro at the top of `Do/1_Figures.do` to the absolute path of the `chapter-3/stata-excel/` folder.
+   - Run `Do/1_Figures.do` in Stata. This script auto-installs the `wbopendata` package if needed and generates `Do/2_label_vars.do` at runtime — do not edit that file manually.
+   - Figure 3.12 is produced in Excel using the workbook in `Datain/Ministerial_Turn_Over/`; it is not generated by the Stata script.
+
 ---
 
 ## List of Exhibits
@@ -281,25 +344,31 @@ The provided code reproduces:
 
 | Exhibit | Output filename | Script |
 |---------|----------------|--------|
-| Figure 1.2 | `chapter-1/figs/fig_1_2.png` | `chapter_1_figures.R` |
-| Figure 1.3 | `chapter-1/figs/fig_1_3.png` | `chapter_1_figures.R` |
-| Figure 1.4 | `chapter-1/figs/fig_1_4.png` | `chapter_1_figures.R` |
-| Figure 1.5 | `chapter-1/figs/fig_1_5.png` | `chapter_1_figures.R` |
-| Figure 1.6 | `chapter-1/figs/fig_1_6.png` | `chapter_1_figures.R` |
-| Figure 1.7 | `chapter-1/figs/fig_1_7.png` | `chapter_1_figures.R` |
-| Figure 2.2 | `chapter-2/figs/fig2_2.png` | `chapter_2_figures.R` |
-| Figure 2.3 | `chapter-2/figs/fig2_3.png` | `chapter_2_figures.R` |
-| Figure 2.4 | `chapter-2/figs/fig2_4.png` | `chapter_2_figures.R` |
-| Figure 2.5 | `chapter-2/figs/fig2_5.png` | `chapter_2_figures.R` |
-| Figure 3.2 | `chapter-3/figs/fig_3_2.png` | `chapter_3_figures.R` |
-| Figure 3.4 | `chapter-3/figs/fig_3_4.png` | `chapter_3_figures.R` |
-| Figure 3.5 | `chapter-3/figs/fig_3_5.png` | `chapter_3_figures.R` |
-| Figure 3.7 | `chapter-3/figs/fig_3_7.png` | `chapter_3_figures.R` |
-| Figure 3.8 | `chapter-3/figs/fig_3_8.png` | `chapter_3_figures.R` |
-| Figure 3.9 | `chapter-3/figs/fig_3_9.png` | `chapter_3_figures.R` |
-| Figure 3.10 | `chapter-3/figs/fig_3_10.png` | `chapter_3_figures.R` |
-| Figure 3.11a | `chapter-3/figs/fig_3_11a.png` | `chapter_3_figures.R` |
-| Figure 3.11b | `chapter-3/figs/fig_3_11b.png` | `chapter_3_figures.R` |
+| Figure 1.2 | `chapter-1/figs/fig_1_2.png` | `chapter-1/source/chapter_1_figures.R` |
+| Figure 1.3 | `chapter-1/figs/fig_1_3.png` | `chapter-1/source/chapter_1_figures.R` |
+| Figure 1.4 | `chapter-1/figs/fig_1_4.png` | `chapter-1/source/chapter_1_figures.R` |
+| Figure 1.5 | `chapter-1/figs/fig_1_5.png` | `chapter-1/source/chapter_1_figures.R` |
+| Figure 1.6 | `chapter-1/figs/fig_1_6.png` | `chapter-1/source/chapter_1_figures.R` |
+| Figure 1.7 | `chapter-1/figs/fig_1_7.png` | `chapter-1/source/chapter_1_figures.R` |
+| Figure 2.2 | `chapter-2/figs/fig2_2.png` | `chapter-2/source/chapter_2_figures.R` |
+| Figure 2.3 | `chapter-2/figs/fig2_3.png` | `chapter-2/source/chapter_2_figures.R` |
+| Figure 2.4 | `chapter-2/figs/fig2_4.png` | `chapter-2/source/chapter_2_figures.R` |
+| Figure 2.5 | `chapter-2/figs/fig2_5.png` | `chapter-2/source/chapter_2_figures.R` |
+| Figure 3.2 | `chapter-3/figs/fig_3_2.png` | `chapter-3/source/chapter_3_figures.R` |
+| Figure 3.3 | `chapter-3/stata-excel/Output/Charts/Figure_3.3_comms_price.png` | `chapter-3/stata-excel/Do/1_Figures.do` (Stata) |
+| Figure 3.4 | `chapter-3/figs/fig_3_4.png` | `chapter-3/source/chapter_3_figures.R` |
+| Figure 3.5 | `chapter-3/figs/fig_3_5.png` | `chapter-3/source/chapter_3_figures.R` |
+| Figure 3.6a | `chapter-3/stata-excel/Output/Charts/Fig_3_6_Comms_Sources_graph_Q2b_a_22.png` | `chapter-3/stata-excel/Do/1_Figures.do` (Stata) |
+| Figure 3.6b | `chapter-3/stata-excel/Output/Charts/Fig_3_6_Rail_Sources_graph_Q3ab_a_22.png` | `chapter-3/stata-excel/Do/1_Figures.do` (Stata) |
+| Figure 3.6c | `chapter-3/stata-excel/Output/Charts/Fig_3_6_Air_Sources_graph_Q3bb_a_22.png` | `chapter-3/stata-excel/Do/1_Figures.do` (Stata) |
+| Figure 3.6d | `chapter-3/stata-excel/Output/Charts/Fig_3_6_Energy_Sources_graph_Q1b_a_22.png` | `chapter-3/stata-excel/Do/1_Figures.do` (Stata) |
+| Figure 3.7 | `chapter-3/figs/fig_3_7.png` | `chapter-3/source/chapter_3_figures.R` |
+| Figure 3.8 | `chapter-3/figs/fig_3_8.png` | `chapter-3/source/chapter_3_figures.R` |
+| Figure 3.9 | `chapter-3/figs/fig_3_9.png` | `chapter-3/source/chapter_3_figures.R` |
+| Figure 3.10 | `chapter-3/figs/fig_3_10.png` | `chapter-3/source/chapter_3_figures.R` |
+| Figure 3.11a | `chapter-3/figs/fig_3_11a.png` | `chapter-3/source/chapter_3_figures.R` |
+| Figure 3.11b | `chapter-3/figs/fig_3_11b.png` | `chapter-3/source/chapter_3_figures.R` |
+| Figure 3.12 | `chapter-3/stata-excel/Datain/Ministerial_Turn_Over/` | Excel workbook (manual) |
 
 ---
 
@@ -337,6 +406,11 @@ The analysis was developed and tested on the following system:
   - `reshape2` — data reshaping
   - `fs` — file system utilities
 
+- **Stata** *(version 17 or later)*
+  - `wbopendata` — auto-installed by `1_Figures.do` if not present (requires internet connection at runtime)
+
+- **Microsoft Excel** *(any recent version)* — required to reproduce Figure 3.12 manually from the workbook in `chapter-3/stata-excel/Datain/Ministerial_Turn_Over/`
+
 ### Memory, Runtime, and Storage Requirements
 
 - **Approximate runtime:** < 10 minutes for all chapters combined
@@ -353,6 +427,10 @@ Each chapter follows the same two-script structure:
 
 Chapter 3 also uses:
 - **`chapter-3/source/funs.R`** — Helper functions (`plot_scores`, `summarize_scores`) used by `chapter_3_figures.R`.
+
+Three figures in Chapter 3 are produced outside of R, using materials in `chapter-3/stata-excel/`:
+- **`Do/1_Figures.do`** — Master Stata script. Produces Figures 3.3 and 3.6 (panels a–d). Reads PMR, ITU, and GSR Excel inputs from `Datain/`, pulls WDI data live via `wbopendata`, and writes PNG output to `Output/Charts/`. Also auto-generates `Do/2_label_vars.do` at runtime — do not edit that file manually.
+- **Figure 3.12** — Produced manually in Excel from the workbook in `Datain/Ministerial_Turn_Over/`. Not generated by any script.
 
 ---
 
