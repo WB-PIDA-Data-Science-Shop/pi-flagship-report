@@ -275,7 +275,7 @@ replace Questioncode = subinstr(Questioncode,".","_",.)
 replace Sector = Sector + ": "
 
 * Create a do-file with label commands
-file open mydo using "C:\Users\wb535806\OneDrive - WBG\RGO\ETIMT\GOV\GSR_data\label_vars.do", write replace
+file open mydo using "$dofile/label_vars.do", write replace
 file write mydo "***************************************************" _n
 file write mydo "* Automatically generated variable label commands *" _n
 file write mydo "***************************************************" _n
@@ -301,7 +301,7 @@ quietly {
 
 file close mydo
 keep Questioncode Sector QuestionText_2023
-export excel using "C:\Users\wb535806\OneDrive - WBG\RGO\ETIMT\GOV\GSR_data\Output\Questions.xlsx", firstrow(variables) replace
+export excel using "$clean/Questions.xlsx", firstrow(variables) replace
 restore 
 */
 
@@ -583,7 +583,7 @@ graph bar , over(`x') over(quint) asyvars stack percentage ///
     bar(1, color(eltblue)) ///
     bar(2, color(midblue)) ///
     bar(3, color(green))	
-	graph export "$clean/charts/Fig_3_6_Energy_Sources_graph_`x'.png", replace
+	graph export "$clean/Charts/Fig_3_6_Energy_Sources_graph_`x'.png", replace
 
 }				
 			
@@ -597,7 +597,7 @@ foreach x in  Q2b_a_22  {
     bar(1, color(eltblue)) ///
     bar(2, color(midblue)) ///
     bar(3, color(green))	
-	graph export "$clean/charts/Fig_3_6_Comms_Sources_graph_`x'.png", replace
+	graph export "$clean/Charts/Fig_3_6_Comms_Sources_graph_`x'.png", replace
 
 }				
 				
@@ -612,7 +612,7 @@ foreach x in  Q3ab_a_22    {
     bar(1, color(eltblue)) ///
     bar(2, color(midblue)) ///
     bar(3, color(green))	
-	graph export "$clean/charts/Fig_3_6_Rail_Sources_graph_`x'.png", replace
+	graph export "$clean/Charts/Fig_3_6_Rail_Sources_graph_`x'.png", replace
 
 }				
 
@@ -626,7 +626,7 @@ graph bar , over(`x') over(quint) asyvars stack percentage ///
     bar(1, color(eltblue)) ///
     bar(2, color(midblue)) ///
     bar(3, color(green))	
-	graph export "$clean/charts/Fig_3_6_Air_Sources_graph_`x'.png", replace
+	graph export "$clean/Charts/Fig_3_6_Air_Sources_graph_`x'.png", replace
 
 }	
 		
