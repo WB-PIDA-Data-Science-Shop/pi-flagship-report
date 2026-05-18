@@ -205,6 +205,7 @@ scatter i271mb_ts_gni2 e_communications_mobile_ecomm,  || ///
 scatter i271mb_ts_gni3 e_communications_mobile_ecomm,  || lfit  i271mb_ts_gni e_communications_mobile_ecomm,  legend(position(6) rows(1))
 graph save "Graph" "$clean/Charts/Figure_3.3_comms_price.gph", replace
 graph export "$clean/Charts/Figure_3.3_comms_price.png", as(png) name("Graph") replace
+graph export "$clean/Charts/Figure_3.3_comms_price.eps", as(eps) name("Graph") replace
 
 
 **** Figure 3.6 
@@ -585,6 +586,7 @@ graph bar , over(`x') over(quint) asyvars stack percentage ///
     bar(2, color(midblue)) ///
     bar(3, color(green))	
 	graph export "$clean/Charts/Fig_3_6_Energy_Sources_graph_`x'.png", replace
+	graph export "$clean/Charts/Fig_3_6_Energy_Sources_graph_`x'.eps", as(eps) replace
 
 }				
 			
@@ -599,6 +601,7 @@ foreach x in  Q2b_a_22  {
     bar(2, color(midblue)) ///
     bar(3, color(green))	
 	graph export "$clean/Charts/Fig_3_6_Comms_Sources_graph_`x'.png", replace
+	graph export "$clean/Charts/Fig_3_6_Comms_Sources_graph_`x'.eps", as(eps) replace
 
 }				
 				
@@ -614,6 +617,7 @@ foreach x in  Q3ab_a_22    {
     bar(2, color(midblue)) ///
     bar(3, color(green))	
 	graph export "$clean/Charts/Fig_3_6_Rail_Sources_graph_`x'.png", replace
+	graph export "$clean/Charts/Fig_3_6_Rail_Sources_graph_`x'.eps", as(eps) replace
 
 }				
 
@@ -628,6 +632,7 @@ graph bar , over(`x') over(quint) asyvars stack percentage ///
     bar(2, color(midblue)) ///
     bar(3, color(green))	
 	graph export "$clean/Charts/Fig_3_6_Air_Sources_graph_`x'.png", replace
+	graph export "$clean/Charts/Fig_3_6_Air_Sources_graph_`x'.eps", as(eps) replace
 
 }	
 		
