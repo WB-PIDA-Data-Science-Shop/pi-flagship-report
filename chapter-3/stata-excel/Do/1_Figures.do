@@ -1,7 +1,8 @@
 *** Reproducability package
 
-*** Set Directories --> Modify.
-global root "`c(pwd)"
+*** Set Directories [Note: c(pwd) referes to the directory where Do file is]
+cd ..
+global root "`c(pwd)'"
 
 * Subfolders
 global raw    "$root/Datain"
