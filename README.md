@@ -27,50 +27,22 @@ pi-flagship-report/
 ├── chapter-1/
 │   ├── data/
 │   │   ├── input/
-│   │   │   ├── gsps.csv
-│   │   │   ├── WBG_GovTech Dataset_Oct2022.xlsx
-│   │   │   ├── regional classification.dta
-│   │   │   └── boost/
-│   │   │       ├── boost_arm_2006_2022.xlsx
-│   │   │       ├── boost_pgy_2006_2022.xlsx
-│   │   │       └── boost_uga_2004_2022.xlsx
 │   │   └── output/
 │   ├── figs/
 │   └── source/
-│       ├── chapter_1_prepdata.R
-│       └── chapter_1_figures.R
 ├── chapter-2/
 │   ├── data/
 │   │   ├── input/
-│   │   │   ├── maps.xlsx
-│   │   │   ├── cwg.xlsx
-│   │   │   ├── gtmi.xlsx
-│   │   │   ├── bfa.xlsx
-│   │   │   ├── regions.dta
-│   │   │   └── wdi.csv
 │   │   └── output/
 │   ├── figs/
 │   └── source/
-│       ├── chapter_2_prepdata.R
-│       └── chapter_2_figures.R
 ├── chapter-3/
 │   ├── data/
 │   │   ├── input/
-│   │   │   ├── afdb/
-│   │   │   ├── itu/
-│   │   │   ├── oecd/
-│   │   │   └── world-bank/
-│   │   │       ├── bready/
-│   │   │       ├── brss/
-│   │   │       ├── girg/
-│   │   │       ├── wb_shapefiles/
-│   │   │       └── gdp_pc_ppp.csv
 │   │   └── output/
 │   ├── figs/
-│   └── source/
-│       ├── chapter_3_prepdata.R
-│       ├── chapter_3_figures.R
-│       └── funs.R
+│   ├── source/
+|   ├── stata-excel
 ├── manuscript/
 ├── LICENSE
 └── README.md
