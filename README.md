@@ -410,27 +410,7 @@ The analysis was developed and tested on the following system:
 
 ### Software Requirements
 
-- **R** *(version 4.5.2)*
-  - `tidyverse` — data manipulation and visualization
-  - `ggplot2` — plotting
-  - `readr` — CSV I/O
-  - `readxl` / `openxlsx` — Excel I/O
-  - `haven` — Stata `.dta` file I/O
-  - `here` — portable file paths
-  - `janitor` — data cleaning
-  - `cowplot` — plot composition
-  - `ggpubr` — plot arrangement
-  - `ggrepel` — non-overlapping text labels
-  - `stringr` / `stringi` — string manipulation
-  - `sf` — spatial data (Chapter 3 maps)
-  - `countrycode` — country code conversion
-  - `RColorBrewer` — color palettes
-  - `ggstats` / `ggthemes` — additional ggplot2 extensions
-  - `tidytext` — text ordering utilities
-  - `scales` — axis formatting
-  - `purrr` — functional programming
-  - `reshape2` — data reshaping
-  - `fs` — file system utilities
+- **R** *(version 4.5.2)
 
 - **Stata** *(version 17 or later)*
   - `wbopendata` — auto-installed by `1_Figures.do` if not present (requires internet connection at runtime)
