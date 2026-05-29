@@ -28,6 +28,8 @@ egvpi_colors <- c(
   "#00ADE4"
 )
 
+set.seed(2025)
+
 # open data
 BFA <- read_csv("chapter-2/data/output/bfa_clean.csv", show_col_types = F)
 CwG <- read_csv("chapter-2/data/output/cwg_clean.csv", show_col_types = F)

@@ -14,6 +14,8 @@ library(cowplot)
 library(ggpubr)
 library(stringr)
 
+set.seed(2025)
+
 # read-in data -----------------------------------------------------------
 gsps <- read_csv(
   here("chapter-1", "data", "input", "gsps.csv")
