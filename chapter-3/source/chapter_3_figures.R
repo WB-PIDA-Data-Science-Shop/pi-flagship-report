@@ -17,7 +17,7 @@ library(janitor)
 library(ggthemes)
 library(tidytext)
 
-theme_set(
+theme_set( 
     theme_cowplot(
         font_size = 24
     )
