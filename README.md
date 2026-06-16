@@ -63,11 +63,11 @@ pi-flagship-report/
 ---
 
 - **Filename:** `gsps.csv`
-- **Source:** World Bank Government Service Providers Survey (GSPS)
-- **URL:** Available upon request from the World Bank
+- **Source:** World Bank Global Survey of Public Servants (GSPS)
+- **URL:** https://www.globalsurveyofpublicservants.org/sites/default/files/2023-11/GSPS_Indicators_Dataset_11_10_23.xlsx
 - **Access year:** 2024
 - **Description:** Survey data on public service providers across multiple countries, covering topics including recruitment, management, independence, and transparency.
-- **License:** World Bank internal data; not publicly redistributable
+- **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 ---
 

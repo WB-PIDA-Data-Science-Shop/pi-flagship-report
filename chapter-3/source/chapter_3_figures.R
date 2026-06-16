@@ -257,7 +257,8 @@ bank_regulator |>
   geom_jitter(
     aes(fill  = income_group, size = personnel_workforce),
     shape = 21,
-    alpha = 0.6
+    alpha = 0.6,
+    position = position_jitter(width = 0.02, seed = 2025)
   ) +
   labs(
     x = "Share of Specialized Regulators",
